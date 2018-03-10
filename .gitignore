@@ -3,3 +3,5 @@
 /.DS_Store
 /en/athina.html~
 /es/athina.html~
+*.html#
+*.html~
