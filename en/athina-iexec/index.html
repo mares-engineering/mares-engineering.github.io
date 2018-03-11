@@ -12,12 +12,23 @@
 <!-- </div> -->
 
 <div>
-  <h1>Athina on iExec - Progress Report</h1>
+  <h1>Athina on iExec - Project Status</h1>
   <p></p>
-  <h2> Milestone 1 - Build a basic NLP agent running on iExec computational resources.</h2>
-  <p>Status: Completed.</p>
-  <p>A dialogue agent has been trained, added to $DOCKERIMAGE, and deployed to the iExec network. To use, run $IEXEC_COMMAND.</p>
-  <p>A second agent has also been deployed, just for fun: A character level model which writes in the style of Cervantes. We want to show the unique capabilities of iExec and blockchain, so this might be    j
+  <h2> Milestone one: a simple chatbot</h2>
+  <p><b>Description:</b> Build a basic NLP agent running on iExec computational resources.</p>
+  <p><b>Status:</b> Completed [2018-03-09 Fri]</p>
+  <p><b>Summary:</b> A basic neural dialogue agent, employing a sequence to sequence model, has been trained, added to docker image javiermares/tiny-chat, and deployed to the iExec network.</p>
+  <p>As the first component of milestone two, a second agent has also been deployed: a character level model which improvises prose in the style of Cervantes. This is the first model fine-tuned for this task, to the knowledge of the author.
+  <p>We want to show the unique capabilities of iExec and blockchain, like fine grained collaboration between dapps. As a first step in that direction, one illustrative idea could be to use the improvised prose from the Cervantes app as an input to a neural calligraphy generator, so it looks like a handwritten note from Cervantes. Other similar ideas are being worked on.</p>
 
-Cervantes - iexec submit --dapp 0x25412143e4c5392dea108c2834008985507410f2
+  <p><b>Dapps</b><p>
+  <p>Improvising Cervantes - iexec submit 'python3 /examples/nlp/dime_algo.py' --dapp 0x25412143e4c5392dea108c2834008985507410f2</p>
+  <p>Tiny Chat - iexec submit 'python3.6 one-turn.py hello' --dapp 0x2e785496d4f66BF1e2dDFba1a7755eb2EbF75d2C</p>
+  
+  <p><b>Comments:</b><p><p>There seems to be an issue on iExec with the cmdline variable. It works fine for a command like 'python3 /examples/nlp/dime_algo.py', but the longer command associated with the Tiny Chat dapp produced a "Bridge Failed" error. The command is 'iexec submit 'python3.6 one-turn.py hello' --dapp 0x2e785496d4f66BF1e2dDFba1a7755eb2EbF75d2C' where 'hello' represents the user input string. It works on the associated docker image, javiermares/tiny-chat. This error has been raised in the beta-testers slack channel and Francois mentioned it will be looked at on Monday.</p>
+
+<p></p>
+<h2>Milestone two: an ensemble of dapp agents</h2>
+  <p><b>Description:</b> Build at least one more agent which would work with the first one in an ensemble fashion.</p>
+  <p><b>Status:</b> In progress. [2018-03-10 Sat 01:58]</p>
 </div>
