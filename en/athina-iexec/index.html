@@ -23,9 +23,13 @@
 
   <p><b>Dapps</b><p>
   <p>Improvising Cervantes v0.04 - iexec submit 'python3 /examples/nlp/dime_algo.py' --dapp 0x25412143e4c5392dea108c2834008985507410f2</p>
-  <p>Tiny Chat v0.02 - iexec submit 'python oneturn.py how are you' --dapp 0x2e785496d4f66BF1e2dDFba1a7755eb2EbF75d2C</p>
+  <p>Tiny Chat v0.03 - iexec submit 'python /iexec/oneturn.py how are you' --dapp 0x2e785496d4f66BF1e2dDFba1a7755eb2EbF75d2C</p>
   
-  <p><b>Comments:</b><p><p>There seems to be an issue on iExec with the cmdline variable. It works fine for a command like 'python3 /examples/nlp/dime_algo.py', but the longer command associated with the Tiny Chat dapp produced a "Bridge Failed" error. The command is 'iexec submit 'python oneturn.py hello' --dapp 0x2e785496d4f66BF1e2dDFba1a7755eb2EbF75d2C' where 'hello' represents the user input string. It works on the associated docker image, javiermares/tiny-chat. This error has been raised in the beta-testers slack channel and Francois mentioned it will be looked at on Monday.</p>
+  <p><b>Comments:</b><p>
+  <p>UPDATE [2018-04-11 Wed]: Francois mentioned that iExec has a bug whereby it won't find scripts located in the Docker image's root directory (eg. iexec submit 'python oneturn.py' --dapp would be incapable of finding oneturn.py. As a temporary measure, the script is now at /iexec/oneturn.py instead.</p>
+  <p>Now iExec can find the script, but the script itself is unable to find filenames. This is an iExec bug, as this doesn't happen when running the command in Docker (eg.  docker run javiermares/tiny-chat python /iexec/oneturn.py hey dude). <a href="https://iexec-team.slack.com/archives/C3Y0MJN8Y/p1523411097000034">The slack discussion can be found here.</a></p>
+
+  <p>"Bridge Failed" iExec bug [2018-03-09 Fri]. There seems to be an issue on iExec with the cmdline variable. It works fine for a command like 'python3 /examples/nlp/dime_algo.py', but the longer command associated with the Tiny Chat dapp produced a "Bridge Failed" error. The command is 'iexec submit 'python oneturn.py hello' --dapp 0x2e785496d4f66BF1e2dDFba1a7755eb2EbF75d2C' where 'hello' represents the user input string. It works on the associated docker image, javiermares/tiny-chat. This error has been raised in the beta-testers slack channel and Francois mentioned it will be looked at on Monday.</p>
 
 <p></p>
 <h2>Milestone two: an ensemble of dapp agents</h2>
