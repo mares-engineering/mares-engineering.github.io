@@ -1,7 +1,7 @@
 <style>
   div {
-    max-width: 600px;
-    min-width: 100px;
+      max-width: 600px;
+      min-width: 100px;
   }
 </style>
 
@@ -9,7 +9,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 550px; text-align:right;">
     [English | <a href="../es/athina.html">Español</a>]
   </div>
-<!-- </div> -->
+  <!-- </div> -->
 
 <div>
   <h1>Athina on iExec - Project Status</h1>
@@ -31,15 +31,68 @@
 
   <p>"Bridge Failed" iExec bug [2018-03-09 Fri]. There seems to be an issue on iExec with the cmdline variable. It works fine for a command like 'python3 /examples/nlp/dime_algo.py', but the longer command associated with the Tiny Chat dapp produced a "Bridge Failed" error. The command is 'iexec submit 'python oneturn.py hello' --dapp 0x2e785496d4f66BF1e2dDFba1a7755eb2EbF75d2C' where 'hello' represents the user input string. It works on the associated docker image, javiermares/tiny-chat. This error has been raised in the beta-testers slack channel and Francois mentioned it will be looked at on Monday.</p>
 
-<p></p>
-<h2>Milestone two: an ensemble of dapp agents</h2>
+  <p></p>
+</div>
+<div id="milestonetwo">
+  <h2>Milestone two: an ensemble of dapp agents</h2>
   <p><b>Description:</b> Build at least one more agent which would work with the first one in an ensemble fashion.</p>
-  <p><b>Status:</b> Partially completed.</p>
-  <p><b>Summary:</b> A second dapp agent, Improvising Cervantes, has been completed and improved. An expert manager has been implemented on Python to triage user queries between the two agents.</p>
-  <p><b>Dapps, scripts:</b><p>
-  <p>Improvising Cervantes v0.04 - iexec submit 'python3 /examples/nlp/dime_algo.py' --dapp 0x25412143e4c5392dea108c2834008985507410f2</p>
-  <p>Expert manager v0.02 - Usage: python3 expertmanager 'your input here'
-    (A normal query will get a response from the Tiny Chat dapp. The query "En que piensa Cervantes?" will return a bit of prose in the style of Cervantes. <a href="https://github.com/lev-kusanagi/iexec-dapp-samples/tree/expertmanager">Source code.</a>)</p>
+  <p><b>Status:</b> Completed [2018-06-13 Wed].</p>
+  <p><b>Summary:</b> An ensemble implemented using a combination of
+    Dialogflow and an intermediary service which calls iExec apps to
+    satisfy user needs. You can talk to it on Facebook Messenger, Slack,
+    Viber, Twitter, Twilio IP, Twilio Text Messaging, Skype, Topo,
+    Telegram, Kik, LINE, Cisco Spark, Amazon Alexa, and Microsoft
+    Cortana. You can use voice or text. You can also chat with
+    it <a href="https://bot.dialogflow.com/acd6075f-7c5a-4766-adb5-48a8fde85265">at
+      this web demo page</a></p>
+  <p>The Athina ensemble works with two iExec apps: the app from Milestone 1 (TinyChat) and a second iExec app agent, "Improvising Cervantes", which has been completed and improved.</p>
+  <p><b>Usage:</b>
+    Dialogflow has a 5 second timeout. Ethereum and iExec will become faster, but right now interactions have to be asynchronous. For "Improvising Cervantes", imagine you're asking the Spanish author Miguel de Cervantes to write you a little improvised prose. He accepts, but he needs a few minutes. To do this, <a href="https://bot.dialogflow.com/acd6075f-7c5a-4766-adb5-48a8fde85265">go here and</a> tell Athina any of the following:
+    <ul style="list-style-type:disc">
+      <li>Write something for me, Mike</li>
+      <li>What are you thinking about, Miguel?</li>
+      <li>Hi Mike, write me some prose</li>
+      <li>Miguel, could you write me something?</li>
+    </ul>
+    Similar sentences will have the same effect. Dialogflow will launch a webhook to the intermediary service which fills an open iExec order to complete the job. Give Miguel a few minutes, and to check on his progress, you can ask him:
+    <ul style="list-style-type:disc">
+      <li>Are you finished?</li>
+      <li>Are you done?</li>
+      <li>Send me what you wrote.</li>
+      <li>Send me the prose.</li>
+    </ul>
+    Again, any similar sentence will be understood. Miguel will tell you if he needs more time, and if he's done, he will send you his improvised prose.
+  <p>
+    Likewise to send a message to the TinyChat app on iExec, you can say:
+    <ul style="list-style-type:disc">
+      <li>tinychat how is it going?</li>
+      <li>tinychat how are you?</li>
+      <li>tinychat hello</li>
+      <li>tinychat what are you thinking about?</li>
+    </ul>
+    You will also have to wait. To check TinyChat's response, write or speak:
+    <ul style="list-style-type:disc">
+      <li>tinychat what is your response?</li>
+      <li>tinychat what is your reply?</li>
+      <li>tinychat tell me what you think</li>
+      <li>tinychat what is your answer?</li>
+      <li>tinychat give me your response</li>
+    </ul>
+    And you will receive its response when it's done.
+  </p>
+  </p>
+  <p><b>Current issues:</b>
+    The following issues have been raised with the good people at #beta-testers:
+    <ul style="list-style-type:disc">
+      <li>The path issue with Dockerized apps is back: In Tinychat, /iexec/oneturn.py once again doesn't work (even though it works fine when run directly as a Docker app. This issue was present in V1 and was solved, but it's back now. I notified Francois about it.</li>
+      <li>The result file combines stderr and stdout: They used to be separate. In Cervantes, the response produced will include stderr before the improvised prose.</li>
+      <li>Sell orders are available intermittently, sometimes in category 3, sometimes in category 4.</li>
+      <li>Jobs sometimes take a very, very long time complete.</li>
+    </ul>
+  </p>
+  <p><b>Conclusion:</b>
+    In the near future, I can see practical applications of iExec resources because my apps will have some non-urgent computational needs, eg. train models in the background and be happy with a one-week delay in results. I expect prices to be good so I see a real practical advantage.</p>
+  <p>To move in that direction I need to know how to run proprietary code in Docker images, code that only I would be able to see. Any suggestions in this regard are welcome, I'm sure it's feasible.<p/>
 
-
+  <p>In the future, I see us developing conversational apps for Athina and using iExec resources whenever it's cheaper, or whenever combinations of dapps are necessary to accomplish some task, as combinations of dapps will benefit from microtransaction economics (as described in the proposal).</p>
 </div>
