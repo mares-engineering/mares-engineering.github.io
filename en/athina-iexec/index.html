@@ -66,23 +66,78 @@
 
   <p> So, how might payments work? </p>
 
-  <p><b>Payment models</b> Simply put: Dapps should be able to
-    arbitrarily hire other dapps. Upon receiving a query, a dapp
-    should decide to either compute a response independently, or pay
-    other dapps to help it complete the task.</p>
+  <p><b>Payment models</b></p>
 
-  <p> Let's take this hypothetical conversation for example:</p
->
+  <p> Simply put: Dapps should be able to arbitrarily hire other
+    dapps. Upon receiving a query, a dapp should decide to either
+    compute a response independently, or pay other dapps to help it
+    complete the task.</p>
+
+  <!-- to add:, possibly:
+    - athina does triage of queries, but so does cervantes-->
+
+  <p> Let's take this hypothetical conversation for example:</p>
+
+<table border="0" cellspacing="4" cellpadding="2">
+<tr> 
+     <td bgcolor="#000080">
+        <table border="0" cellpadding="4" cellspacing="0">
+        <tr><td bgcolor="#ffffff">
+	    <p>Athina
+	    [<b>pre-qa</b>, <b>my-interests</b>, <b>eu-legislation</b>]:
+	    Hi, <a href="https://medium.com/@gijsnelissen/stop-complaining-about-gdpr-86e893f8d11">this new article might interest you.</a>. It involves new regulations regarding financial asset tokenizations in Europe.</p>
+	    <p align="right">User: Thank you, could you summarize it?</p>
+	    <p>Athina [<b>summarization</b>]: Sure, (…)</p>
+	    <p align="right">User: Thank you. How was The Economist's response to these changes?</p>
+	   <p>Athina [<b>sentiment-analysis</b>]: <a href="https://www.economist.com/news/briefing/21721634-how-it-shaping-up-data-giving-rise-new-economy">They are rather optimistic about their long term impact.</a>.</p>
+
+
+
+</td>
+        </tr></table></td>
+     
+</table>
+
+  <p>In a mature, <a href="https://techcrunch.com/2017/09/18/ethereum-will-replace-visa-in-a-couple-of-years-says-founder/">fast Ethereum blockchain</a>, any dapp will be able to do query triage. In other words, any dapp will be able to pay other dapps to help it fulfill a query, while still providing an answer to the user in about under 5 seconds.</p>
+
     <!-- here goes the diagram for the future payment model -->
+  <pre>
+                   +----------+         +------------+
+                   |          +-------->+            |
+                   |  EU-law  |         | translator |
+                   |          +<--------+            |
+                   +---+---+--+         +------------+
+                       ^   |
+                       |   v
++---------+        +---+---v--+         +--------------+
+|         |        |          +<--------+              |
+| Athina  +------->+  pre-qa  |         | my-interests |
+|         |        |          +-------->+              |
++---------+        +---+---+--+         +--------------+
+                       |   ^
+                       v   |
+                   +---+---+-------+
+                   |               |
+                   | summarization |
+                   |               |
+                   +---------------+
+
+						     </pre>
+
 
   <p>  Fig. 1 Payments in the future: Any dapp can triage a query.</p>
 
-  <p> This model involves decentralized triage, in the sense that any
-    dapp can take an arbitrary query and choose which other dapps, if
-    any, to run in order to produce a response for the user.
-       <a href="https://techcrunch.com/2017/09/18/ethereum-will-replace-visa-in-a-couple-of-years-says-founder/">at this web demo page</a>
-       
-  </p>
+  <p>This model involves decentralized triage. Any dapp can hire any
+    other app to fulfill the query. This means that depending on the
+    query, a dapp might require more or less resources (computational
+    capacity, data and algorithms from other dapps) to fulfill
+    it. It's important therefore that in the future, a dapp can charge
+    different prices for different tasks. </p>
+
+  <p>
+
+  <p> Fig. 2 Payments in the short term: an expert manager triages
+  queries.</p>
 
     <p><b>Feedback</b> This text is to be turned into a bullet-point
     list. Multi-agent calls might have privacy issues, as the apps
