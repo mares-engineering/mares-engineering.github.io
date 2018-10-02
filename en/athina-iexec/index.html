@@ -21,10 +21,12 @@
   <p><b>Description:</b> Formulate a payment model for the future ecosystem.</p>
   <p><b>Status:</b> Completed [2018-09-29 Sat 19:16]</p>
   <p><b>Summary:</b> The future for dapp ecosystems is speculated
-  upon. A couple of payment models are considered that might satisfy the
-  needs of such ecosystem. A proof of principle example of one of such
-  payment models is implemented for a simple case of a user query
-  involving a dapp ensemble. Finally, some feedback is provided.</p>
+  upon. A couple of payment models are considered that might satisfy
+  the needs of such ecosystem. A proof of principle example of one of
+  such payment models is implemented for a simple case of a user query
+  involving a dapp
+  ensemble <a href="https://youtu.be/0I-HcOmZ_34">(video
+  here)</a>. Finally, some feedback is provided.</p>
 
   <p><b>Mature dapp ecosystems, from the eyes of an AI assistant</b></p>
 
@@ -130,9 +132,13 @@
     it. It's important therefore that in the future, a dapp can charge
     different prices for different tasks. </p>
 
-  <p>The enabling technologies required to make this kind of interaction possible <a href="https://techcrunch.com/2017/09/18/ethereum-will-replace-visa-in-a-couple-of-years-says-founder/">are already underway.</a> From user query to response, the process should last approximately less than 5 seconds.</p>
+  <p>There will always be multiple ways to answer the same
+  query. Market forces will ensure that the dapp ensembles with the
+  highest predictive power / cost (RLC) will be more popular.</p>
 
-  <p>Are practical applications impossible until then? No, some computational tasks can still be useful given large delays (eg. periodic training on new data). Until then however, any query triage will have to be centralized, in an expert manager such as Athina.</p>
+  <p>The enabling technologies required to make this kind of interaction possible <a href="https://techcrunch.com/2017/09/18/ethereum-will-replace-visa-in-a-couple-of-years-says-founder/">are already underway.</a> From user query to response, the process should last less than approximately 5 seconds.</p>
+
+  <p>Are practical applications impossible until then? No, some computational tasks can still be useful given large delays (eg. periodic training on new data, whereby you update your model parameters every week or month). Until then however, any query triage will have to be centralized, in an expert manager such as Athina.</p>
 
   <pre>
                       +------------+
@@ -171,14 +177,49 @@
   <p align="center">Fig. 2 Payments in the short term: an expert
   manager triages queries.</p>
   <!-- notes: there will be incentive to build in athina -->
-  <p></p>
+  <p>Until then, the interactions and payments fall entirely on
+  "expert managers" such as Athina. They will have to decide which
+  combinations of dapps to use for different tasks. There will still
+  be an incentive to combine data and algorithms from different dapps,
+  since connected knowledge tends to be more valuable. This is more
+  inefficient however, and will be a bottleneck until Ethereum scales,
+  as mentioned previously.</p>
 
-    <p><b>Conclusion</b>New economics from decentralized dapp markets will allow a new class of higher value machine learning applications, which will tend to take the form of cybernetic assistants. It will be important that any dapp can hire any other dapp and so be able to charge differently for each type of query. Until then, to grow the number of dapps so the networks effects will be present when the Ethereum network is fast enough for dapp ensembles.</p>
+  <p>On the other hand, this will allow a more curated experience,
+  akin to the closed model of the first iPhone (which was not open to
+  third party developers). This is not a bad way to start.</p>
+
+  <p>A proof of principle example of this model is provided. In this
+  example, the user has an intent that Athina classifies as "typograph
+  Cervantes" (see Milestone 2 to see how DialogFlow facilitates this),
+  which is an "ensemble intent" because it requires two dapps:
+  Cervantes, to improvise some prose, and Typographer, to typeset that
+  prose into a beautiful, old style document. In this example, the
+  "End user" (address 0x5f3fdff7d42333aa276e31ba658718b702d69684)
+  launches ensemble task with intent "typograph Cervantes", which
+  automatically sends payment to owners of both apps involved,
+  Cervantes (wallet address
+  0x84eddc455b224b5233b633fab74731117846cf19) and Typographer (wallet
+  address
+  0x5b309b5c144b68a44f5d5a8fe2ef7428b2e4e9ee). <a href="https://youtu.be/0I-HcOmZ_34">Here
+  is a video of this process.</a>
 
 
-    <p><b>Feedback</b> This text is to be turned into a bullet-point
-    list. Multi-agent calls might have privacy issues, as the apps
-    called are on-chain.</p>
+  <p><b>Feedback</b></p>
+
+  <p>In my personal order of importance:</p>
+  <ul>
+    <li>Allow dapps to charge different amounts depending on task/user
+    intent, to allow decentralized triage (as described above) in the future.</li>
+    <li>In the short term, make it easy to compare costs of computational tasks in iExec vs. costs in platforms like AWS. I would like to use iExec for all my non-urgent neural net training tasks.</li>
+    <li>Intellectual property / code protection (I've been told work is underway with SGX technology, this is very important for us.)</li>
+    <li>More documentation for the JS interface would be very welcome.</li>
+    <li>Removal of wall-time limits</li>
+    <li>More documentation on how to set up your own worker, for easier, independent experimentation.</li>
+  </ul>
+
+    <p><b>Conclusion</b>New payment models from decentralized dapp markets will allow a new class of higher value machine learning applications, which will tend to take the form of cybernetic assistants. It will be important that any dapp can hire any other dapp and so be able to charge differently for each type of query. Until the enabling technologies (ie. a VISA-scale Ethereum) are ready, expert managers will have to manually curate combinations of data and algorithms from different dapps, as in the early days of the iPhone app platform.</p>
+
 
 <div id="milestonetwo">
   <h2>Milestone two: an ensemble of dapp agents</h2>
