@@ -21,12 +21,12 @@
   <p><b>Description:</b> Formulate a payment model for the future ecosystem.</p>
   <p><b>Status:</b> Completed [2018-09-29 Sat 19:16]</p>
   <p><b>Summary:</b> The future for dapp ecosystems is speculated
-  upon. Several payment models are considered that might satisfy the
+  upon. A couple of payment models are considered that might satisfy the
   needs of such ecosystem. A proof of principle example of one of such
   payment models is implemented for a simple case of a user query
   involving a dapp ensemble. Finally, some feedback is provided.</p>
 
-  <p><b>Dapp ecosystems, from the eyes of an AI assistant</b></p>
+  <p><b>Mature dapp ecosystems, from the eyes of an AI assistant</b></p>
 
   <p>How will dapp ecosystems look like in the near future? We can
     expect a lot of dapps will be subsumed into AI assistants. These
@@ -73,10 +73,7 @@
     compute a response independently, or pay other dapps to help it
     complete the task.</p>
 
-  <!-- to add:, possibly:
-    - athina does triage of queries, but so does cervantes-->
-
-  <p> Let's take this hypothetical conversation for example:</p>
+  <p>Let's take this hypothetical conversation for example:</p>
 
 <table border="0" cellspacing="4" cellpadding="2">
 <tr> 
@@ -98,9 +95,8 @@
      
 </table>
 
-  <p>In a mature, <a href="https://techcrunch.com/2017/09/18/ethereum-will-replace-visa-in-a-couple-of-years-says-founder/">fast Ethereum blockchain</a>, any dapp will be able to do query triage. In other words, any dapp will be able to pay other dapps to help it fulfill a query, while still providing an answer to the user in about under 5 seconds.</p>
+  <p>In a mature dapp market, how might this look, in terms of interactions between dapps? The pre-qa dapp could consult the EU-law, my-interests, and summarization apps. The EU-law dapp in turn could make use of a translator dapp.</p>
 
-    <!-- here goes the diagram for the future payment model -->
   <pre>
                    +----------+         +------------+
                    |          +-------->+            |
@@ -125,7 +121,7 @@
 						     </pre>
 
 
-  <p>  Fig. 1 Payments in the future: Any dapp can triage a query.</p>
+  <p align="center">Fig. 1 Payments in the future: Any dapp can triage a query.</p>
 
   <p>This model involves decentralized triage. Any dapp can hire any
     other app to fulfill the query. This means that depending on the
@@ -134,10 +130,51 @@
     it. It's important therefore that in the future, a dapp can charge
     different prices for different tasks. </p>
 
-  <p>
+  <p>The enabling technologies required to make this kind of interaction possible <a href="https://techcrunch.com/2017/09/18/ethereum-will-replace-visa-in-a-couple-of-years-says-founder/">are already underway.</a> From user query to response, the process should last approximately less than 5 seconds.</p>
 
-  <p> Fig. 2 Payments in the short term: an expert manager triages
-  queries.</p>
+  <p>Are practical applications impossible until then? No, some computational tasks can still be useful given large delays (eg. pretraining, periodic training on newly obtained data, and so forth). Until then however, any query triage will have to be centralized, in an expert manager such as Athina.</p>
+
+  <pre>
+                      +------------+
+             +------->+            |
+             |        | translator |
+             +<-------+            |
+             |        +------------+
+             |
+             |        +----------+
+             +------->+          |
+             |        | EU-law   |       
+             +<-------+          |
+             |        +----------+
+             |
++--------+   |        +----------+
+|        |   +------->+          |
+| Athina |---|        |  pre-qa  |
+|        |   +<-------+          |
++--------+   |        +----------+
+             |
+             |        +---------------+
+             +------->+               |
+             |        | summarization |
+             +<-------+               |
+             |        +---------------+
+             |
+             |        +--------------+
+             +------->+              |
+             |        | my-interests |
+             +<-------+              |
+                      +--------------+
+
+    </pre>
+
+
+  <p align="center">Fig. 2 Payments in the short term: an expert
+  manager triages queries.</p>
+  
+  <p></p>
+
+    <p><b>Conclusion</b>New economics from decentralized dapp markets will allow a new class of higher value machine learning applications, which will tend to take the form of cybernetic assistants. It will be important that any dapp can hire any other dapp and so be able to charge differently for each type of query. Until then, to grow the number of dapps so the networks effects will be present when the Ethereum network is fast enough for dapp ensembles.</p>
+
 
     <p><b>Feedback</b> This text is to be turned into a bullet-point
     list. Multi-agent calls might have privacy issues, as the apps
