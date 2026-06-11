@@ -9,6 +9,15 @@
         --bg: #090909;
         --fg: #efefef;
         --muted: #b4b4b4;
+        --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
+      }
+
+      @font-face {
+        font-family: 'Mares Display';
+        src: url('assets/fonts/eurostile-extended-black.woff2') format('woff2');
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
       }
 
       * {
@@ -20,9 +29,8 @@
         background: var(--bg);
         color: var(--fg);
         min-height: 100vh;
-        font-family: 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Eurostile Extended', Impact, sans-serif;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-weight: 900;
-        font-stretch: expanded;
         letter-spacing: 0.01em;
       }
 
@@ -36,6 +44,10 @@
       h1 {
         margin: 0 0 12px;
         font-size: clamp(1.8rem, 4vw, 2.4rem);
+        font-family: var(--display-font);
+        font-weight: 900;
+        letter-spacing: 0.03em;
+        font-stretch: expanded;
       }
 
       p {
@@ -57,8 +69,12 @@
       a {
         color: var(--fg);
         text-decoration: none;
+        font-family: var(--display-font);
         border-bottom: 1px solid var(--fg);
         padding-bottom: 2px;
+        font-weight: 900;
+        letter-spacing: 0.02em;
+        font-stretch: expanded;
       }
     </style>
   </head>
