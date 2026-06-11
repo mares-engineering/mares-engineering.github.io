@@ -32,10 +32,10 @@ Task: Populate Mares Engineering website repo with public-safe local instruction
 4. `write_file` created/updated required docs
 5. `git status --short`
 6. `git diff --check`
-7. `git commit -m "Add website Spark roadmap and prompts"` (pending hash)
+7. `git commit -m "Add website Spark roadmap and prompts"` (completed)
 
 ## Commit
-- SHA: 1620dc0
+- SHA: beab0ebd5cb9bfc2757f961f0ff1103391d11518
 
 ## Residual risks
 - Existing default website behavior untouched.
