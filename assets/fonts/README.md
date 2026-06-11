@@ -1,12 +1,14 @@
-# License-required Eurostile/Eurostyle Webfont Placeholder
+# Eurostyle/Eurostile Webfont
 
-This directory is intentionally empty in source control.
+This directory contains the self-hosted `woff2` font required for the root site logo
+headline to render with the `Mares Display` face even when visitors do not have the
+font installed.
 
-If your build or deployment flow includes a licensed copy of **Eurostile/Eurostyle Extended Black**, place it here as:
+If you need to replace it, keep the filename as:
 
 - `assets/fonts/eurostile-extended-black.woff2`
 
-Do not add commercial font files without permission. The runtime file is not committed here.
+Do not add commercial font files without license permission.
 
 The home page CSS expects this file via:
 
