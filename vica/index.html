@@ -6,22 +6,42 @@
     <title>VICA — VR Race Awareness</title>
     <style>
       :root {
-        --bg: #090909;
+        --bg: #050607;
         --fg: #efefef;
-        --muted: #a9a9a9;
+        --muted: #b4b4b4;
         --line: #2a2a2a;
+        --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
+        --body-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
+      }
+
+      @font-face {
+        font-family: 'Mares Display';
+        src: url('../assets/fonts/eurostile-extended-black.woff2') format('woff2');
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        overflow-x: hidden;
+        background: var(--bg);
+      }
+
       body {
         margin: 0;
+        background:
+          radial-gradient(ellipse 92% 32% at 50% 53%, rgba(20, 48, 72, 0.075), rgba(12, 30, 48, 0.035) 45%, rgba(5, 6, 7, 0) 78%),
+          radial-gradient(ellipse 130% 92% at 50% 48%, #18191a 0%, #101112 46%, var(--bg) 100%);
         color: var(--fg);
-        background: var(--bg);
-        font-family: Arial, Helvetica, sans-serif;
+        min-height: 100vh;
+        font-family: var(--body-font);
         line-height: 1.6;
+        letter-spacing: 0;
+        overflow-x: hidden;
       }
 
       .page {
@@ -30,12 +50,63 @@
         padding: 56px 24px;
       }
 
+      .brand-link {
+        color: inherit;
+        text-decoration: none;
+        display: inline-block;
+      }
+
       .brand {
-        color: var(--muted);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
+        position: relative;
+        margin: 0 0 14px;
+        font-family: var(--display-font);
         font-size: 0.72rem;
-        margin-bottom: 14px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        font-stretch: expanded;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: transparent;
+        background:
+          linear-gradient(
+            180deg,
+            #d4ebf5 0%,
+            #b9d9e9 20%,
+            #9abfd3 46%,
+            #74a0bb 72%,
+            #4f789b 100%
+          );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.55px rgba(151, 208, 236, 0.5);
+        filter:
+          drop-shadow(0 0 1px rgba(194, 230, 247, 0.28))
+          drop-shadow(0 0 4px rgba(105, 178, 226, 0.18))
+          drop-shadow(0 0 11px rgba(45, 112, 174, 0.12));
+        text-shadow:
+          0 -1px 0 rgba(228, 246, 252, 0.12),
+          0 1px 0 rgba(24, 55, 82, 0.34),
+          0 0 3px rgba(110, 184, 226, 0.16);
+      }
+
+      .brand::before {
+        position: absolute;
+        inset: 0;
+        content: attr(data-text);
+        pointer-events: none;
+      }
+
+      .brand::before {
+        z-index: -1;
+        color: rgba(98, 176, 230, 0.08);
+        -webkit-text-fill-color: rgba(98, 176, 230, 0.08);
+        -webkit-text-stroke: 1px rgba(78, 158, 220, 0.06);
+        filter: blur(3px);
+        text-shadow:
+          0 0 8px rgba(96, 177, 230, 0.1),
+          0 0 22px rgba(52, 124, 188, 0.08);
       }
 
       h1 {
@@ -78,7 +149,9 @@
   </head>
   <body>
     <main class="page">
-      <p class="brand">Mares Engineering</p>
+      <a class="brand-link" href="../index.html" aria-label="Mares Engineering homepage">
+        <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
+      </a>
       <h1>VICA</h1>
       <p class="lead">
         VICA is a restrained, safety-first race-awareness layer for VR sim racing.
