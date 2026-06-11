@@ -43,7 +43,8 @@ Do not add production payments/accounts/licensing systems.
 Do not add secrets, private strategy, customer data, or unsupported public
 claims.
 Do not edit core Vica runtime code.
-Do not push unless Javier asks.
+In this website repo only, pushing accepted commits is allowed and expected.
+After validation and review, push final accepted changes to origin.
 
 First check:
 git status --short

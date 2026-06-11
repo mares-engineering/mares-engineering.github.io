@@ -32,4 +32,5 @@ Create or refine public documentation for install, disable, and troubleshooting.
 
 - Run `git status --short`.
 - Run `git diff --check`.
-- Commit locally; do not push.
+- Commit locally.
+- After Codex review, push accepted changes to `origin`.

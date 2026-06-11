@@ -34,4 +34,5 @@ Implement placeholder pricing/shop pages that clarify this is a mock scaffold.
 
 - Run `git status --short`.
 - Run `git diff --check`.
-- Commit locally; do not push.
+- Commit locally.
+- After Codex review, push accepted changes to `origin`.

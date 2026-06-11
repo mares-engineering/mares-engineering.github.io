@@ -136,6 +136,12 @@ git show --stat --oneline HEAD
 Also inspect builder reports. Spark has previously written incorrect commit
 hashes in builder reports, so do not trust those blindly.
 
+Repo-local push policy:
+
+- Pushing is allowed and expected for this website repo.
+- After validation and review, accepted commits should be pushed to `origin`.
+- This does not grant push permission for the business repo or core Vica repo.
+
 ## Next Recommended Task
 
 If continuing website work, create the trust/privacy/install-safety page next.

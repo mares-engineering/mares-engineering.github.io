@@ -39,6 +39,6 @@ Implement a first, restrained landing page for VICA in this website repo.
 - Run: `git status --short`.
 - Run: `git diff --check`.
 - Commit locally with a clear message.
-- Do not push.
+- After Codex review, push accepted changes to `origin`.
 
 This task is done when the diff is clean (no whitespace errors), static, and review-ready.

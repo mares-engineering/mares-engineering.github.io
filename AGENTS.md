@@ -36,4 +36,16 @@ For changed files in this repo, include at minimum:
 - `git status --short`
 - `git diff --check`
 - local commit when ready
-- do not push to remote
+- push accepted commits to `origin`
+
+## Push policy
+
+For this repository only, pushing is allowed and expected.
+
+- Do not consider completed website work finished while it is local-only.
+- After validation and review, push the accepted commit(s) to `origin`.
+- If implementation was delegated to Hermes/Spark, Codex should review the
+  result before pushing the final accepted state.
+- This push policy applies only to `C:\Users\javie\repos\mares-engineering.github.io`.
+  Do not infer push permission for `C:\Users\javie\repos\vica-business`,
+  `C:\Users\javie\repos\vica`, or any other repo.

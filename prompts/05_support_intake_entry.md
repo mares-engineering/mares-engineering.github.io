@@ -28,4 +28,5 @@ Add a public support intake entry point that helps users send useful context wit
 
 - Run `git status --short`.
 - Run `git diff --check`.
-- Commit locally; do not push.
+- Commit locally.
+- After Codex review, push accepted changes to `origin`.

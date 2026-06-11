@@ -35,4 +35,5 @@ Create a trust and safety page for VICA focused on install posture, data boundar
 
 - Run `git status --short`.
 - Run `git diff --check`.
-- Commit locally; do not push.
+- Commit locally.
+- After Codex review, push accepted changes to `origin`.

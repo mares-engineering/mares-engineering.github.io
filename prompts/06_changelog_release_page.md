@@ -29,4 +29,5 @@ Build a public changelog with date-ordered release/news entries.
 
 - Run `git status --short`.
 - Run `git diff --check`.
-- Commit locally; do not push.
+- Commit locally.
+- After Codex review, push accepted changes to `origin`.

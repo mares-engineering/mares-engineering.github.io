@@ -36,4 +36,5 @@ Each section must use explicit labels to avoid implying certainty where evidence
 
 - Run `git status --short`.
 - Run `git diff --check`.
-- Commit locally; do not push.
+- Commit locally.
+- After Codex review, push accepted changes to `origin`.
