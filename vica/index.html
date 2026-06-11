@@ -38,13 +38,14 @@
 
       .page {
         display: grid;
-        align-content: center;
+        align-content: start;
         justify-items: center;
         min-height: 100vh;
         width: min(100%, 1680px);
         max-width: none;
         margin: 0 auto;
-        padding: 48px 24px;
+        padding: 24px 24px 48px;
+        gap: 18px;
         line-height: 1.55;
         text-align: center;
         overflow-x: hidden;
@@ -55,8 +56,10 @@
         isolation: isolate;
         display: inline-grid;
         place-items: center;
-        width: min(100%, 1540px);
-        margin-top: 5vh;
+        width: max-content;
+        justify-self: center;
+        margin-top: 0;
+        margin-bottom: 4px;
       }
 
       .logo-field::before,
@@ -92,10 +95,10 @@
         position: relative;
         margin: 0;
         font-family: var(--display-font);
-        font-size: clamp(1rem, 5.45vw, 7rem);
-        font-weight: 900;
-        letter-spacing: clamp(0.026em, 0.42vw, 0.068em);
-        font-stretch: expanded;
+        font-size: clamp(0.82rem, 1.4vw, 1.2rem);
+        font-weight: 700;
+        letter-spacing: clamp(0.08em, 0.16vw, 0.13em);
+        font-stretch: normal;
         line-height: 1;
         text-transform: uppercase;
         white-space: nowrap;
@@ -112,15 +115,15 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 0.55px rgba(151, 208, 236, 0.5);
+        -webkit-text-stroke: 0.34px rgba(151, 208, 236, 0.42);
         filter:
-          drop-shadow(0 0 1px rgba(194, 230, 247, 0.28))
-          drop-shadow(0 0 4px rgba(105, 178, 226, 0.18))
-          drop-shadow(0 0 11px rgba(45, 112, 174, 0.12));
+          drop-shadow(0 0 1px rgba(194, 230, 247, 0.22))
+          drop-shadow(0 0 3px rgba(105, 178, 226, 0.14))
+          drop-shadow(0 0 8px rgba(45, 112, 174, 0.1));
         text-shadow:
-          0 -1px 0 rgba(228, 246, 252, 0.12),
-          0 1px 0 rgba(24, 55, 82, 0.34),
-          0 0 3px rgba(110, 184, 226, 0.16);
+          0 -1px 0 rgba(228, 246, 252, 0.1),
+          0 1px 0 rgba(24, 55, 82, 0.26),
+          0 0 3px rgba(110, 184, 226, 0.14);
       }
 
       .brand-logo::before {
@@ -195,31 +198,32 @@
 
       @media (max-width: 640px) {
         .page {
-          padding: 36px 18px;
+          padding: 24px 18px 40px;
         }
 
         .logo-field {
           margin-top: 0;
+          margin-bottom: 0;
         }
 
         .brand-logo {
-          font-size: clamp(0.76rem, 3.7vw, 1.65rem);
-          letter-spacing: 0.006em;
-          -webkit-text-stroke: 0.35px rgba(151, 208, 236, 0.42);
+          font-size: clamp(0.74rem, 2.1vw, 1rem);
+          letter-spacing: 0.065em;
+          -webkit-text-stroke: 0.3px rgba(151, 208, 236, 0.38);
           filter:
-            drop-shadow(0 0 1px rgba(194, 230, 247, 0.18))
-            drop-shadow(0 0 4px rgba(105, 178, 226, 0.12))
-            drop-shadow(0 0 14px rgba(45, 112, 174, 0.075));
+            drop-shadow(0 0 1px rgba(194, 230, 247, 0.16))
+            drop-shadow(0 0 2px rgba(105, 178, 226, 0.1))
+            drop-shadow(0 0 10px rgba(45, 112, 174, 0.065));
           text-shadow:
-            0 1px 0 rgba(24, 55, 82, 0.24),
-            0 0 2px rgba(110, 184, 226, 0.1);
+            0 1px 0 rgba(24, 55, 82, 0.2),
+            0 0 2px rgba(110, 184, 226, 0.09);
         }
 
         .brand-logo::before {
-          color: rgba(98, 176, 230, 0.045);
-          -webkit-text-fill-color: rgba(98, 176, 230, 0.045);
-          -webkit-text-stroke-color: rgba(78, 158, 220, 0.04);
-          filter: blur(2px);
+          color: rgba(98, 176, 230, 0.038);
+          -webkit-text-fill-color: rgba(98, 176, 230, 0.038);
+          -webkit-text-stroke-color: rgba(78, 158, 220, 0.035);
+          filter: blur(1.5px);
         }
 
         .lede {
