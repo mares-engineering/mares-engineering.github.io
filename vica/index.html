@@ -8,18 +8,10 @@
       :root {
         --bg: #050607;
         --fg: #efefef;
-        --muted: #a9a9a9;
+        --muted: #b4b4b4;
         --line: #2a2a2a;
-        --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
+        --display-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
         --body-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
-      }
-
-      @font-face {
-        font-family: 'Mares Display';
-        src: url('../assets/fonts/eurostile-extended-black.woff2') format('woff2');
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap;
       }
 
       * {
@@ -33,73 +25,165 @@
 
       body {
         margin: 0;
-        min-height: 100vh;
         background:
           radial-gradient(ellipse 92% 32% at 50% 53%, rgba(20, 48, 72, 0.075), rgba(12, 30, 48, 0.035) 45%, rgba(5, 6, 7, 0) 78%),
           radial-gradient(ellipse 130% 92% at 50% 48%, #18191a 0%, #101112 46%, var(--bg) 100%);
         color: var(--fg);
+        min-height: 100vh;
         font-family: var(--body-font);
-        line-height: 1.55;
+        font-weight: 400;
+        letter-spacing: 0;
         overflow-x: hidden;
       }
 
       .page {
-        width: min(100%, 860px);
+        display: grid;
+        align-content: center;
+        justify-items: center;
+        min-height: 100vh;
+        width: min(100%, 1680px);
+        max-width: none;
         margin: 0 auto;
-        padding: 56px 24px;
+        padding: 48px 24px;
+        line-height: 1.55;
+        text-align: center;
+        overflow-x: hidden;
       }
 
-      .brand {
-        color: var(--muted);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 0.72rem;
-        margin-bottom: 12px;
+      .logo-field {
+        position: relative;
+        isolation: isolate;
+        display: inline-grid;
+        place-items: center;
+        width: min(100%, 1540px);
+        margin-top: 5vh;
       }
 
-      h1 {
-        margin: 0 0 10px;
-        font-family: var(--display-font);
-        font-size: clamp(1.8rem, 4vw, 2.6rem);
-        font-weight: 900;
-        letter-spacing: 0.04em;
-        line-height: 1.1;
-        text-transform: uppercase;
+      .logo-field::before,
+      .logo-field::after {
+        position: absolute;
+        z-index: -2;
+        content: "";
+        pointer-events: none;
       }
 
-      .lead {
+      .logo-field::before {
+        width: 128%;
+        height: 150%;
+        background:
+          radial-gradient(ellipse at center, rgba(76, 144, 198, 0.045), rgba(28, 72, 108, 0.026) 42%, rgba(5, 6, 7, 0) 78%);
+        filter: blur(48px);
+      }
+
+      .logo-field::after {
+        width: 145%;
+        height: 210%;
+        background:
+          radial-gradient(ellipse at center, rgba(18, 58, 90, 0.035), rgba(5, 6, 7, 0) 74%);
+        filter: blur(76px);
+      }
+
+      .brand-link {
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .brand-logo {
+        position: relative;
         margin: 0;
-        max-width: 64ch;
-        color: rgba(221, 235, 244, 0.9);
-        font-size: 1rem;
+        font-family: var(--display-font);
+        font-size: clamp(1rem, 5.45vw, 7rem);
+        font-weight: 900;
+        letter-spacing: clamp(0.026em, 0.42vw, 0.068em);
+        font-stretch: expanded;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: transparent;
+        background:
+          linear-gradient(
+            180deg,
+            #d4ebf5 0%,
+            #b9d9e9 20%,
+            #9abfd3 46%,
+            #74a0bb 72%,
+            #4f789b 100%
+          );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.55px rgba(151, 208, 236, 0.5);
+        filter:
+          drop-shadow(0 0 1px rgba(194, 230, 247, 0.28))
+          drop-shadow(0 0 4px rgba(105, 178, 226, 0.18))
+          drop-shadow(0 0 11px rgba(45, 112, 174, 0.12));
+        text-shadow:
+          0 -1px 0 rgba(228, 246, 252, 0.12),
+          0 1px 0 rgba(24, 55, 82, 0.34),
+          0 0 3px rgba(110, 184, 226, 0.16);
       }
 
-      .panel {
+      .brand-logo::before {
+        position: absolute;
+        inset: 0;
+        content: attr(data-text);
+        pointer-events: none;
+      }
+
+      .brand-logo::before {
+        z-index: -1;
+        color: rgba(98, 176, 230, 0.08);
+        -webkit-text-fill-color: rgba(98, 176, 230, 0.08);
+        -webkit-text-stroke: 1px rgba(78, 158, 220, 0.06);
+        filter: blur(3px);
+        text-shadow:
+          0 0 8px rgba(96, 177, 230, 0.1),
+          0 0 22px rgba(52, 124, 188, 0.08);
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .lede {
         margin-top: 28px;
-        border: 1px solid var(--line);
-        padding: 16px;
-        background: #111;
+        margin-bottom: 24px;
+        color: rgba(221, 235, 244, 0.72);
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        width: min(100%, calc(100vw - 36px));
+        max-width: 48rem;
+        min-width: 0;
+        overflow-wrap: break-word;
+        text-wrap: balance;
+        text-shadow: 0 0 18px rgba(31, 82, 128, 0.5);
+      }
+
+      .lede-line {
+        display: inline;
+      }
+
+      .content {
+        margin: 0;
+        max-width: 48rem;
+        width: min(100%, calc(100vw - 36px));
+        text-align: left;
       }
 
       h2 {
-        margin: 0 0 8px;
-        font-size: 1.05rem;
-        color: var(--fg);
+        margin: 22px 0 8px;
+        color: rgba(239, 247, 252, 0.86);
+        letter-spacing: 0.05em;
+        font-size: 1.1rem;
+        text-transform: uppercase;
       }
 
       ul {
-        margin: 8px 0 0;
-        padding-left: 18px;
+        margin: 0;
+        padding-left: 20px;
       }
 
       li + li {
         margin-top: 8px;
-      }
-
-      footer {
-        margin-top: 28px;
-        color: var(--muted);
-        font-size: 0.92rem;
       }
 
       a {
@@ -111,34 +195,60 @@
 
       @media (max-width: 640px) {
         .page {
-          padding: 40px 18px;
+          padding: 36px 18px;
         }
 
-        .brand {
-          letter-spacing: 0.07em;
+        .logo-field {
+          margin-top: 0;
         }
 
-        h1 {
-          font-size: 1.95rem;
-          letter-spacing: 0.03em;
+        .brand-logo {
+          font-size: clamp(0.76rem, 3.7vw, 1.65rem);
+          letter-spacing: 0.006em;
+          -webkit-text-stroke: 0.35px rgba(151, 208, 236, 0.42);
+          filter:
+            drop-shadow(0 0 1px rgba(194, 230, 247, 0.18))
+            drop-shadow(0 0 4px rgba(105, 178, 226, 0.12))
+            drop-shadow(0 0 14px rgba(45, 112, 174, 0.075));
+          text-shadow:
+            0 1px 0 rgba(24, 55, 82, 0.24),
+            0 0 2px rgba(110, 184, 226, 0.1);
         }
 
-        .lead {
-          font-size: 0.98rem;
+        .brand-logo::before {
+          color: rgba(98, 176, 230, 0.045);
+          -webkit-text-fill-color: rgba(98, 176, 230, 0.045);
+          -webkit-text-stroke-color: rgba(78, 158, 220, 0.04);
+          filter: blur(2px);
+        }
+
+        .lede {
+          font-size: 1rem;
+        }
+
+        .content {
+          width: min(100%, calc(100vw - 28px));
+        }
+
+        .lede-line {
+          display: block;
         }
       }
     </style>
   </head>
   <body>
     <main class="page">
-      <p class="brand">Mares Engineering</p>
-      <h1>VICA</h1>
-      <p class="lead">
+      <div class="logo-field">
+        <a class="brand-link" href="../index.html" aria-label="Mares Engineering homepage">
+          <h1 class="brand-logo" data-text="MARES ENGINEERING">MARES ENGINEERING</h1>
+        </a>
+      </div>
+      <p class="lede">
         VICA is a restrained, safety-first race-awareness layer for VR sim racing.
         It is designed to surface only the information needed to maintain focus.
       </p>
 
-      <section class="panel">
+      <div class="content">
         <h2>What to expect</h2>
         <ul>
           <li>Minimal visual load for low cognitive overhead.</li>
@@ -146,20 +256,14 @@
           <li>Conservative defaults and explicit stop paths.</li>
           <li>Static public page while intake and releases remain alpha-stage.</li>
         </ul>
-      </section>
 
-      <section class="panel" style="margin-top: 16px;">
         <h2>Safety stance</h2>
         <ul>
           <li>VICA is driver support tooling, never a substitute for judgment.</li>
           <li>Use in controlled sessions first before any competitive use.</li>
           <li>Disable quickly if visibility or focus is impaired.</li>
         </ul>
-      </section>
-
-      <footer>
-        <p>Back to <a href="../index.html">Mares Engineering</a> or <a href="../minimai/index.html">Minimai</a>.</p>
-      </footer>
+      </div>
     </main>
   </body>
 </html>
