@@ -51,43 +51,14 @@
       }
 
       .brand-link {
-        position: relative;
-        isolation: isolate;
-        display: inline-grid;
-        place-items: center;
-        width: min(100%, 1540px);
-        margin-bottom: 14px;
         color: inherit;
         text-decoration: none;
-      }
-
-      .brand-link::before,
-      .brand-link::after {
-        position: absolute;
-        z-index: -2;
-        content: "";
-        pointer-events: none;
-      }
-
-      .brand-link::before {
-        width: 128%;
-        height: 150%;
-        background:
-          radial-gradient(ellipse at center, rgba(76, 144, 198, 0.045), rgba(28, 72, 108, 0.026) 42%, rgba(5, 6, 7, 0) 78%);
-        filter: blur(48px);
-      }
-
-      .brand-link::after {
-        width: 145%;
-        height: 210%;
-        background:
-          radial-gradient(ellipse at center, rgba(18, 58, 90, 0.035), rgba(5, 6, 7, 0) 74%);
-        filter: blur(76px);
+        display: inline-block;
       }
 
       .brand {
         position: relative;
-        margin: 0;
+        margin: 0 0 14px;
         font-family: var(--display-font);
         font-size: 0.72rem;
         font-weight: 900;
@@ -125,6 +96,9 @@
         inset: 0;
         content: attr(data-text);
         pointer-events: none;
+      }
+
+      .brand::before {
         z-index: -1;
         color: rgba(98, 176, 230, 0.08);
         -webkit-text-fill-color: rgba(98, 176, 230, 0.08);
