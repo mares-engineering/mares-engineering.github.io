@@ -32,7 +32,7 @@ Task: Fix homepage font fallback to a self-hosted Eurostyle-like display family.
 - `git diff --check`
 
 ## Commit
-- SHA: TBD (not yet committed)
+- SHA: 1e4b67b
 
 ## Residual risks
 - Actual Eurostyle/Eurostile Extended Black rendering depends on adding a legally licensed `assets/fonts/eurostile-extended-black.woff2` file; fallback stack uses widely available geometric sans-heavy faces.

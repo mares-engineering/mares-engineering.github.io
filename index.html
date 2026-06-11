@@ -10,6 +10,7 @@
         --fg: #efefef;
         --muted: #b4b4b4;
         --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
+        --body-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
       }
 
       @font-face {
@@ -29,9 +30,9 @@
         background: var(--bg);
         color: var(--fg);
         min-height: 100vh;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-weight: 900;
-        letter-spacing: 0.01em;
+        font-family: var(--body-font);
+        font-weight: 400;
+        letter-spacing: 0;
       }
 
       .page {
@@ -69,12 +70,8 @@
       a {
         color: var(--fg);
         text-decoration: none;
-        font-family: var(--display-font);
         border-bottom: 1px solid var(--fg);
         padding-bottom: 2px;
-        font-weight: 900;
-        letter-spacing: 0.02em;
-        font-stretch: expanded;
       }
     </style>
   </head>
