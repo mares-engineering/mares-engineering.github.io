@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VICA — VR Race Awareness</title>
+    <style>
+      :root {
+        --bg: #090909;
+        --fg: #efefef;
+        --muted: #a9a9a9;
+        --line: #2a2a2a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--fg);
+        background: var(--bg);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      .page {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 56px 24px;
+      }
+
+      .brand {
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+      }
+
+      .lead {
+        margin: 0;
+        max-width: 64ch;
+      }
+
+      .panel {
+        margin-top: 28px;
+        border: 1px solid var(--line);
+        padding: 16px;
+        background: #111;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      footer {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      a {
+        color: var(--fg);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <p class="brand">Mares Engineering</p>
+      <h1>VICA</h1>
+      <p class="lead">
+        VICA is a restrained, safety-first race-awareness layer for VR sim racing.
+        It is designed to surface only the information needed to maintain focus.
+      </p>
+
+      <section class="panel">
+        <h2>What to expect</h2>
+        <ul>
+          <li>Minimal visual load for low cognitive overhead.</li>
+          <li>Clear race-critical cues in predictable positions.</li>
+          <li>Conservative defaults and explicit stop paths.</li>
+          <li>Static public page while intake and releases remain alpha-stage.</li>
+        </ul>
+      </section>
+
+      <section class="panel" style="margin-top: 16px;">
+        <h2>Safety stance</h2>
+        <ul>
+          <li>VICA is driver support tooling, never a substitute for judgment.</li>
+          <li>Use in controlled sessions first before any competitive use.</li>
+          <li>Disable quickly if visibility or focus is impaired.</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>Back to <a href="../index.html">Mares Engineering</a> or <a href="../minimai/index.html">Minimai</a>.</p>
+      </footer>
+    </main>
+  </body>
+</html>

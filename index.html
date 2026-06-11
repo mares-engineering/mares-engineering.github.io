@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VICA — VR Race Awareness for Focused Drivers</title>
+    <title>Mares Engineering</title>
     <style>
       :root {
         --bg: #090909;
         --fg: #efefef;
-        --muted: #a9a9a9;
-        --accent: #f5f5f5;
+        --muted: #b4b4b4;
       }
 
       * {
@@ -18,144 +17,61 @@
 
       body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        color: var(--fg);
         background: var(--bg);
+        color: var(--fg);
+        min-height: 100vh;
+        font-family: 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Eurostile Extended', Impact, sans-serif;
+        font-weight: 900;
+        font-stretch: expanded;
+        letter-spacing: 0.01em;
       }
 
       .page {
         max-width: 720px;
         margin: 0 auto;
         padding: 56px 24px;
-        line-height: 1.6;
+        line-height: 1.55;
       }
 
       h1 {
         margin: 0 0 12px;
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
-        letter-spacing: 0.01em;
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
       }
 
-      .brand {
-        display: inline-block;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 0.72rem;
-        color: var(--muted);
-        margin-bottom: 16px;
-      }
-
-      .lead {
+      p {
         margin: 0;
-        font-size: 1.15rem;
       }
 
-      .position {
-        margin: 28px 0;
-        border-left: 2px solid var(--accent);
-        padding-left: 14px;
+      .lede {
+        margin-bottom: 26px;
+        color: var(--muted);
+        font-size: 1.05rem;
       }
 
-      .actions {
+      .links {
         display: flex;
+        gap: 14px;
         flex-wrap: wrap;
-        gap: 12px;
-        margin: 26px 0 18px;
       }
 
-      .button {
-        display: inline-block;
-        text-decoration: none;
-        padding: 10px 16px;
-        border: 1px solid var(--fg);
-        color: var(--bg);
-        background: var(--fg);
-        font-weight: 700;
-      }
-
-      .ghost {
-        background: transparent;
+      a {
         color: var(--fg);
-      }
-
-      .section {
-        margin-top: 32px;
-      }
-
-      .note {
-        color: var(--muted);
-        margin-top: 0;
-      }
-
-      .panel {
-        padding: 14px;
-        border: 1px solid #333;
-        background: #111;
-      }
-
-      ul {
-        padding-left: 18px;
-      }
-
-      li + li {
-        margin-top: 8px;
-      }
-
-      footer {
-        margin-top: 42px;
-        color: var(--muted);
-        font-size: 0.92rem;
+        text-decoration: none;
+        border-bottom: 1px solid var(--fg);
+        padding-bottom: 2px;
       }
     </style>
   </head>
   <body>
     <main class="page">
-      <p class="brand">Mares Engineering / VICA</p>
-      <h1>VICA: focused race awareness for serious VR sim racers.</h1>
-      <p class="lead">
-        VICA is a lightweight race-awareness instrument designed to keep critical context visible without adding visual noise.
+      <h1>Mares Engineering</h1>
+      <p class="lede">
+        We build restrained interfaces for race-critical information.
       </p>
-
-      <p class="position">
-        Right race-critical data, in the right place, at the right time.
-      </p>
-
-      <div class="actions">
-        <a class="button" href="#waitlist">Request private alpha interest</a>
-        <a class="button ghost" href="#safety">View safety and install posture</a>
+      <div class="links">
+        <a href="vica/index.html">VICA</a>
+        <a href="minimai/index.html">Minimai</a>
       </div>
-
-      <p class="note">No login, analytics, or payment flow is required for this page.</p>
-
-      <section id="waitlist" class="section">
-        <h2>Private alpha interest (placeholder)</h2>
-        <div class="panel">
-          <p class="note">
-            Waitlist intake is not yet wired. If you want to be considered for private alpha, this page uses a static placeholder request path:
-          </p>
-          <ul>
-            <li>Track your interest in project discussions.</li>
-            <li>Share headset, simulator, and goals when intake is enabled.</li>
-            <li>A simple manual intake form will replace this placeholder in a follow-up pass.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="safety" class="section">
-        <h2>Install and safety note</h2>
-        <div class="panel">
-          <ul>
-            <li>VICA is designed as a driver-assistance aid, not a replacement for judgment.</li>
-            <li>Validate behavior first in controlled sessions before any race event use.</li>
-            <li>Keep a direct stop/exit path available for immediate disable or quick disable.</li>
-            <li>Use conservative visual settings and disable VICA if you lose focus.</li>
-          </ul>
-        </div>
-      </section>
-
-      <footer>
-        <p>Related project page: <a href="minimai/index.html">Minimai</a></p>
-      </footer>
     </main>
   </body>
 </html>

@@ -30,7 +30,7 @@ Task: P0 landing page first pass (static), VICA public site landing.
 11. `git status --short`
 
 ## Commit
-- SHA: 4da6b6e
+- SHA: f8224eb
 
 ## Residual risks
 - Current CTA remains placeholder text with no live waitlist intake backend, per scope.
