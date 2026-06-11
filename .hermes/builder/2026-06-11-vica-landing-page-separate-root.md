@@ -32,7 +32,7 @@ Task: Separate VICA landing page from Mares Engineering root page
 - `git diff --check`
 
 ## Commit
-- SHA: b976f4c
+- SHA: 65653a3
 
 ## Residual risks
 - Root copy and VICA copy are intentionally minimal and conservative; may require expanded content in future passes.
