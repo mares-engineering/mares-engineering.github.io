@@ -6,261 +6,86 @@
     <title>VICA — VR Race Awareness</title>
     <style>
       :root {
-        --bg: #050607;
+        --bg: #090909;
         --fg: #efefef;
-        --muted: #b4b4b4;
+        --muted: #a9a9a9;
         --line: #2a2a2a;
-        --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
-        --body-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
-      }
-
-      @font-face {
-        font-family: 'Mares Display';
-        src: url('../assets/fonts/eurostile-extended-black.woff2') format('woff2');
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap;
       }
 
       * {
         box-sizing: border-box;
       }
 
-      html {
-        overflow-x: hidden;
-        background: var(--bg);
-      }
-
       body {
         margin: 0;
-        background:
-          radial-gradient(ellipse 92% 32% at 50% 53%, rgba(20, 48, 72, 0.075), rgba(12, 30, 48, 0.035) 45%, rgba(5, 6, 7, 0) 78%),
-          radial-gradient(ellipse 130% 92% at 50% 48%, #18191a 0%, #101112 46%, var(--bg) 100%);
         color: var(--fg);
-        min-height: 100vh;
-        font-family: var(--body-font);
-        font-weight: 400;
-        letter-spacing: 0;
-        overflow-x: hidden;
+        background: var(--bg);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
       }
 
       .page {
-        display: grid;
-        align-content: start;
-        justify-items: center;
-        min-height: 100vh;
-        width: min(100%, 1680px);
-        max-width: none;
+        max-width: 780px;
         margin: 0 auto;
-        padding: 24px 24px 48px;
-        gap: 18px;
-        line-height: 1.55;
-        text-align: center;
-        overflow-x: hidden;
+        padding: 56px 24px;
       }
 
-      .logo-field {
-        position: relative;
-        isolation: isolate;
-        display: inline-grid;
-        place-items: center;
-        width: max-content;
-        justify-self: center;
-        margin-top: 0;
-        margin-bottom: 4px;
-      }
-
-      .logo-field::before,
-      .logo-field::after {
-        position: absolute;
-        z-index: -2;
-        content: "";
-        pointer-events: none;
-      }
-
-      .logo-field::before {
-        width: 128%;
-        height: 150%;
-        background:
-          radial-gradient(ellipse at center, rgba(76, 144, 198, 0.045), rgba(28, 72, 108, 0.026) 42%, rgba(5, 6, 7, 0) 78%);
-        filter: blur(48px);
-      }
-
-      .logo-field::after {
-        width: 145%;
-        height: 210%;
-        background:
-          radial-gradient(ellipse at center, rgba(18, 58, 90, 0.035), rgba(5, 6, 7, 0) 74%);
-        filter: blur(76px);
-      }
-
-      .brand-link {
-        display: inline-block;
-        text-decoration: none;
-      }
-
-      .brand-logo {
-        position: relative;
-        margin: 0;
-        font-family: var(--display-font);
-        font-size: clamp(0.82rem, 1.4vw, 1.2rem);
-        font-weight: 700;
-        letter-spacing: clamp(0.08em, 0.16vw, 0.13em);
-        font-stretch: normal;
-        line-height: 1;
+      .brand {
+        color: var(--muted);
         text-transform: uppercase;
-        white-space: nowrap;
-        color: transparent;
-        background:
-          linear-gradient(
-            180deg,
-            #d4ebf5 0%,
-            #b9d9e9 20%,
-            #9abfd3 46%,
-            #74a0bb 72%,
-            #4f789b 100%
-          );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 0.34px rgba(151, 208, 236, 0.42);
-        filter:
-          drop-shadow(0 0 1px rgba(194, 230, 247, 0.22))
-          drop-shadow(0 0 3px rgba(105, 178, 226, 0.14))
-          drop-shadow(0 0 8px rgba(45, 112, 174, 0.1));
-        text-shadow:
-          0 -1px 0 rgba(228, 246, 252, 0.1),
-          0 1px 0 rgba(24, 55, 82, 0.26),
-          0 0 3px rgba(110, 184, 226, 0.14);
+        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+        margin-bottom: 14px;
       }
 
-      .brand-logo::before {
-        position: absolute;
-        inset: 0;
-        content: attr(data-text);
-        pointer-events: none;
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
       }
 
-      .brand-logo::before {
-        z-index: -1;
-        color: rgba(98, 176, 230, 0.08);
-        -webkit-text-fill-color: rgba(98, 176, 230, 0.08);
-        -webkit-text-stroke: 1px rgba(78, 158, 220, 0.06);
-        filter: blur(3px);
-        text-shadow:
-          0 0 8px rgba(96, 177, 230, 0.1),
-          0 0 22px rgba(52, 124, 188, 0.08);
-      }
-
-      p {
+      .lead {
         margin: 0;
+        max-width: 64ch;
       }
 
-      .lede {
+      .panel {
         margin-top: 28px;
-        margin-bottom: 24px;
-        color: rgba(221, 235, 244, 0.72);
-        font-size: clamp(1rem, 1.5vw, 1.2rem);
-        width: min(100%, calc(100vw - 36px));
-        max-width: 48rem;
-        min-width: 0;
-        overflow-wrap: break-word;
-        text-wrap: balance;
-        text-shadow: 0 0 18px rgba(31, 82, 128, 0.5);
-      }
-
-      .lede-line {
-        display: inline;
-      }
-
-      .content {
-        margin: 0;
-        max-width: 48rem;
-        width: min(100%, calc(100vw - 36px));
-        text-align: left;
-      }
-
-      h2 {
-        margin: 22px 0 8px;
-        color: rgba(239, 247, 252, 0.86);
-        letter-spacing: 0.05em;
-        font-size: 1.1rem;
-        text-transform: uppercase;
+        border: 1px solid var(--line);
+        padding: 16px;
+        background: #111;
       }
 
       ul {
-        margin: 0;
-        padding-left: 20px;
+        margin: 8px 0 0;
+        padding-left: 18px;
       }
 
       li + li {
         margin-top: 8px;
       }
 
-      a {
-        color: rgba(239, 247, 252, 0.86);
-        text-decoration: none;
-        border-bottom: 1px solid rgba(173, 220, 248, 0.72);
-        padding-bottom: 2px;
+      footer {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 0.92rem;
       }
 
-      @media (max-width: 640px) {
-        .page {
-          padding: 24px 18px 40px;
-        }
-
-        .logo-field {
-          margin-top: 0;
-          margin-bottom: 0;
-        }
-
-        .brand-logo {
-          font-size: clamp(0.74rem, 2.1vw, 1rem);
-          letter-spacing: 0.065em;
-          -webkit-text-stroke: 0.3px rgba(151, 208, 236, 0.38);
-          filter:
-            drop-shadow(0 0 1px rgba(194, 230, 247, 0.16))
-            drop-shadow(0 0 2px rgba(105, 178, 226, 0.1))
-            drop-shadow(0 0 10px rgba(45, 112, 174, 0.065));
-          text-shadow:
-            0 1px 0 rgba(24, 55, 82, 0.2),
-            0 0 2px rgba(110, 184, 226, 0.09);
-        }
-
-        .brand-logo::before {
-          color: rgba(98, 176, 230, 0.038);
-          -webkit-text-fill-color: rgba(98, 176, 230, 0.038);
-          -webkit-text-stroke-color: rgba(78, 158, 220, 0.035);
-          filter: blur(1.5px);
-        }
-
-        .lede {
-          font-size: 1rem;
-        }
-
-        .content {
-          width: min(100%, calc(100vw - 28px));
-        }
-
-        .lede-line {
-          display: block;
-        }
+      a {
+        color: var(--fg);
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <main class="page">
-      <div class="logo-field">
-        <a class="brand-link" href="../index.html" aria-label="Mares Engineering homepage">
-          <h1 class="brand-logo" data-text="MARES ENGINEERING">MARES ENGINEERING</h1>
-        </a>
-      </div>
-      <p class="lede">
+      <p class="brand">Mares Engineering</p>
+      <h1>VICA</h1>
+      <p class="lead">
         VICA is a restrained, safety-first race-awareness layer for VR sim racing.
         It is designed to surface only the information needed to maintain focus.
       </p>
 
-      <div class="content">
+      <section class="panel">
         <h2>What to expect</h2>
         <ul>
           <li>Minimal visual load for low cognitive overhead.</li>
@@ -268,14 +93,20 @@
           <li>Conservative defaults and explicit stop paths.</li>
           <li>Static public page while intake and releases remain alpha-stage.</li>
         </ul>
+      </section>
 
+      <section class="panel" style="margin-top: 16px;">
         <h2>Safety stance</h2>
         <ul>
           <li>VICA is driver support tooling, never a substitute for judgment.</li>
           <li>Use in controlled sessions first before any competitive use.</li>
           <li>Disable quickly if visibility or focus is impaired.</li>
         </ul>
-      </div>
+      </section>
+
+      <footer>
+        <p>Back to <a href="../index.html">Mares Engineering</a> or <a href="../minimai/index.html">Minimai</a>.</p>
+      </footer>
     </main>
   </body>
 </html>
