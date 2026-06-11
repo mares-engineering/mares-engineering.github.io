@@ -6,26 +6,45 @@
     <title>VICA — VR Race Awareness</title>
     <style>
       :root {
-        --bg: #090909;
+        --bg: #050607;
         --fg: #efefef;
         --muted: #a9a9a9;
         --line: #2a2a2a;
+        --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
+        --body-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
+      }
+
+      @font-face {
+        font-family: 'Mares Display';
+        src: url('../assets/fonts/eurostile-extended-black.woff2') format('woff2');
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        overflow-x: hidden;
+        background: var(--bg);
+      }
+
       body {
         margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(ellipse 92% 32% at 50% 53%, rgba(20, 48, 72, 0.075), rgba(12, 30, 48, 0.035) 45%, rgba(5, 6, 7, 0) 78%),
+          radial-gradient(ellipse 130% 92% at 50% 48%, #18191a 0%, #101112 46%, var(--bg) 100%);
         color: var(--fg);
-        background: var(--bg);
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
+        font-family: var(--body-font);
+        line-height: 1.55;
+        overflow-x: hidden;
       }
 
       .page {
-        max-width: 780px;
+        width: min(100%, 860px);
         margin: 0 auto;
         padding: 56px 24px;
       }
@@ -35,17 +54,24 @@
         text-transform: uppercase;
         letter-spacing: 0.12em;
         font-size: 0.72rem;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
       }
 
       h1 {
-        margin: 0 0 12px;
-        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        margin: 0 0 10px;
+        font-family: var(--display-font);
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        line-height: 1.1;
+        text-transform: uppercase;
       }
 
       .lead {
         margin: 0;
         max-width: 64ch;
+        color: rgba(221, 235, 244, 0.9);
+        font-size: 1rem;
       }
 
       .panel {
@@ -53,6 +79,12 @@
         border: 1px solid var(--line);
         padding: 16px;
         background: #111;
+      }
+
+      h2 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+        color: var(--fg);
       }
 
       ul {
@@ -71,8 +103,29 @@
       }
 
       a {
-        color: var(--fg);
+        color: rgba(239, 247, 252, 0.86);
         text-decoration: none;
+        border-bottom: 1px solid rgba(173, 220, 248, 0.72);
+        padding-bottom: 2px;
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding: 40px 18px;
+        }
+
+        .brand {
+          letter-spacing: 0.07em;
+        }
+
+        h1 {
+          font-size: 1.95rem;
+          letter-spacing: 0.03em;
+        }
+
+        .lead {
+          font-size: 0.98rem;
+        }
       }
     </style>
   </head>
