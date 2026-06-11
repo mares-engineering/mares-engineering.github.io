@@ -34,7 +34,7 @@ Task: Package the Eurostyle/Eurostile display font as webfont so visitors do not
 - `git status --short`
 
 ## Commit
-- SHA: f069d15
+- SHA: 76cc6cb
 
 ## Residual risks
 - The font file was generated from `EurostileExtendedBlackOBS-repaired.ttf`; ensure this source is the licensed artifact you want to distribute.
