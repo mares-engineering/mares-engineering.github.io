@@ -12,6 +12,7 @@
   --red: #f05d55;
   --blue: #77d7ff;
   --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
+  --logo-font: 'Trajan Pro 3', 'Trajan Pro', Cinzel, Constantia, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
   --body-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
   --ui-font: Arial, Helvetica, sans-serif;
 }
@@ -203,21 +204,39 @@ p {
 }
 
 h1 {
-  margin-bottom: 16px;
+  margin-bottom: 0;
+  font-family: var(--logo-font);
   font-size: clamp(4rem, 12vw, 9.5rem);
+  font-weight: 700;
   line-height: 0.86;
-  letter-spacing: 0;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 26px;
 }
 
 .brand-expansion {
-  margin: -4px 0 22px;
-  color: rgba(117, 245, 141, 0.92);
-  font-family: var(--ui-font);
-  font-size: clamp(0.86rem, 1.8vw, 1.08rem);
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  line-height: 1.2;
+  margin: 13px 0 26px;
+  color: rgba(239, 255, 244, 0.94);
+  font-family: var(--logo-font);
+  font-size: clamp(1.05rem, 2.4vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 0 14px rgba(117, 245, 141, 0.14);
   text-transform: uppercase;
+}
+
+.brand-lockup .brand-expansion {
+  align-self: stretch;
+  margin-bottom: 0;
 }
 
 h2 {
