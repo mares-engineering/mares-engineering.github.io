@@ -209,6 +209,17 @@ h1 {
   letter-spacing: 0;
 }
 
+.brand-expansion {
+  margin: -4px 0 22px;
+  color: rgba(117, 245, 141, 0.92);
+  font-family: var(--ui-font);
+  font-size: clamp(0.86rem, 1.8vw, 1.08rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 h2 {
   margin-bottom: 14px;
   font-size: clamp(1.8rem, 4vw, 3rem);
@@ -226,7 +237,7 @@ h3 {
 .hero-lede,
 .section.narrow p,
 .split p,
-.manual-hero p {
+.manual-hero .hero-lede {
   color: rgba(236, 244, 239, 0.82);
   font-size: clamp(1.08rem, 2vw, 1.32rem);
   max-width: 62ch;
@@ -531,7 +542,7 @@ td:first-child,
   .hero-lede,
   .section.narrow p,
   .split p,
-  .manual-hero p {
+  .manual-hero .hero-lede {
     font-size: 1.05rem;
   }
 
