@@ -451,8 +451,16 @@ h3 {
 }
 
 .footer-made {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   margin-top: 10px;
   color: rgba(117, 245, 141, 0.86);
+}
+
+.footer-flag {
+  font-size: 1.05rem;
+  line-height: 1;
 }
 
 .footer-meta {
