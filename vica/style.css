@@ -223,14 +223,14 @@ h1 {
 
 .brand-expansion {
   margin: 13px 0 26px;
-  color: rgba(239, 255, 244, 0.94);
+  color: #f3fff5;
   font-family: var(--logo-font);
   font-size: clamp(1.05rem, 2.4vw, 1.55rem);
   font-weight: 700;
   letter-spacing: 0.22em;
   line-height: 1;
   text-align: center;
-  text-shadow: 0 0 14px rgba(117, 245, 141, 0.14);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
   text-transform: uppercase;
 }
 
