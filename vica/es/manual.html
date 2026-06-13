@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manual de VICA - Mares Engineering</title>
+    <meta
+      name="description"
+      content="Manual público de VICA para postura de seguridad de alfa privada, superficies, elementos de visualización, desactivación y resolución de problemas."
+    >
+    <link rel="alternate" hreflang="en" href="../manual.html">
+    <link rel="alternate" hreflang="es" href="manual.html">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="../../index.html" aria-label="Página principal de Mares Engineering">
+        <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Paginas de VICA">
+          <a href="index.html">Producto</a>
+          <a href="manual.html" aria-current="page">Manual</a>
+        </nav>
+        <nav class="language-switcher" aria-label="Selector de idioma">
+          <a class="language-link" href="../manual.html" hreflang="en" lang="en">
+            <span class="flag" aria-hidden="true">🇪🇺</span>
+            <span>English</span>
+          </a>
+          <a class="language-link" href="manual.html" aria-current="true" hreflang="es" lang="es">
+            <span class="flag" aria-hidden="true">🇪🇸</span>
+            <span>Español</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="manual">
+      <section class="manual-hero">
+        <p class="eyebrow">Manual operativo de alfa privada</p>
+        <h1>Manual de VICA</h1>
+        <p class="hero-lede">
+          Usa VICA primero en sesiones controladas. Si una señal obstruye la
+          visión, parece antigua, distrae o afecta al rendimiento del simulador,
+          desactiva VICA antes de continuar.
+        </p>
+      </section>
+
+      <section class="section safety-panel">
+        <h2>Comprobaciones inmediatas de seguridad</h2>
+        <ul class="check-list">
+          <li>Conoce la ruta de desactivación antes de conducir con cualquier elemento OpenXR.</li>
+          <li>Valida los cambios en sesiones solo, test, replay o IA antes de uso competitivo.</li>
+          <li>No trates VICA como control de carrera, aprobación oficial ni sustituto del criterio del piloto.</li>
+          <li>Oculta o desactiva VICA si perjudica la visibilidad, el frame timing o la atención.</li>
+        </ul>
+      </section>
+
+      <section class="section manual-grid">
+        <article>
+          <h2>Superficies</h2>
+          <p>
+            VICA es primero VR. El visor OpenXR es la superficie primaria de
+            alfa privada, mientras que monitor/HUD y OBS/navegador usan los
+            mismos elementos semánticos.
+          </p>
+        </article>
+        <article>
+          <h2>Comportamiento de datos</h2>
+          <p>
+            Los elementos consumen estado canónico de VICA. Datos ausentes,
+            antiguos, inválidos o de baja confianza deben ocultar la señal en
+            vez de presentar una suposición.
+          </p>
+        </article>
+        <article>
+          <h2>Modo carrera</h2>
+          <p>
+            La vista frontal permanece escasa. Torres completas, mapas densos,
+            gráficas amplias de telemetría y decoración HUD no pertenecen al
+            modo de carrera del piloto.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Elementos actuales de alfa privada</p>
+          <h2>Lo que puede ver el piloto</h2>
+        </div>
+        <div class="manual-list">
+          <article>
+            <h3>Viento</h3>
+            <p>
+              Un segmento radial verde muestra hacia donde sopla el viento
+              respecto al coche. Viento frontal apunta abajo, viento de cola
+              apunta arriba, viento desde la derecha apunta a la izquierda y
+              viento desde la izquierda apunta a la derecha.
+            </p>
+          </article>
+          <article>
+            <h3>Incidentes</h3>
+            <p>
+              Una lectura compacta <code>xN</code> puede mostrar el recuento de
+              incidentes cuando está habilitada y es válida. Se oculta si la
+              fuente falta, está antigua, es inválida, tiene baja confianza o el
+              renderizador no puede mostrarla con seguridad.
+            </p>
+          </article>
+          <article>
+            <h3>Velocidad mínima de curva</h3>
+            <p>
+              Un pequeño entero encuadrado en la parte superior izquierda puede
+              mostrar la velocidad mínima guardada del último evento de frenada
+              significativo. Está orientado a práctica y clasificación.
+            </p>
+          </article>
+          <article>
+            <h3>Relativo</h3>
+            <p>
+              Relativo es experimental. Presenta coches cercanos como
+              diferencias temporales, no como posición lateral en pista. Coches
+              delante aparecen sobre el centro; coches detrás aparecen debajo.
+            </p>
+          </article>
+          <article>
+            <h3>Relativo curvo</h3>
+            <p>
+              Relativo curvo es un modo de layout experimental del elemento
+              Relativo. No es una función pública separada y no aprueba el uso
+              normal ni oficial en carrera.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Elementos proyectados y worktrees</p>
+          <h2>En desarrollo o solo futuro</h2>
+        </div>
+        <div class="manual-table-wrap">
+          <table class="manual-table">
+            <thead>
+              <tr>
+                <th>Elemento</th>
+                <th>Propósito</th>
+                <th>Estado publicable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Caution</td>
+                <td>Avisa de amarilla/caution o evidencia conservadora de coche lento delante.</td>
+                <td>MVP canónico/debug y OBS/navegador en un worktree; HMD futuro.</td>
+              </tr>
+              <tr>
+                <td>Slowdown</td>
+                <td>Muestra penalización slowdown activa y tiempo restante.</td>
+                <td>MVP OpenXR opcional en un worktree; los nombres exactos del SDK en vivo necesitan confirmación.</td>
+              </tr>
+              <tr>
+                <td>Timings</td>
+                <td>Muestra referencias compactas de última vuelta y mejor vuelta.</td>
+                <td>MVP OpenXR opcional en un worktree; orientado a práctica/clasificación.</td>
+              </tr>
+              <tr>
+                <td>Car Settings</td>
+                <td>Muestra ajustes vivos del coche, como brake bias y diferencial.</td>
+                <td>MVP opcional para Mercedes W13 en un worktree; otros coches requieren adaptadores verificados.</td>
+              </tr>
+              <tr>
+                <td>Race Picture</td>
+                <td>Muestra contexto de vuelta completa con salida/meta, curvas y números de coche.</td>
+                <td>MVP canónico/debug/OBS en un worktree; HMD solo futuro.</td>
+              </tr>
+              <tr>
+                <td>Tinted Visor</td>
+                <td>Oscurece escenas de VR muy brillantes como ayuda explícita de confort.</td>
+                <td>MVP OpenXR opcional en un worktree; desactivado por defecto y con desactivación fácil requerida.</td>
+              </tr>
+              <tr>
+                <td>Speed Memory Pair</td>
+                <td>Memoria futura de dos valores: mínimo de curva y máximo de recta.</td>
+                <td>Concepto diferido. El comportamiento actual es solo velocidad mínima de curva.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="section-kicker">Desactivar y recuperar</p>
+          <h2>Fallar abierto antes de adivinar.</h2>
+          <p>
+            Los paquetes de alfa privada deben mantener visibles las rutas de
+            desactivación. Los builds desde código fuente tratan
+            <code>VICA_DISABLE=1</code> como bypass fuerte siempre que sea
+            posible.
+          </p>
+        </div>
+        <ol class="number-list">
+          <li>Sal de la sesión o deja de conducir si la visibilidad o el rendimiento se ven afectados.</li>
+          <li>Desactiva VICA para el siguiente lanzamiento, o usa <code>VICA_DISABLE=1</code> en el entorno.</li>
+          <li>Detén cualquier servicio de telemetría de VICA o vista local OBS/navegador usada para pruebas.</li>
+          <li>Reinicia iRacing y el runtime OpenXR activo tras cambiar el estado de la capa.</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Resolución de problemas</p>
+          <h2>Primeras comprobaciones comunes</h2>
+        </div>
+        <div class="manual-list compact">
+          <article>
+            <h3>VICA no aparece</h3>
+            <p>
+              Confirma que el elemento está habilitado, que la telemetría está
+              viva o alimentada por replay, y que la sesión tiene las variables
+              requeridas. Datos ausentes deben ocultar la señal.
+            </p>
+          </article>
+          <article>
+            <h3>Una señal desaparece</h3>
+            <p>
+              Trátalo como comportamiento fail-open esperado cuando los datos
+              están antiguos, tienen baja confianza, no están disponibles o el
+              renderizador no está listo.
+            </p>
+          </article>
+          <article>
+            <h3>El frame timing empeora</h3>
+            <p>
+              Desactiva VICA, repite la misma sesión sin VICA y compara. No
+              sigas conduciendo con una capa gráfica que sospeches que causa
+              stutter repetible.
+            </p>
+          </article>
+          <article>
+            <h3>La salida OBS esta en blanco</h3>
+            <p>
+              Confirma que la fuente local de navegador apunta al endpoint
+              localhost previsto y que <code>/state.json</code> está fresco.
+              Las vistas OBS pueden mostrar mas contexto que el visor del piloto.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-links">
+        <a href="../../index.html">Mares Engineering</a>
+        <span aria-hidden="true">/</span>
+        <a href="index.html">Producto VICA</a>
+      </p>
+      <p class="footer-made">Made in the European Union. Hecho en la Unión Europea.</p>
+      <p class="footer-meta">&copy; 2026 Mares Engineering. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
