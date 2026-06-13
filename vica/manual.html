@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VICA Manual - Mares Engineering</title>
+    <meta
+      name="description"
+      content="Public VICA manual for private-alpha safety posture, surfaces, display elements, disable guidance, and troubleshooting."
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="../index.html" aria-label="Mares Engineering homepage">
+        <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
+      </a>
+      <nav class="nav-links" aria-label="VICA pages">
+        <a href="index.html">Product</a>
+        <a href="manual.html" aria-current="page">Manual</a>
+      </nav>
+    </header>
+
+    <main class="manual">
+      <section class="manual-hero">
+        <p class="eyebrow">Private-alpha operating manual</p>
+        <h1>VICA Manual</h1>
+        <p class="hero-lede">
+          Use VICA first in controlled sessions. If any cue obstructs vision,
+          feels stale, causes distraction, or appears to affect simulator
+          performance, disable VICA before continuing.
+        </p>
+      </section>
+
+      <section class="section safety-panel">
+        <h2>Immediate Safety Checks</h2>
+        <ul class="check-list">
+          <li>Know the disable path before driving with any OpenXR display element.</li>
+          <li>Validate changes in solo, test, replay, or AI sessions before competitive use.</li>
+          <li>Do not treat VICA as race control, official approval, or a substitute for driver judgment.</li>
+          <li>Hide or disable VICA if visibility, frame timing, or attention is impaired.</li>
+        </ul>
+      </section>
+
+      <section class="section manual-grid">
+        <article>
+          <h2>Surfaces</h2>
+          <p>
+            VICA is VR-first. The OpenXR visor is the primary private-alpha
+            surface, while monitor/HUD and OBS/browser output are shaped around
+            the same semantic display elements.
+          </p>
+        </article>
+        <article>
+          <h2>Data Behavior</h2>
+          <p>
+            Display elements consume canonical VICA state. Missing, stale,
+            invalid, or low-confidence data should hide the cue instead of
+            presenting a guess.
+          </p>
+        </article>
+        <article>
+          <h2>Race Mode</h2>
+          <p>
+            The forward view stays sparse. Full standings towers, dense maps,
+            broad telemetry graphs, and decorative HUD elements do not belong
+            in driver race mode.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Current private-alpha elements</p>
+          <h2>What the driver may see</h2>
+        </div>
+        <div class="manual-list">
+          <article>
+            <h3>Wind</h3>
+            <p>
+              A green radial segment shows where the wind is blowing relative
+              to the car. Headwind points down, tailwind points up, wind from
+              the right points left, and wind from the left points right. The
+              segment starts away from the exact center to preserve the braking
+              and apex view.
+            </p>
+          </article>
+          <article>
+            <h3>Incidents</h3>
+            <p>
+              A compact <code>xN</code> readout can show the current incident
+              count when enabled and valid. It hides when the selected source
+              is missing, stale, invalid, low-confidence, or when the renderer
+              cannot show it safely.
+            </p>
+          </article>
+          <article>
+            <h3>Minimum corner speed</h3>
+            <p>
+              A small top-left boxed integer can show the latched minimum speed
+              from the most recent meaningful slowing event. It is practice and
+              qualifying oriented; race visibility remains a conservative
+              product decision.
+            </p>
+          </article>
+          <article>
+            <h3>Relative</h3>
+            <p>
+              Relative is experimental. It presents nearby cars as temporal
+              gaps, not lateral track position. Cars ahead appear above center;
+              cars behind appear below center. Position-sensitive stale data
+              hides instead of holding an old marker.
+            </p>
+          </article>
+          <article>
+            <h3>Curved Relative</h3>
+            <p>
+              Curved Relative is an experimental layout mode for the Relative
+              element. It is not a separate release feature and does not approve
+              normal or official-race Relative use.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Projected and worktree elements</p>
+          <h2>Under development or future-only</h2>
+        </div>
+        <div class="manual-table-wrap">
+          <table class="manual-table">
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Purpose</th>
+                <th>Public-safe status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Caution</td>
+                <td>Warns of yellow/caution or conservative slow-car-ahead evidence.</td>
+                <td>Canonical/debug and OBS/browser MVP in a worktree; HMD rendering future.</td>
+              </tr>
+              <tr>
+                <td>Slowdown</td>
+                <td>Shows active slowdown penalty amount and time remaining.</td>
+                <td>Opt-in OpenXR MVP in a worktree; live SDK variable names still need confirmation.</td>
+              </tr>
+              <tr>
+                <td>Timings</td>
+                <td>Shows compact last-lap and best-lap references.</td>
+                <td>Opt-in OpenXR MVP in a worktree; practice/qualifying oriented.</td>
+              </tr>
+              <tr>
+                <td>Car Settings</td>
+                <td>Shows live in-car settings such as brake bias and differential state.</td>
+                <td>Mercedes W13 opt-in MVP in a worktree; other cars require verified adapters.</td>
+              </tr>
+              <tr>
+                <td>Race Picture</td>
+                <td>Shows whole-lap context with start/finish, turns, and car numbers.</td>
+                <td>Canonical/debug/OBS MVP in a worktree; HMD rendering future only.</td>
+              </tr>
+              <tr>
+                <td>Tinted Visor</td>
+                <td>Darkens very bright VR scenes as an explicit comfort aid.</td>
+                <td>Opt-in OpenXR MVP in a worktree; disabled by default and easy disable required.</td>
+              </tr>
+              <tr>
+                <td>Speed Memory Pair</td>
+                <td>Future two-value memory for corner minimum and straight maximum speeds.</td>
+                <td>Deferred concept. Current behavior is minimum corner speed only.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="section-kicker">Disable and recovery</p>
+          <h2>Fail open before guessing.</h2>
+          <p>
+            Private-alpha packages should keep disable paths prominent. Source
+            builds currently treat <code>VICA_DISABLE=1</code> as the hard
+            bypass wherever possible. If you built from source, use the
+            build-provided disable or layer-status scripts for that build
+            before starting iRacing.
+          </p>
+        </div>
+        <ol class="number-list">
+          <li>Exit the session or stop driving if visibility or performance is affected.</li>
+          <li>Disable VICA for the next launch, or set <code>VICA_DISABLE=1</code> in the launch environment.</li>
+          <li>Stop any VICA telemetry service or local OBS/browser preview used for testing.</li>
+          <li>Restart iRacing and the active OpenXR runtime after changing layer state.</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Troubleshooting</p>
+          <h2>Common first checks</h2>
+        </div>
+        <div class="manual-list compact">
+          <article>
+            <h3>VICA does not appear</h3>
+            <p>
+              Confirm the element is explicitly enabled, telemetry is live or
+              replay-backed, and the current session has the required variables.
+              Missing data should hide the cue.
+            </p>
+          </article>
+          <article>
+            <h3>A cue disappears</h3>
+            <p>
+              Treat this as expected fail-open behavior when data is stale,
+              low-confidence, unavailable, over layer budget, or renderer
+              resources are not ready.
+            </p>
+          </article>
+          <article>
+            <h3>Frame timing feels worse</h3>
+            <p>
+              Disable VICA, repeat the same session without VICA, then compare.
+              Do not continue driving with a graphics-adjacent layer that you
+              suspect is causing repeatable stutter.
+            </p>
+          </article>
+          <article>
+            <h3>OBS output is blank</h3>
+            <p>
+              Confirm the local browser source is pointed at the intended
+              localhost endpoint and that <code>/state.json</code> is fresh.
+              OBS views may intentionally show richer context than the driver
+              visor.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href="../index.html">Mares Engineering</a>
+        <span aria-hidden="true">/</span>
+        <a href="index.html">VICA product</a>
+      </p>
+    </footer>
+  </body>
+</html>

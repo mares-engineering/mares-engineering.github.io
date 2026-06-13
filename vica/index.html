@@ -3,181 +3,161 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VICA — VR Race Awareness</title>
-    <style>
-      :root {
-        --bg: #050607;
-        --fg: #efefef;
-        --muted: #b4b4b4;
-        --line: #2a2a2a;
-        --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
-        --body-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
-      }
-
-      @font-face {
-        font-family: 'Mares Display';
-        src: url('../assets/fonts/eurostile-extended-black.woff2') format('woff2');
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        overflow-x: hidden;
-        background: var(--bg);
-      }
-
-      body {
-        margin: 0;
-        background:
-          radial-gradient(ellipse 92% 32% at 50% 53%, rgba(20, 48, 72, 0.075), rgba(12, 30, 48, 0.035) 45%, rgba(5, 6, 7, 0) 78%),
-          radial-gradient(ellipse 130% 92% at 50% 48%, #18191a 0%, #101112 46%, var(--bg) 100%);
-        color: var(--fg);
-        min-height: 100vh;
-        font-family: var(--body-font);
-        line-height: 1.6;
-        letter-spacing: 0;
-        overflow-x: hidden;
-      }
-
-      .page {
-        max-width: 780px;
-        margin: 0 auto;
-        padding: 56px 24px;
-      }
-
-      .brand-link {
-        color: inherit;
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      .brand {
-        position: relative;
-        margin: 0 0 14px;
-        font-family: var(--display-font);
-        font-size: 0.72rem;
-        font-weight: 900;
-        letter-spacing: 0.12em;
-        font-stretch: expanded;
-        line-height: 1;
-        text-transform: uppercase;
-        white-space: nowrap;
-        color: transparent;
-        background:
-          linear-gradient(
-            180deg,
-            #beddea 0%,
-            #a9cada 26%,
-            #88b0c5 58%,
-            #5f86a5 100%
-          );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 0.0048em rgba(151, 208, 236, 0.38);
-        filter:
-          drop-shadow(0 0 0.012em rgba(194, 230, 247, 0.2))
-          drop-shadow(0 0 0.05em rgba(105, 178, 226, 0.13))
-          drop-shadow(0 0 0.15em rgba(45, 112, 174, 0.09));
-        text-shadow:
-          0 0.006em 0 rgba(24, 55, 82, 0.22),
-          0 0 0.035em rgba(110, 184, 226, 0.12);
-      }
-
-      .brand::before {
-        position: absolute;
-        inset: 0;
-        content: attr(data-text);
-        pointer-events: none;
-      }
-
-      .brand::before {
-        z-index: -1;
-        color: rgba(98, 176, 230, 0.08);
-        -webkit-text-fill-color: rgba(98, 176, 230, 0.08);
-        -webkit-text-stroke: 0.007em rgba(78, 158, 220, 0.045);
-        filter: blur(0.055em);
-        text-shadow:
-          0 0 0.16em rgba(96, 177, 230, 0.08),
-          0 0 0.52em rgba(52, 124, 188, 0.055);
-      }
-
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(1.8rem, 4vw, 2.4rem);
-      }
-
-      .lead {
-        margin: 0;
-        max-width: 64ch;
-      }
-
-      .panel {
-        margin-top: 28px;
-        border: 1px solid var(--line);
-        padding: 16px;
-        background: #111;
-      }
-
-      ul {
-        margin: 8px 0 0;
-        padding-left: 18px;
-      }
-
-      li + li {
-        margin-top: 8px;
-      }
-
-      footer {
-        margin-top: 28px;
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      a {
-        color: var(--fg);
-        text-decoration: none;
-      }
-    </style>
+    <title>VICA - VR Race Awareness</title>
+    <meta
+      name="description"
+      content="VICA is a VR-native race-awareness instrument from Mares Engineering, built to show sparse, trusted driver cues with clear safety controls."
+    >
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main class="page">
+    <header class="site-header">
       <a class="brand-link" href="../index.html" aria-label="Mares Engineering homepage">
         <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
       </a>
-      <h1>VICA</h1>
-      <p class="lead">
-        VICA is a restrained, safety-first race-awareness layer for VR sim racing.
-        It is designed to surface only the information needed to maintain focus.
-      </p>
+      <nav class="nav-links" aria-label="VICA pages">
+        <a href="index.html" aria-current="page">Product</a>
+        <a href="manual.html">Manual</a>
+      </nav>
+    </header>
 
-      <section class="panel">
-        <h2>What to expect</h2>
-        <ul>
-          <li>Minimal visual load for low cognitive overhead.</li>
-          <li>Clear race-critical cues in predictable positions.</li>
-          <li>Conservative defaults and explicit stop paths.</li>
-          <li>Static public page while intake and releases remain alpha-stage.</li>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Private-alpha race-awareness instrument</p>
+          <h1>VICA</h1>
+          <p class="hero-lede">
+            VICA is a VR-native driver information layer for serious sim racers
+            who need race-critical context without turning the forward view into
+            a dashboard.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="manual.html">Read the manual</a>
+            <a class="button button-secondary" href="#alpha-interest">Alpha interest</a>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img
+            src="assets/vica-visor-preview.png"
+            alt="Conceptual VICA visor preview with sparse green race-awareness cues over a racing circuit"
+          >
+          <figcaption>
+            Conceptual display preview. Public docs describe current private-alpha behavior and planned surfaces conservatively.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section narrow">
+        <p class="section-kicker">Product thesis</p>
+        <h2>The right cue, in the right place, at the right time.</h2>
+        <p>
+          VICA is not an overlay pack. It is a small race-awareness instrument:
+          display elements are allowed only when they support a real driver
+          decision, can hide cleanly when stale, and keep the driver focused on
+          the racing line.
+        </p>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="section-kicker">Surfaces</p>
+          <h2>VR first, not VR only.</h2>
+          <p>
+            The visor is the flagship surface. The same underlying state model
+            is also shaped for monitor/HUD and OBS/browser output so VICA can
+            keep one meaning across driver and viewer contexts.
+          </p>
+        </div>
+        <div class="surface-list">
+          <article>
+            <h3>OpenXR visor</h3>
+            <p>Opt-in HMD cues for private-alpha VR validation.</p>
+          </article>
+          <article>
+            <h3>Monitor HUD</h3>
+            <p>Planned driver-facing flat-screen surface using the same display logic.</p>
+          </article>
+          <article>
+            <h3>OBS/browser</h3>
+            <p>Local browser-source output for stream scenes, review, and safe support checks.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Display elements</p>
+          <h2>Built around driver decisions.</h2>
+        </div>
+        <div class="element-grid">
+          <article>
+            <h3>Wind</h3>
+            <p>
+              A sparse radial segment shows wind direction and strength relative
+              to the car while keeping the center of the view clean.
+            </p>
+          </article>
+          <article>
+            <h3>Incidents</h3>
+            <p>
+              A compact incident counter helps the driver judge risk without
+              opening a full timing or black-box panel.
+            </p>
+          </article>
+          <article>
+            <h3>Minimum corner speed</h3>
+            <p>
+              A small latched speed memory readout supports practice and
+              qualifying review without encouraging eyes-down checks.
+            </p>
+          </article>
+          <article>
+            <h3>Relative</h3>
+            <p>
+              Experimental temporal nearby-car context is under validation, with
+              stale car positions hidden rather than held.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split trust-band">
+        <div>
+          <p class="section-kicker">Trust posture</p>
+          <h2>Safe failure is part of the product.</h2>
+          <p>
+            VICA display elements should disappear before they mislead. Missing,
+            stale, invalid, or low-confidence data hides the cue instead of
+            guessing. The user must always be able to disable the layer quickly.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>OpenXR behavior is opt-in during private-alpha validation.</li>
+          <li>Driver-facing renderers consume canonical VICA state, not raw telemetry.</li>
+          <li>No cloud dependency is required for race HUD behavior.</li>
+          <li>No production checkout, account, or licensing flow is present on this site.</li>
         </ul>
       </section>
 
-      <section class="panel" style="margin-top: 16px;">
-        <h2>Safety stance</h2>
-        <ul>
-          <li>VICA is driver support tooling, never a substitute for judgment.</li>
-          <li>Use in controlled sessions first before any competitive use.</li>
-          <li>Disable quickly if visibility or focus is impaired.</li>
-        </ul>
+      <section id="alpha-interest" class="section narrow alpha-note">
+        <p class="section-kicker">Alpha interest</p>
+        <h2>Private intake is intentionally manual.</h2>
+        <p>
+          VICA is not presented here as a public download or race-approved
+          product. Public alpha intake will be added only after the static
+          trust, compatibility, install, and disable documentation has been
+          reviewed.
+        </p>
+        <a class="inline-link" href="manual.html">Review the current manual</a>
       </section>
-
-      <footer>
-        <p>Back to <a href="../index.html">Mares Engineering</a> or <a href="../minimai/index.html">Minimai</a>.</p>
-      </footer>
     </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href="../index.html">Mares Engineering</a>
+        <span aria-hidden="true">/</span>
+        <a href="manual.html">VICA manual</a>
+      </p>
+    </footer>
   </body>
 </html>
