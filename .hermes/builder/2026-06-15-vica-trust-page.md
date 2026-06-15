@@ -14,7 +14,7 @@ Implement the next website roadmap item: static trust/privacy/install-safety pag
 - `vica/manual.html` (updated)
 
 ## Commit
-- Commit: `e67eb41`
+- Commit: `8a0cc48`
 - Message: `Add VICA trust and install-safety page`
 
 ## Commands run
