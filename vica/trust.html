@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VICA Trust, Privacy, Install Safety</title>
+    <meta
+      name="description"
+      content="Public trust, privacy, and install-safety guidance for VICA private-alpha usage."
+    >
+    <link rel="alternate" hreflang="en" href="trust.html">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="../index.html" aria-label="Mares Engineering homepage">
+        <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="VICA pages">
+          <a href="index.html">Product</a>
+          <a href="manual.html">Manual</a>
+          <a href="trust.html" aria-current="page">Trust</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="manual">
+      <section class="manual-hero">
+        <p class="eyebrow">Private-alpha trust and install safety</p>
+        <div class="brand-lockup">
+          <h1 aria-label="VICA Trust and Safety">Trust, Privacy, Install Safety</h1>
+          <p class="brand-expansion">No hype. No surprises.</p>
+        </div>
+        <p class="hero-lede">
+          VICA is a private-alpha, install-sensitive race-awareness instrument. This
+          page explains what can be expected today and where control should come from:
+          explicit enabling, explicit disable, explicit support boundaries.
+        </p>
+      </section>
+
+      <section class="section safety-panel">
+        <div class="section-heading">
+          <p class="section-kicker">Install posture</p>
+          <h2>Controlled delivery, controlled expectations</h2>
+          <p>
+            VICA does not have a public installer in this phase. Alpha access and
+            packaging are controlled and documented conservatively so users can verify
+            what is run on their machine.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>Install behavior is private-alpha testing only, not a public product launch.</li>
+          <li>No payment flow, account system, or licensing portal is linked from this site.</li>
+          <li>Do not assume broad simulator support; public pages only describe currently documented behavior.</li>
+          <li>Keep only one validated test path active per machine while evaluating.</li>
+        </ul>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="section-kicker">Disable and uninstall expectations</p>
+          <h2>Fail-open behavior should be easy to reach.</h2>
+          <p>
+            The driver should always be able to stop or hide the display path quickly.
+            If any cue affects vision, attention, or performance, stop and disable
+            before continuing.
+          </p>
+        </div>
+        <ol class="number-list">
+          <li>Use the documented disable path before driving if VICA is not needed.</li>
+          <li>For immediate pauses, exit driving and disable VICA for the next launch.</li>
+          <li>Remove or disable startup hooks that inject VICA into a simulator session.</li>
+          <li>Delete or archive local package folders only after stopping associated
+          runtime layers and services.</li>
+        </ol>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="section-kicker">Data boundaries</p>
+          <h2>Privacy is local-first by default.</h2>
+          <p>
+            VICA public guidance does not claim cloud-first operation. The HUD behavior
+            is designed so race-facing output can function without external account
+            infrastructure.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>Current public docs do not describe server-side storage of session data.</li>
+          <li>Any logs or temporary files are only generated if you explicitly run tooling that enables them.</li>
+          <li>Do not share private session traces beyond private alpha support needs.</li>
+          <li>There are no public statements of certification, official approval, or zero-risk operation.</li>
+        </ul>
+      </section>
+
+      <section class="section split trust-band">
+        <div>
+          <p class="section-kicker">Trust posture</p>
+          <h2>Reliability through restraint.</h2>
+          <p>
+            Missing, stale, invalid, or low-confidence inputs should be treated as
+            an absence of confidence. VICA should avoid guessing in those cases.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>Display content should degrade to a safe baseline rather than invent values.</li>
+          <li>Critical actions remain under user control, not hidden automation.</li>
+          <li>Validation is expected in solo, test, or controlled sessions first.</li>
+          <li>Trust is earned through conservative behavior, clear controls, and explicit scope.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <p class="section-kicker">Where to go next</p>
+        <h2>Support and troubleshooting first steps</h2>
+        <p>
+          For immediate usage checks, use the troubleshooting guidance in the manual.
+          Dedicated alpha support intake pages are being prepared; until then, use
+          the alpha-path channels described on the VICA product page.
+        </p>
+        <div class="hero-actions" aria-label="Support paths">
+          <a class="button button-primary" href="manual.html#troubleshooting">Manual troubleshooting</a>
+          <a class="button button-secondary" href="index.html#alpha-interest">Alpha support channels</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-links">
+        <a href="../index.html">Mares Engineering</a>
+        <span aria-hidden="true">/</span>
+        <a href="index.html">VICA product</a>
+        <span aria-hidden="true">/</span>
+        <a href="manual.html">VICA manual</a>
+      </p>
+      <p class="footer-made">Made in the European Union. <span class="footer-flag" aria-hidden="true">🇪🇺</span></p>
+      <p class="footer-meta">&copy; 2026 Mares Engineering. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
