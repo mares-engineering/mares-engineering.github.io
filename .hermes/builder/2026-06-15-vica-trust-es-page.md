@@ -2,7 +2,8 @@
 
 - Date: 2026-06-15
 - Branch: master
-- Commit: a9554b89498ba9e22aa560a24ce7782bc9e32125
+- Implementation commit: f1d38ebbcef620765556714c582d820fcd0582f4
+- Report correction commit: verify with `git log --oneline --decorate -n 1`
 
 ## Summary
 Added the missing Spanish VICA trust page and wired trust/navigation links across the Spanish and English public pages.
@@ -38,7 +39,9 @@ Added the missing Spanish VICA trust page and wired trust/navigation links acros
 - `git status --short` reported only intended files before commit.
 - `git diff --check` reported no whitespace issues.
 - Build/tests were not necessary for static HTML content changes.
-- Post-commit `git status --short` is clean and HEAD is at `2173cf57ed358d46a277d0909db4f0804a60dbed`.
+- Post-implementation `git status --short` was clean.
+- The builder report was corrected afterward to avoid stale self-referential
+  commit hashes; verify the final report-correction commit with `git log`.
 
 ## Residual risks
 - New Spanish trust content should be reviewed for localization tone consistency with future style pass.
@@ -46,4 +49,4 @@ Added the missing Spanish VICA trust page and wired trust/navigation links acros
 - Existing CRLF conversion warnings may appear on checkout in some editors; behavior is non-functional but should be reviewed if strict line ending policy is enforced.
 
 ## Recommended next task
-- Add a short Spanish/English support intake reference from `vica/es/trust.html` once the dedicated support intake page is ready, replacing the current placeholder phrase. 
+- Add a short Spanish/English support intake reference from `vica/es/trust.html` once the dedicated support intake page is ready, replacing the current placeholder phrase.
