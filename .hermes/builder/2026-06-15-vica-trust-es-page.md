@@ -16,6 +16,7 @@ Added the missing Spanish VICA trust page and wired trust/navigation links acros
   - Added full public-safe Spanish page equivalent to the English trust page.
   - Includes conservative messaging and explicit statements that there is no public installer, private-alpha-only distribution, and no official approval/certification claims.
   - Added language switcher and `alternate` tags.
+  - Received a post-review Spanish wording polish for clarity.
 - `vica/es/index.html`
   - Added `Confianza` nav entry linking to `trust.html`.
   - Added “Confianza y seguridad” action button to main hero actions.
