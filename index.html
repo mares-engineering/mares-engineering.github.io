@@ -63,7 +63,6 @@
         display: inline-grid;
         place-items: center;
         width: min(100%, 1680px);
-        margin-top: 5vh;
       }
 
       .logo-field::before,
@@ -141,48 +140,9 @@
           0 0 0.52em rgba(52, 124, 188, 0.055);
       }
 
-      p {
-        margin: 0;
-      }
-
-      .lede {
-        margin-top: 28px;
-        margin-bottom: 24px;
-        color: rgba(221, 235, 244, 0.72);
-        font-size: clamp(1rem, 1.5vw, 1.2rem);
-        width: min(100%, calc(100vw - 36px));
-        max-width: 48rem;
-        min-width: 0;
-        overflow-wrap: break-word;
-        text-wrap: balance;
-        text-shadow: 0 0 18px rgba(31, 82, 128, 0.5);
-      }
-
-      .lede-line {
-        display: inline;
-      }
-
-      .links {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      a {
-        color: rgba(239, 247, 252, 0.86);
-        text-decoration: none;
-        border-bottom: 1px solid rgba(173, 220, 248, 0.72);
-        padding-bottom: 2px;
-      }
-
       @media (max-width: 640px) {
         .page {
           padding: 36px 18px;
-        }
-
-        .logo-field {
-          margin-top: 0;
         }
 
         .brand-logo {
@@ -196,13 +156,6 @@
           -webkit-text-stroke-color: rgba(78, 158, 220, 0.04);
         }
 
-        .lede {
-          font-size: 1rem;
-        }
-
-        .lede-line {
-          display: block;
-        }
       }
     </style>
   </head>
@@ -210,13 +163,6 @@
     <main class="page">
       <div class="logo-field">
         <h1 class="brand-logo" data-text="MARES ENGINEERING">MARES ENGINEERING</h1>
-      </div>
-      <p class="lede">
-        Reduce noise, focus on what matters.
-      </p>
-      <div class="links">
-        <a href="vica/index.html">VICA</a>
-        <a href="minimai/index.html">Minimai</a>
       </div>
     </main>
   </body>
