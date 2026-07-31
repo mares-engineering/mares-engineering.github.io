@@ -1,152 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VICA Trust, Privacy, Install Safety</title>
     <meta
       name="description"
-      content="Public trust, privacy, and install-safety guidance for VICA private-alpha usage."
+      content="VICA private-alpha trust, privacy, install-safety, and product-boundary guidance."
     >
+    <title>VICA Trust and Safety — Mares Engineering</title>
     <link rel="alternate" hreflang="en" href="trust.html">
     <link rel="alternate" hreflang="es" href="es/trust.html">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
-      <a class="brand-link" href="../index.html" aria-label="Mares Engineering homepage">
+      <a class="brand-link" href="../" aria-label="Mares Engineering homepage">
         <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
       </a>
       <div class="header-actions">
         <nav class="nav-links" aria-label="VICA pages">
-          <a href="index.html">Product</a>
+          <a href="../#work">Projects</a>
+          <a href="./">Product</a>
           <a href="manual.html">Manual</a>
           <a href="trust.html" aria-current="page">Trust</a>
         </nav>
-        <nav class="language-switcher" aria-label="Language selector">
-          <a class="language-link" href="trust.html" aria-current="true" hreflang="en" lang="en">
-            <span class="flag" aria-hidden="true">🇪🇺</span>
-            <span>English</span>
-          </a>
-          <a class="language-link" href="es/trust.html" hreflang="es" lang="es">
-            <span class="flag" aria-hidden="true">🇪🇸</span>
-            <span>Español</span>
-          </a>
+        <nav class="language-switcher" aria-label="Language">
+          <a class="language-link" href="trust.html" aria-current="true" hreflang="en" lang="en">EN</a>
+          <a class="language-link" href="es/trust.html" hreflang="es" lang="es">ES</a>
         </nav>
       </div>
     </header>
 
-    <main class="manual">
+    <main id="content" class="manual">
       <section class="manual-hero">
-        <p class="eyebrow">Private-alpha trust and install safety</p>
-        <div class="brand-lockup">
-          <h1 aria-label="VICA Trust and Safety">Trust, Privacy, Install Safety</h1>
-          <p class="brand-expansion">No hype. No surprises.</p>
-        </div>
+        <p class="eyebrow">Trust, privacy, install safety</p>
+        <h1>Explicit scope. Explicit control.</h1>
         <p class="hero-lede">
-          VICA is a private-alpha, install-sensitive race-awareness instrument. This
-          page explains what can be expected today and where control should come from:
-          explicit enabling, explicit disable, explicit support boundaries.
+          VICA is a private-alpha OpenXR display tool. Trust begins with narrow claims,
+          visible limits, and a disable path the driver understands before use.
         </p>
       </section>
 
-      <section class="section safety-panel">
-        <div class="section-heading">
-          <p class="section-kicker">Install posture</p>
-          <h2>Controlled delivery, controlled expectations</h2>
-          <p>
-            VICA does not have a public installer in this phase. Alpha access and
-            packaging are controlled and documented conservatively so users can verify
-            what is run on their machine.
+      <section class="section safety-panel" aria-labelledby="install-posture">
+        <p class="section-kicker">Install posture</p>
+        <h2 id="install-posture">No public installer, account, or checkout.</h2>
+        <p class="section-lede">
+          Alpha packages and instructions are controlled so each tester knows what is
+          being run. This website does not collect registrations or provide a production
+          download, account, payment, or licensing flow.
+        </p>
+      </section>
+
+      <section class="section split" aria-labelledby="user-control">
+        <div>
+          <p class="section-kicker">User control</p>
+          <h2 id="user-control">Disable comes before diagnosis.</h2>
+          <p class="section-lede">
+            If a cue affects vision, attention, comfort, or performance, leave the
+            driving session and disable VICA before investigating further.
           </p>
         </div>
         <ul class="check-list">
-          <li>Install behavior is private-alpha testing only, not a public product launch.</li>
-          <li>No payment flow, account system, or licensing portal is linked from this site.</li>
-          <li>Do not assume broad simulator support; public pages only describe currently documented behavior.</li>
-          <li>Keep only one validated test path active per machine while evaluating.</li>
+          <li>OpenXR display elements are opt-in during private-alpha validation.</li>
+          <li>The supplied disable path should remain available at all times.</li>
+          <li>Changes should be tested in solo or otherwise controlled sessions first.</li>
+          <li>If VICA cannot present a cue reliably, it hides the cue without blocking the simulator.</li>
         </ul>
       </section>
 
-      <section class="section split">
-        <div>
-          <p class="section-kicker">Disable and uninstall expectations</p>
-          <h2>Fail-open behavior should be easy to reach.</h2>
-          <p>
-            The driver should always be able to stop or hide the display path quickly.
-            If any cue affects vision, attention, or performance, stop and disable
-            before continuing.
-          </p>
-        </div>
-        <ol class="number-list">
-          <li>Use the documented disable path before driving if VICA is not needed.</li>
-          <li>For immediate pauses, exit driving and disable VICA for the next launch.</li>
-          <li>Remove or disable startup hooks that inject VICA into a simulator session.</li>
-          <li>Delete or archive local package folders only after stopping associated
-          runtime layers and services.</li>
-        </ol>
-      </section>
-
-      <section class="section split">
+      <section class="section split" aria-labelledby="data-boundaries">
         <div>
           <p class="section-kicker">Data boundaries</p>
-          <h2>Privacy is local-first by default.</h2>
-          <p>
-            VICA public guidance does not claim cloud-first operation. The HUD behavior
-            is designed so race-facing output can function without external account
-            infrastructure.
+          <h2 id="data-boundaries">The in-race display is local-first.</h2>
+          <p class="section-lede">
+            The current in-race display does not require a cloud account. The OpenXR
+            layer writes a bounded local diagnostic log while active. Recordings and
+            preview files are produced only when a tester runs the corresponding tools.
           </p>
         </div>
         <ul class="check-list">
-          <li>Current public docs do not describe server-side storage of session data.</li>
-          <li>Any logs or temporary files are only generated if you explicitly run tooling that enables them.</li>
-          <li>Do not share private session traces beyond private alpha support needs.</li>
-          <li>There are no public statements of certification, official approval, or zero-risk operation.</li>
+          <li>This site does not receive simulator telemetry.</li>
+          <li>Do not share private session traces beyond the agreed alpha support path.</li>
+          <li>Local artifacts may contain session context; review them before sharing.</li>
+          <li>No zero-retention or comprehensive privacy guarantee is claimed.</li>
         </ul>
       </section>
 
-      <section class="section split trust-band">
+      <section class="section split trust-band" aria-labelledby="product-boundaries">
         <div>
-          <p class="section-kicker">Trust posture</p>
-          <h2>Reliability through restraint.</h2>
-          <p>
-            Missing, stale, invalid, or low-confidence inputs should be treated as
-            an absence of confidence. VICA should avoid guessing in those cases.
+          <p class="section-kicker">Product boundaries</p>
+          <h2 id="product-boundaries">A driver aid, not an authority.</h2>
+          <p class="section-lede">
+            VICA provides limited informational cues. It does not replace simulator
+            flags, spotters, race control, driver judgment, or the responsibility to
+            operate safely.
           </p>
         </div>
         <ul class="check-list">
-          <li>Display content should degrade to a safe baseline rather than invent values.</li>
-          <li>Critical actions remain under user control, not hidden automation.</li>
-          <li>Validation is expected in solo, test, or controlled sessions first.</li>
-          <li>Trust is earned through conservative behavior, clear controls, and explicit scope.</li>
+          <li>No official-race approval, certification, or sanction is claimed.</li>
+          <li>No broad simulator, headset, or runtime compatibility is claimed.</li>
+          <li>No guarantee of safety outcomes or absence of performance impact is made.</li>
+          <li>Private-alpha evidence does not make the product production-ready.</li>
         </ul>
       </section>
 
-      <section class="section">
-        <p class="section-kicker">Where to go next</p>
-        <h2>Support and troubleshooting first steps</h2>
-        <p>
-          For immediate usage checks, use the troubleshooting guidance in the manual.
-          Dedicated alpha support intake pages are being prepared; until then, use
-          the alpha-path channels described on the VICA product page.
+      <section class="section narrow" aria-labelledby="next-step">
+        <p class="section-kicker">Next step</p>
+        <h2 id="next-step">Read the disable path first.</h2>
+        <p class="section-lede">
+          The public manual explains the current safe baseline, display-element scope,
+          disable sequence, and first troubleshooting checks.
         </p>
-        <div class="hero-actions" aria-label="Support paths">
-          <a class="button button-primary" href="manual.html#troubleshooting">Manual troubleshooting</a>
-          <a class="button button-secondary" href="index.html#alpha-interest">Alpha support channels</a>
+        <div class="hero-actions">
+          <a class="button button-primary" href="manual.html#disable">Disable and recovery</a>
+          <a class="button" href="manual.html#troubleshooting">Troubleshooting</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p class="footer-links">
-        <a href="../index.html">Mares Engineering</a>
+        <a href="../">Mares Engineering</a>
         <span aria-hidden="true">/</span>
-        <a href="index.html">VICA product</a>
+        <a href="./">VICA</a>
         <span aria-hidden="true">/</span>
-        <a href="manual.html">VICA manual</a>
+        <a href="manual.html">Manual</a>
       </p>
       <p class="footer-made">Made in the European Union. <span class="footer-flag" aria-hidden="true">🇪🇺</span></p>
-      <p class="footer-meta">&copy; 2026 Mares Engineering. All rights reserved.</p>
+      <p class="footer-meta">&copy; 2026 Mares Engineering.</p>
     </footer>
   </body>
 </html>

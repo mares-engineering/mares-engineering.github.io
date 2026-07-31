@@ -1,254 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Manual de VICA - Mares Engineering</title>
     <meta
       name="description"
-      content="Manual público de VICA para postura de seguridad de alfa privada, superficies, elementos de visualización, desactivación y resolución de problemas."
+      content="Manual público, desactivación y resolución de problemas para la alfa privada de VICA."
     >
+    <title>Manual de VICA — Mares Engineering</title>
     <link rel="alternate" hreflang="en" href="../manual.html">
     <link rel="alternate" hreflang="es" href="manual.html">
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
+    <a class="skip-link" href="#content">Ir al contenido</a>
     <header class="site-header">
-      <a class="brand-link" href="../../index.html" aria-label="Página principal de Mares Engineering">
+      <a class="brand-link" href="../../" aria-label="Página principal de Mares Engineering">
         <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
       </a>
       <div class="header-actions">
-        <nav class="nav-links" aria-label="Paginas de VICA">
-          <a href="index.html">Producto</a>
+        <nav class="nav-links" aria-label="Páginas de VICA">
+          <a href="../../#work">Proyectos</a>
+          <a href="./">Producto</a>
           <a href="manual.html" aria-current="page">Manual</a>
-          <a href="trust.html">Confianza</a>
+          <a href="trust.html">Seguridad</a>
         </nav>
-        <nav class="language-switcher" aria-label="Selector de idioma">
-          <a class="language-link" href="../manual.html" hreflang="en" lang="en">
-            <span class="flag" aria-hidden="true">🇪🇺</span>
-            <span>English</span>
-          </a>
-          <a class="language-link" href="manual.html" aria-current="true" hreflang="es" lang="es">
-            <span class="flag" aria-hidden="true">🇪🇸</span>
-            <span>Español</span>
-          </a>
+        <nav class="language-switcher" aria-label="Idioma">
+          <a class="language-link" href="../manual.html" hreflang="en" lang="en">EN</a>
+          <a class="language-link" href="manual.html" aria-current="true" hreflang="es" lang="es">ES</a>
         </nav>
       </div>
     </header>
 
-    <main class="manual">
+    <main id="content" class="manual">
       <section class="manual-hero">
-        <p class="eyebrow">Manual operativo de alfa privada</p>
-        <div class="brand-lockup">
-          <h1 aria-label="Manual de VICA">VICA</h1>
-          <p class="brand-expansion">VISOR DE CARRERA</p>
-        </div>
+        <p class="eyebrow">Manual de alfa privada</p>
+        <h1>Usa menos. Aprende a desactivarlo.</h1>
         <p class="hero-lede">
-          Usa VICA primero en sesiones controladas. Si una señal obstruye la
-          visión, parece antigua, distrae o afecta al rendimiento del simulador,
-          desactiva VICA antes de continuar.
+          VICA es una herramienta de visualización OpenXR en alfa privada. Valídala en
+          una sesión controlada, activa solo los elementos que quieras probar y conoce
+          la forma de desactivarla antes de conducir.
         </p>
       </section>
 
-      <section class="section safety-panel">
-        <h2>Comprobaciones inmediatas de seguridad</h2>
+      <section class="section safety-panel" aria-labelledby="stop-first">
+        <p class="section-kicker">Primera respuesta</p>
+        <h2 id="stop-first">Si VICA afecta a la visibilidad, la atención o los tiempos de fotograma, deja de conducir.</h2>
+        <ol class="number-list">
+          <li>Vuelve a boxes o termina de forma segura la sesión de conducción activa.</li>
+          <li>Desactiva VICA antes del siguiente inicio del simulador.</li>
+          <li>Reinicia el simulador y el entorno OpenXR activo después de cambiar el estado de la capa.</li>
+          <li>Confirma en una sesión controlada que VICA no aparece antes de volver a conducir con normalidad.</li>
+        </ol>
+      </section>
+
+      <section class="section split" aria-labelledby="before-starting">
+        <div>
+          <p class="section-kicker">Antes de empezar</p>
+          <h2 id="before-starting">Acceso privado, alcance reducido.</h2>
+          <p class="section-lede">
+            No existe un instalador público. La ruta documentada de alfa privada está
+            dirigida a Windows, iRacing y un entorno OpenXR; esto no afirma una
+            compatibilidad amplia con simuladores o visores.
+          </p>
+        </div>
         <ul class="check-list">
-          <li>Conoce la ruta de desactivación antes de conducir con cualquier elemento OpenXR.</li>
-          <li>Valida los cambios en sesiones solo, test, replay o IA antes de uso competitivo.</li>
-          <li>No trates VICA como control de carrera, aprobación oficial ni sustituto del criterio del piloto.</li>
-          <li>Oculta o desactiva VICA si perjudica la visibilidad, el frame timing o la atención.</li>
+          <li>Usa solo el paquete y las instrucciones suministradas para tu prueba.</li>
+          <li>Empieza en una sesión individual, de prueba o controlada.</li>
+          <li>Cambia un solo elemento o ajuste de colocación cada vez.</li>
+          <li>Mantén accesible el control de desactivación suministrado.</li>
         </ul>
       </section>
 
-      <section class="section manual-grid">
-        <article>
-          <h2>Superficies</h2>
-          <p>
-            VICA es primero VR. El visor OpenXR es la superficie primaria de
-            alfa privada, mientras que monitor/HUD y OBS/navegador usan los
-            mismos elementos semánticos.
-          </p>
-        </article>
-        <article>
-          <h2>Comportamiento de datos</h2>
-          <p>
-            Los elementos consumen estado canónico de VICA. Datos ausentes,
-            antiguos, inválidos o de baja confianza deben ocultar la señal en
-            vez de presentar una suposición.
-          </p>
-        </article>
-        <article>
-          <h2>Modo carrera</h2>
-          <p>
-            La vista frontal permanece escasa. Torres completas, mapas densos,
-            gráficas amplias de telemetría y decoración HUD no pertenecen al
-            modo de carrera del piloto.
-          </p>
-        </article>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <p class="section-kicker">Elementos actuales de alfa privada</p>
-          <h2>Lo que puede ver el piloto</h2>
-        </div>
-        <div class="manual-list">
-          <article>
-            <h3>Viento</h3>
-            <p>
-              Un segmento radial verde muestra hacia donde sopla el viento
-              respecto al coche. Viento frontal apunta abajo, viento de cola
-              apunta arriba, viento desde la derecha apunta a la izquierda y
-              viento desde la izquierda apunta a la derecha.
-            </p>
-          </article>
-          <article>
-            <h3>Incidentes</h3>
-            <p>
-              Una lectura compacta <code>xN</code> puede mostrar el recuento de
-              incidentes cuando está habilitada y es válida. Se oculta si la
-              fuente falta, está antigua, es inválida, tiene baja confianza o el
-              renderizador no puede mostrarla con seguridad.
-            </p>
-          </article>
-          <article>
-            <h3>Velocidad mínima de curva</h3>
-            <p>
-              Un pequeño entero encuadrado en la parte superior izquierda puede
-              mostrar la velocidad mínima guardada del último evento de frenada
-              significativo. Está orientado a práctica y clasificación.
-            </p>
-          </article>
-          <article>
-            <h3>Relativo</h3>
-            <p>
-              Relativo es experimental. Presenta coches cercanos como
-              diferencias temporales, no como posición lateral en pista. Coches
-              delante aparecen sobre el centro; coches detrás aparecen debajo.
-            </p>
-          </article>
-          <article>
-            <h3>Relativo curvo</h3>
-            <p>
-              Relativo curvo es un modo de layout experimental del elemento
-              Relativo. No es una función pública separada y no aprueba el uso
-              normal ni oficial en carrera.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <p class="section-kicker">Elementos proyectados y worktrees</p>
-          <h2>En desarrollo o solo futuro</h2>
-        </div>
-        <div class="manual-table-wrap">
+      <section class="section" aria-labelledby="current-elements">
+        <p class="section-kicker">Elementos de visualización</p>
+        <h2 id="current-elements">Lo que muestra la página pública actual.</h2>
+        <div class="manual-table-wrap" tabindex="0" role="region" aria-label="Tabla de elementos de VICA">
           <table class="manual-table">
+            <caption>Elementos de alfa privada y uso previsto</caption>
             <thead>
               <tr>
-                <th>Elemento</th>
-                <th>Propósito</th>
-                <th>Estado publicable</th>
+                <th scope="col">Elemento</th>
+                <th scope="col">Propósito</th>
+                <th scope="col">Estado actual</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Caution</td>
-                <td>Avisa de amarilla/caution o evidencia conservadora de coche lento delante.</td>
-                <td>MVP canónico/debug y OBS/navegador en un worktree; HMD futuro.</td>
+                <td>Viento</td>
+                <td>Muestra la dirección respecto al coche; la longitud del segmento representa la magnitud.</td>
+                <td>Indicación implementada, en validación de alfa privada.</td>
               </tr>
               <tr>
-                <td>Slowdown</td>
-                <td>Muestra penalización slowdown activa y tiempo restante.</td>
-                <td>MVP OpenXR opcional en un worktree; los nombres exactos del SDK en vivo necesitan confirmación.</td>
+                <td>Incidentes</td>
+                <td>Muestra un contador compacto de incidentes de la sesión.</td>
+                <td>Elemento opcional de alfa privada.</td>
               </tr>
               <tr>
-                <td>Timings</td>
-                <td>Muestra referencias compactas de última vuelta y mejor vuelta.</td>
-                <td>MVP OpenXR opcional en un worktree; orientado a práctica/clasificación.</td>
+                <td>Velocidad mínima en curva</td>
+                <td>Recuerda el último mínimo significativo para práctica y clasificación.</td>
+                <td>Elemento opcional y dependiente del contexto.</td>
               </tr>
               <tr>
-                <td>Car Settings</td>
-                <td>Muestra ajustes vivos del coche, como brake bias y diferencial.</td>
-                <td>MVP opcional para Mercedes W13 en un worktree; otros coches requieren adaptadores verificados.</td>
-              </tr>
-              <tr>
-                <td>Race Picture</td>
-                <td>Muestra contexto de vuelta completa con salida/meta, curvas y números de coche.</td>
-                <td>MVP canónico/debug/OBS en un worktree; HMD solo futuro.</td>
-              </tr>
-              <tr>
-                <td>Tinted Visor</td>
-                <td>Oscurece escenas de VR muy brillantes como ayuda explícita de confort.</td>
-                <td>MVP OpenXR opcional en un worktree; desactivado por defecto y con desactivación fácil requerida.</td>
-              </tr>
-              <tr>
-                <td>Speed Memory Pair</td>
-                <td>Memoria futura de dos valores: mínimo de curva y máximo de recta.</td>
-                <td>Concepto diferido. El comportamiento actual es solo velocidad mínima de curva.</td>
+                <td>Relativo</td>
+                <td>Muestra contexto experimental de coches cercanos en una escala temporal.</td>
+                <td>Solo validación experimental; no es para uso público normal.</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <section class="section split">
+      <section class="section split" aria-labelledby="visibility-rules">
         <div>
-          <p class="section-kicker">Desactivar y recuperar</p>
-          <h2>Fallar abierto antes de adivinar.</h2>
-          <p>
-            Los paquetes de alfa privada deben mantener visibles las rutas de
-            desactivación. Los builds desde código fuente tratan
-            <code>VICA_DISABLE=1</code> como bypass fuerte siempre que sea
-            posible.
+          <p class="section-kicker">Visibilidad</p>
+          <h2 id="visibility-rules">La ausencia puede ser el comportamiento correcto.</h2>
+          <p class="section-lede">
+            Una indicación debe ocultarse cuando el estado requerido falta, está
+            desactualizado, no es válido o resulta demasiado incierto. VICA no debe
+            mantener un valor antiguo solo para llenar la pantalla.
           </p>
         </div>
-        <ol class="number-list">
-          <li>Sal de la sesión o deja de conducir si la visibilidad o el rendimiento se ven afectados.</li>
-          <li>Desactiva VICA para el siguiente lanzamiento, o usa <code>VICA_DISABLE=1</code> en el entorno.</li>
-          <li>Detén cualquier servicio de telemetría de VICA o vista local OBS/navegador usada para pruebas.</li>
-          <li>Reinicia iRacing y el runtime OpenXR activo tras cambiar el estado de la capa.</li>
-        </ol>
+        <ul class="check-list">
+          <li>No interpretes una indicación oculta como prueba de que la capa ha fallado.</li>
+          <li>No uses VICA como sustituto de las banderas del simulador o del control de carrera.</li>
+          <li>No aumentes la densidad solo porque quede espacio disponible.</li>
+          <li>Desactiva cualquier elemento que distraiga u oculte la vista de forma repetida.</li>
+        </ul>
       </section>
 
-      <section class="section" id="troubleshooting">
-        <div class="section-heading">
-          <p class="section-kicker">Resolución de problemas</p>
-          <h2>Primeras comprobaciones comunes</h2>
+      <section class="section" id="disable" aria-labelledby="disable-heading">
+        <p class="section-kicker">Desactivación y recuperación</p>
+        <h2 id="disable-heading">Vuelve a una configuración de referencia.</h2>
+        <div class="manual-grid">
+          <article>
+            <h3>Paquete alfa</h3>
+            <p>Usa el control de desactivación o estado de capa suministrado con el paquete exacto que recibiste.</p>
+          </article>
+          <article>
+            <h3>Compilación desde código</h3>
+            <p>Quienes compilen el código pueden usar <code>VICA_DISABLE=1</code> como mecanismo de desactivación completa donde esté documentado.</p>
+          </article>
+          <article>
+            <h3>Confirmación</h3>
+            <p>Reinicia el entorno correspondiente y comprueba en una sesión controlada que no aparece ninguna indicación.</p>
+          </article>
         </div>
+      </section>
+
+      <section class="section" id="troubleshooting" aria-labelledby="troubleshooting-heading">
+        <p class="section-kicker">Resolución de problemas</p>
+        <h2 id="troubleshooting-heading">Empieza por las comprobaciones más seguras.</h2>
         <div class="manual-list compact">
           <article>
-            <h3>VICA no aparece</h3>
-            <p>
-              Confirma que el elemento está habilitado, que la telemetría está
-              viva o alimentada por replay, y que la sesión tiene las variables
-              requeridas. Datos ausentes deben ocultar la señal.
-            </p>
+            <h3>No aparece la indicación</h3>
+            <p>Confirma que el elemento está activado y que su estado requerido está disponible. Si falta, debe ocultarse.</p>
           </article>
           <article>
-            <h3>Una señal desaparece</h3>
-            <p>
-              Trátalo como comportamiento fail-open esperado cuando los datos
-              están antiguos, tienen baja confianza, no están disponibles o el
-              renderizador no está listo.
-            </p>
+            <h3>La indicación desaparece</h3>
+            <p>Puede ser el comportamiento seguro esperado cuando los datos están desactualizados, ausentes o son inciertos.</p>
           </article>
           <article>
-            <h3>El frame timing empeora</h3>
-            <p>
-              Desactiva VICA, repite la misma sesión sin VICA y compara. No
-              sigas conduciendo con una capa gráfica que sospeches que causa
-              stutter repetible.
-            </p>
+            <h3>Empeoran los tiempos de fotograma</h3>
+            <p>Desactiva VICA y repite el mismo escenario controlado. No sigas conduciendo si los tirones se repiten.</p>
           </article>
           <article>
-            <h3>La salida OBS esta en blanco</h3>
-            <p>
-              Confirma que la fuente local de navegador apunta al endpoint
-              localhost previsto y que <code>/state.json</code> está fresco.
-              Las vistas OBS pueden mostrar mas contexto que el visor del piloto.
-            </p>
+            <h3>La colocación parece incorrecta</h3>
+            <p>Deja de conducir y vuelve a la base suministrada. No ajustes la colocación durante una carrera activa.</p>
           </article>
         </div>
       </section>
@@ -256,14 +174,14 @@
 
     <footer class="site-footer">
       <p class="footer-links">
-        <a href="../../index.html">Mares Engineering</a>
+        <a href="../../">Mares Engineering</a>
         <span aria-hidden="true">/</span>
-        <a href="index.html">Producto VICA</a>
+        <a href="./">VICA</a>
         <span aria-hidden="true">/</span>
-        <a href="trust.html">Confianza, privacidad, seguridad de instalación</a>
+        <a href="trust.html">Seguridad</a>
       </p>
       <p class="footer-made">Hecho en la Unión Europea. <span class="footer-flag" aria-hidden="true">🇪🇺</span></p>
-      <p class="footer-meta">&copy; 2026 Mares Engineering. Todos los derechos reservados.</p>
+      <p class="footer-meta">&copy; 2026 Mares Engineering.</p>
     </footer>
   </body>
 </html>

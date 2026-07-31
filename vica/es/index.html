@@ -1,189 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VICA - Conciencia de carrera en VR</title>
     <meta
       name="description"
-      content="VICA es un instrumento de conciencia de carrera nativo de VR de Mares Engineering, creado para mostrar señales de conducción escasas y fiables con controles de seguridad claros."
+      content="VICA es un instrumento de información situacional para carreras, diseñado para VR y para presentar un conjunto reducido de indicaciones útiles."
     >
-    <link rel="alternate" hreflang="en" href="../index.html">
-    <link rel="alternate" hreflang="es" href="index.html">
+    <title>VICA — Información situacional para carreras en VR</title>
+    <link rel="alternate" hreflang="en" href="../">
+    <link rel="alternate" hreflang="es" href="./">
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
+    <a class="skip-link" href="#content">Ir al contenido</a>
     <header class="site-header">
-      <a class="brand-link" href="../../index.html" aria-label="Página principal de Mares Engineering">
+      <a class="brand-link" href="../../" aria-label="Página principal de Mares Engineering">
         <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
       </a>
       <div class="header-actions">
-        <nav class="nav-links" aria-label="Paginas de VICA">
-          <a href="index.html" aria-current="page">Producto</a>
+        <nav class="nav-links" aria-label="Páginas de VICA">
+          <a href="../../#work">Proyectos</a>
+          <a href="./" aria-current="page">Producto</a>
           <a href="manual.html">Manual</a>
-          <a href="trust.html">Confianza</a>
+          <a href="trust.html">Seguridad</a>
         </nav>
-        <nav class="language-switcher" aria-label="Selector de idioma">
-          <a class="language-link" href="../index.html" hreflang="en" lang="en">
-            <span class="flag" aria-hidden="true">🇪🇺</span>
-            <span>English</span>
-          </a>
-          <a class="language-link" href="index.html" aria-current="true" hreflang="es" lang="es">
-            <span class="flag" aria-hidden="true">🇪🇸</span>
-            <span>Español</span>
-          </a>
+        <nav class="language-switcher" aria-label="Idioma">
+          <a class="language-link" href="../" hreflang="en" lang="en">EN</a>
+          <a class="language-link" href="./" aria-current="true" hreflang="es" lang="es">ES</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
+    <main id="content">
+      <section class="hero" aria-labelledby="vica-title">
         <div class="hero-copy">
-          <p class="eyebrow">Instrumento de conciencia de carrera en alfa privada</p>
+          <p class="eyebrow">Alfa privada · OpenXR</p>
           <div class="brand-lockup">
-            <h1>VICA</h1>
-            <p class="brand-expansion">VISOR DE CARRERA</p>
+            <h1 id="vica-title">VICA</h1>
+            <p class="brand-expansion">Visor de Carrera</p>
           </div>
           <p class="hero-lede">
-            VICA es una capa de información para pilotos de simulación en VR
-            que necesitan contexto crítico de carrera sin convertir la vista
-            frontal en un salpicadero.
+            Un instrumento de información situacional para carreras, diseñado para VR
+            y para presentar un conjunto reducido de indicaciones sin llenar la vista frontal.
           </p>
-          <div class="hero-actions" aria-label="Acciones principales">
+          <div class="hero-actions" aria-label="Documentación de VICA">
             <a class="button button-primary" href="manual.html">Leer el manual</a>
-            <a class="button button-secondary" href="trust.html">Confianza y seguridad</a>
-            <a class="button button-secondary" href="#alpha-interest">Interés en la alfa</a>
+            <a class="button" href="trust.html">Seguridad y privacidad</a>
           </div>
         </div>
-        <figure class="hero-visual">
-          <img
-            src="../assets/vica-visor-preview.png"
-            alt="Vista conceptual del visor de VICA con señales verdes escasas de conciencia de carrera sobre un circuito"
-          >
-          <figcaption>
-            Vista conceptual del display. La documentación pública describe con prudencia el comportamiento actual de alfa privada y las superficies planificadas.
+
+        <figure class="vica-gallery-wrap">
+          <div class="vica-gallery" aria-label="Cuatro vistas del renderizador de elementos de VICA">
+            <figure class="instrument-card instrument-wind">
+              <div class="instrument-stage">
+                <img src="../assets/display/wind.png" width="256" height="256" alt="Salida de VICA: un segmento radial verde que indica el viento">
+              </div>
+              <figcaption>Viento</figcaption>
+            </figure>
+            <figure class="instrument-card instrument-incidents">
+              <div class="instrument-stage">
+                <img src="../assets/display/incidents.png" width="160" height="64" alt="Salida de VICA: contador compacto de incidentes x5">
+              </div>
+              <figcaption>Incidentes</figcaption>
+            </figure>
+            <figure class="instrument-card instrument-speed">
+              <div class="instrument-stage">
+                <img src="../assets/display/minimum_corner_speed.png" width="160" height="64" alt="Salida de VICA: velocidad mínima en curva de 137">
+              </div>
+              <figcaption>Velocidad mínima en curva</figcaption>
+            </figure>
+            <figure class="instrument-card instrument-relative">
+              <div class="instrument-stage">
+                <img src="../assets/display/relative_vertical.png" width="256" height="512" alt="Salida de VICA: marcadores de coches cercanos en una escala vertical relativa">
+              </div>
+              <figcaption>Relativo · experimental</figcaption>
+            </figure>
+          </div>
+          <figcaption class="capture-note">
+            Vista del renderizador offline de VICA con un estado representativo. No es una captura de una sesión en directo ni de la colocación en VR.
           </figcaption>
         </figure>
       </section>
 
-      <section class="section narrow">
+      <section class="section narrow" aria-labelledby="vica-thesis">
         <p class="section-kicker">Tesis de producto</p>
-        <h2>La señal adecuada, en el lugar adecuado, en el momento adecuado.</h2>
-        <p>
-          VICA no es un paquete de overlays. Es un instrumento pequeño de
-          conciencia de carrera: los elementos de visualizacion solo aparecen
-          cuando ayudan a una decisión real del piloto, pueden ocultarse con
-          seguridad cuando los datos envejecen y mantienen la atencion en la
-          trazada.
+        <h2 id="vica-thesis">Solo la indicación que ayuda a decidir.</h2>
+        <p class="section-lede">
+          VICA no es un panel de datos. Cada elemento tiene un propósito, una regla de
+          visibilidad y un comportamiento ante datos desactualizados. Si faltan datos,
+          están desactualizados o son inciertos, la indicación se oculta.
         </p>
       </section>
 
-      <section class="section split">
-        <div>
-          <p class="section-kicker">Superficies</p>
-          <h2>VR primero, no solo VR.</h2>
-          <p>
-            El visor es la superficie principal. El mismo modelo de estado se
-            prepara también para HUD de monitor y salida OBS/navegador, de modo
-            que VICA mantenga un significado coherente para piloto y espectador.
-          </p>
-        </div>
-        <div class="surface-list">
-          <article>
-            <h3>Visor OpenXR</h3>
-            <p>Señales HMD opcionales para validación de VR en alfa privada.</p>
-          </article>
-          <article>
-            <h3>HUD de monitor</h3>
-            <p>Superficie plana prevista para el piloto usando la misma lógica de visualización.</p>
-          </article>
-          <article>
-            <h3>OBS/navegador</h3>
-            <p>Salida local de fuente de navegador para escenas de streaming, revisión y soporte seguro.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <p class="section-kicker">Elementos de visualización</p>
-          <h2>Diseñados en torno a decisiones del piloto.</h2>
-        </div>
+      <section class="section" aria-labelledby="elements-heading">
+        <p class="section-kicker">Elementos de visualización</p>
+        <h2 id="elements-heading">Instrumentos actuales de alfa privada.</h2>
         <div class="element-grid">
           <article>
             <h3>Viento</h3>
-            <p>
-              Un segmento radial escaso muestra dirección y fuerza del viento
-              respecto al coche mientras mantiene limpio el centro de la vista.
-            </p>
+            <p>Dirección respecto al coche; la longitud del segmento representa la magnitud.</p>
           </article>
           <article>
             <h3>Incidentes</h3>
-            <p>
-              Un contador compacto ayuda al piloto a juzgar el riesgo sin abrir
-              un panel completo de tiempos o black box.
-            </p>
+            <p>Un contador compacto <code>xN</code> de incidentes de la sesión.</p>
           </article>
           <article>
-            <h3>Velocidad minima de curva</h3>
-            <p>
-              Un pequeño recuerdo de velocidad latched ayuda en práctica y
-              clasificación sin fomentar miradas hacia abajo.
-            </p>
+            <h3>Velocidad mínima en curva</h3>
+            <p>La velocidad mínima registrada durante la última deceleración significativa, pensada para práctica y clasificación.</p>
           </article>
           <article>
             <h3>Relativo</h3>
-            <p>
-              El contexto temporal experimental de coches cercanos está en
-              validación, y las posiciones antiguas se ocultan en vez de
-              mantenerse.
-            </p>
+            <p>Contexto experimental de coches cercanos en una escala vertical de &plusmn;2 segundos. Los marcadores se ocultan cuando sus datos de posición están desactualizados.</p>
           </article>
         </div>
       </section>
 
-      <section class="section split trust-band">
+      <section class="section split trust-band" aria-labelledby="driver-control">
         <div>
-          <p class="section-kicker">Postura de confianza</p>
-          <h2>Fallar de forma segura forma parte del producto.</h2>
-          <p>
-            Los elementos de VICA deben desaparecer antes de inducir a error.
-            Datos ausentes, antiguos, inválidos o de baja confianza ocultan la
-            señal en vez de adivinar. El usuario siempre debe poder desactivar
-            la capa con rapidez.
+          <p class="section-kicker">Control del piloto</p>
+          <h2 id="driver-control">El control sigue en manos del piloto.</h2>
+          <p class="section-lede">
+            Las indicaciones OpenXR son opcionales. Valida los cambios en una sesión
+            controlada, conoce la forma de desactivar VICA antes de conducir y
+            desactívalo si afecta a la visibilidad, la atención o el rendimiento.
           </p>
         </div>
         <ul class="check-list">
-          <li>El comportamiento OpenXR es opcional durante la validación de alfa privada.</li>
-          <li>Los renderizadores para el piloto consumen estado canónico de VICA, no telemetría bruta.</li>
-          <li>No se requiere dependencia cloud para el comportamiento del HUD de carrera.</li>
-          <li>Este sitio no contiene checkout, cuentas ni flujo de licencias de producción.</li>
+          <li>Si faltan datos o están desactualizados, la indicación afectada se oculta.</li>
+          <li>El comportamiento durante la carrera no requiere una cuenta en la nube.</li>
+          <li>VICA no es control de carrera ni se presenta como aprobado oficialmente para competición.</li>
+          <li>Este sitio no ofrece instalador público, cuenta, pago ni licencias.</li>
         </ul>
       </section>
 
-      <section id="alpha-interest" class="section narrow alpha-note">
-        <p class="section-kicker">Interés en la alfa</p>
-        <h2>La admisión privada es deliberadamente manual.</h2>
-        <p>
-          VICA no se presenta aquí como descarga pública ni como producto
-          aprobado para carrera. La admisión pública de alfa se añadirá solo
-          después de revisar la documentación estática de confianza,
-          compatibilidad, instalación y desactivación.
+      <section class="section narrow alpha-note" aria-labelledby="alpha-status">
+        <p class="section-kicker">Estado</p>
+        <h2 id="alpha-status">Alfa privada.</h2>
+        <p class="section-lede">
+          VICA se valida mediante pruebas controladas y opcionales. El manual y la
+          página de seguridad documentan la postura pública actual sin afirmar soporte
+          amplio de simuladores ni aprobación para carreras.
         </p>
-        <a class="inline-link" href="manual.html">Revisar el manual actual</a>
+        <div class="hero-actions">
+          <a class="button button-primary" href="manual.html">Manual y desactivación</a>
+          <a class="button" href="trust.html">Seguridad, privacidad e instalación</a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p class="footer-links">
-        <a href="../../index.html">Mares Engineering</a>
+        <a href="../../">Mares Engineering</a>
         <span aria-hidden="true">/</span>
-        <a href="manual.html">Manual de VICA</a>
+        <a href="../../faber/">Faber</a>
         <span aria-hidden="true">/</span>
-        <a href="trust.html">Confianza, privacidad, seguridad de instalación</a>
+        <a href="../../minimai/">Minimai</a>
       </p>
       <p class="footer-made">Hecho en la Unión Europea. <span class="footer-flag" aria-hidden="true">🇪🇺</span></p>
-      <p class="footer-meta">&copy; 2026 Mares Engineering. Todos los derechos reservados.</p>
+      <p class="footer-meta">&copy; 2026 Mares Engineering.</p>
     </footer>
   </body>
 </html>

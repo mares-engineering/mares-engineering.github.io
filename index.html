@@ -1,169 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="home-document" lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mares Engineering builds focused tools for drivers, developers, and readers.">
     <title>Mares Engineering</title>
-    <style>
-      :root {
-        --bg: #050607;
-        --fg: #efefef;
-        --muted: #b4b4b4;
-        --display-font: 'Mares Display', 'Eurostile Extended Black', 'Eurostyle Extended Black', 'Arial Black', 'Trebuchet MS', 'Franklin Gothic Demi Cond', sans-serif;
-        --body-font: Baskerville, 'Baskerville Old Face', 'Times New Roman', serif;
-      }
-
-      @font-face {
-        font-family: 'Mares Display';
-        src: url('assets/fonts/eurostile-extended-black.woff2') format('woff2');
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        overflow-x: hidden;
-        background: var(--bg);
-      }
-
-      body {
-        margin: 0;
-        background:
-          radial-gradient(ellipse 92% 32% at 50% 53%, rgba(20, 48, 72, 0.075), rgba(12, 30, 48, 0.035) 45%, rgba(5, 6, 7, 0) 78%),
-          radial-gradient(ellipse 130% 92% at 50% 48%, #18191a 0%, #101112 46%, var(--bg) 100%);
-        color: var(--fg);
-        min-height: 100vh;
-        font-family: var(--body-font);
-        font-weight: 400;
-        letter-spacing: 0;
-        overflow-x: hidden;
-      }
-
-      .page {
-        display: grid;
-        align-content: center;
-        justify-items: center;
-        min-height: 100vh;
-        width: min(100%, 1680px);
-        max-width: none;
-        margin: 0 auto;
-        padding: 48px 24px;
-        line-height: 1.55;
-        text-align: center;
-        overflow-x: hidden;
-      }
-
-      .logo-field {
-        position: relative;
-        isolation: isolate;
-        display: inline-grid;
-        place-items: center;
-        width: min(100%, 1680px);
-      }
-
-      .logo-field::before,
-      .logo-field::after {
-        position: absolute;
-        z-index: -2;
-        content: "";
-        pointer-events: none;
-      }
-
-      .logo-field::before {
-        width: 128%;
-        height: 150%;
-        background:
-          radial-gradient(ellipse at center, rgba(76, 144, 198, 0.045), rgba(28, 72, 108, 0.026) 42%, rgba(5, 6, 7, 0) 78%);
-        filter: blur(48px);
-      }
-
-      .logo-field::after {
-        width: 145%;
-        height: 210%;
-        background:
-          radial-gradient(ellipse at center, rgba(18, 58, 90, 0.035), rgba(5, 6, 7, 0) 74%);
-        filter: blur(76px);
-      }
-
-      .brand-logo {
-        position: relative;
-        margin: 0;
-        font-family: var(--display-font);
-        font-size: clamp(1rem, 4.8vw, 6.05rem);
-        font-weight: 900;
-        letter-spacing: clamp(0.012em, 0.22vw, 0.044em);
-        font-stretch: expanded;
-        line-height: 1;
-        text-transform: uppercase;
-        white-space: nowrap;
-        color: transparent;
-        background:
-          linear-gradient(
-            180deg,
-            #beddea 0%,
-            #a9cada 26%,
-            #88b0c5 58%,
-            #5f86a5 100%
-          );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 0.0048em rgba(151, 208, 236, 0.38);
-        filter:
-          drop-shadow(0 0 0.012em rgba(194, 230, 247, 0.2))
-          drop-shadow(0 0 0.05em rgba(105, 178, 226, 0.13))
-          drop-shadow(0 0 0.15em rgba(45, 112, 174, 0.09));
-        text-shadow:
-          0 0.006em 0 rgba(24, 55, 82, 0.22),
-          0 0 0.035em rgba(110, 184, 226, 0.12);
-      }
-
-      .brand-logo::before {
-        position: absolute;
-        inset: 0;
-        content: attr(data-text);
-        pointer-events: none;
-      }
-
-      .brand-logo::before {
-        z-index: -1;
-        color: rgba(98, 176, 230, 0.08);
-        -webkit-text-fill-color: rgba(98, 176, 230, 0.08);
-        -webkit-text-stroke: 0.007em rgba(78, 158, 220, 0.045);
-        filter: blur(0.055em);
-        text-shadow:
-          0 0 0.16em rgba(96, 177, 230, 0.08),
-          0 0 0.52em rgba(52, 124, 188, 0.055);
-      }
-
-      @media (max-width: 640px) {
-        .page {
-          padding: 36px 18px;
-        }
-
-        .brand-logo {
-          font-size: clamp(0.76rem, 3.7vw, 1.65rem);
-          letter-spacing: 0.006em;
-        }
-
-        .brand-logo::before {
-          color: rgba(98, 176, 230, 0.045);
-          -webkit-text-fill-color: rgba(98, 176, 230, 0.045);
-          -webkit-text-stroke-color: rgba(78, 158, 220, 0.04);
-        }
-
-      }
-    </style>
+    <link rel="stylesheet" href="assets/site.css">
   </head>
-  <body>
-    <main class="page">
-      <div class="logo-field">
-        <h1 class="brand-logo" data-text="MARES ENGINEERING">MARES ENGINEERING</h1>
-      </div>
+  <body class="home">
+    <main class="home-main">
+      <section class="home-hero" aria-labelledby="company-name">
+        <div class="logo-field">
+          <h1 id="company-name" class="brand-logo" data-text="MARES ENGINEERING">MARES ENGINEERING</h1>
+        </div>
+      </section>
+
+      <section id="work" class="home-work" aria-labelledby="work-heading">
+        <p id="work-heading" class="home-work-heading">Selected work</p>
+        <nav class="project-list" aria-label="Mares Engineering products">
+          <a class="project-link" href="vica/">
+            <span class="project-name">VICA</span>
+            <span class="project-description">A VR-native race-awareness instrument.</span>
+            <span class="project-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="project-link" href="faber/">
+            <span class="project-name">Faber</span>
+            <span class="project-description">Evidence for agent-written patches.</span>
+            <span class="project-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="project-link" href="minimai/">
+            <span class="project-name">Minimai</span>
+            <span class="project-description">Less feed. More signal.</span>
+            <span class="project-arrow" aria-hidden="true">→</span>
+          </a>
+        </nav>
+        <footer class="home-footer">
+          <span>Made in the European Union. <span aria-hidden="true">🇪🇺</span></span>
+          <span>&copy; 2026 Mares Engineering.</span>
+        </footer>
+      </section>
     </main>
   </body>
 </html>

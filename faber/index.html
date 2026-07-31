@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Faber Proof turns patch requirements into bounded proof obligations and evidence-based decisions."
+    >
+    <title>Faber Proof — Mares Engineering</title>
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body class="product-page faber-page">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand-link" href="../" aria-label="Mares Engineering homepage">
+        <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
+      </a>
+      <nav class="global-nav" aria-label="Products">
+        <a href="../vica/">VICA</a>
+        <a href="./" aria-current="page">Faber</a>
+        <a href="../minimai/">Minimai</a>
+      </nav>
+    </header>
+
+    <main id="content" class="product-main">
+      <section class="product-hero" aria-labelledby="faber-title">
+        <div class="product-hero-copy">
+          <p class="eyebrow">Development preview</p>
+          <h1 id="faber-title" class="product-title">Faber Proof</h1>
+          <p class="product-tagline">Codex can write the patch. Faber makes the patch prove itself.</p>
+          <p class="hero-lede">
+            Faber turns a patch&rsquo;s requirements into falsifiable obligations, runs only
+            repository-approved checks, and returns an evidence-bound <code>PASS</code>,
+            <code>BLOCK</code>, or <code>HUMAN_REVIEW</code> decision.
+          </p>
+        </div>
+        <figure class="faber-visual">
+          <img
+            src="assets/demo-comparison.svg"
+            width="1600"
+            height="900"
+            alt="Development replay comparison: ordinary tests pass for both patches, while Faber Proof blocks the bad patch and passes the repaired patch"
+          >
+          <figcaption>
+            Deterministic local replay using a development fixture
+            (<code>REPLAY — FAKE-DEVELOPMENT</code>); not live-model or production evidence.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section" aria-labelledby="faber-method">
+        <p class="section-kicker">Method</p>
+        <h2 id="faber-method">A proof path with explicit authority.</h2>
+        <div class="feature-grid">
+          <article>
+            <h3>Plan</h3>
+            <p>Turn task requirements and a bounded diff into claims that can be tested.</p>
+          </article>
+          <article>
+            <h3>Check</h3>
+            <p>Execute only evidence capabilities approved by repository policy.</p>
+          </article>
+          <article>
+            <h3>Decide</h3>
+            <p>Bind results to the exact patch and return an auditable decision.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" aria-labelledby="faber-trust">
+        <div>
+          <p class="section-kicker">Trust boundary</p>
+          <h2 id="faber-trust">Evidence, not model prose, decides.</h2>
+          <p class="section-lede">
+            The planner can identify claims and select approved proof templates. It cannot
+            provide arbitrary commands or the final verdict.
+          </p>
+        </div>
+        <div class="verdicts" aria-label="Faber decision rules">
+          <div class="verdict-row">
+            <span>Missing, contradictory, or unbound evidence</span>
+            <span class="verdict-value verdict-block">CANNOT PASS</span>
+          </div>
+          <div class="verdict-row">
+            <span>Authoritative evidence disproves a requirement</span>
+            <span class="verdict-value verdict-block">BLOCK</span>
+          </div>
+          <div class="verdict-row">
+            <span>Policy requires human judgment</span>
+            <span class="verdict-value">HUMAN_REVIEW</span>
+          </div>
+          <div class="verdict-row">
+            <span>All required evidence is valid and passing</span>
+            <span class="verdict-value verdict-pass">PASS</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section narrow" aria-labelledby="faber-scope">
+        <p class="section-kicker">Current scope</p>
+        <h2 id="faber-scope">Local, reproducible, deliberately bounded.</h2>
+        <p class="section-lede">
+          Faber Proof is currently a development-local tool. Its no-key replay path can
+          reproduce evidence reports without an account or network request. The local
+          runner is not a production sandbox, and a passing report covers declared
+          obligations&mdash;not universal correctness.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-links">
+        <a href="../">Mares Engineering</a>
+        <span aria-hidden="true">/</span>
+        <a href="../vica/">VICA</a>
+        <span aria-hidden="true">/</span>
+        <a href="../minimai/">Minimai</a>
+      </p>
+      <p class="footer-made">Made in the European Union. <span class="footer-flag" aria-hidden="true">🇪🇺</span></p>
+      <p class="footer-meta">&copy; 2026 Mares Engineering.</p>
+    </footer>
+  </body>
+</html>

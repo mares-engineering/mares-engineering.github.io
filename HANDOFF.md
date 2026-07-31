@@ -1,10 +1,10 @@
 # Website Handoff
 
-Date: 2026-06-11
+Date: 2026-07-31
 
-This repo is the public Mares Engineering GitHub Pages site.
+This repository is the public Mares Engineering GitHub Pages site.
 
-## Current Site Shape
+## Current site shape
 
 Root:
 
@@ -12,146 +12,91 @@ Root:
 /
 ```
 
-Purpose:
+- The opening viewport preserves the centered Mares Engineering wordmark on the
+  original near-black field.
+- A minimal product directory appears below the first viewport.
+- Shared site styling lives in `assets/site.css`.
 
-- Mares Engineering home page
-- links to Vica and Minimai
-- not a dedicated Vica-only page
-
-Vica:
+Products:
 
 ```text
 /vica/
-```
-
-Purpose:
-
-- static public Vica landing page
-- serious, restrained, safety-first positioning
-- no backend
-- no accounts
-- no payments
-- no analytics
-
-Minimai:
-
-```text
+/faber/
 /minimai/
 ```
 
-Purpose:
+- VICA is a restrained private-alpha product and documentation surface with
+  English and Spanish pages.
+- Faber leads with the implemented Faber Proof entry point and its bounded,
+  evidence-first trust model.
+- Minimai remains an intentionally sparse coming-soon concept page.
 
-- existing Minimai placeholder/page, preserved
+## Visual-source decisions
 
-## Typography Decision
+VICA must use genuine output from the VICA display renderer, shown on a neutral
+black field. The current web assets are offline renderer previews generated from
+representative canonical state:
 
-Only the root `Mares Engineering` heading should use the Eurostyle/Eurostile
-display face.
+```text
+vica/assets/display/wind.png
+vica/assets/display/incidents.png
+vica/assets/display/minimum_corner_speed.png
+vica/assets/display/relative_vertical.png
+```
 
-Everything else on the root page should remain Baskerville-style unless Javier
-explicitly changes direction.
+They are not live-session screenshots and do not prove VR placement or performance.
+Keep that distinction visible in the page caption. Do not reintroduce fabricated
+cockpit, circuit, simulator, or imagined HUD-placement imagery.
 
-Current implementation:
+The Faber comparison graphic is a tracked product asset and carries the exact
+`REPLAY — FAKE-DEVELOPMENT` provenance label. Minimai has no approved imagery and
+should remain typography-only until real product material exists.
 
-- CSS defines `@font-face` for `Mares Display`.
-- It expects a licensed webfont at:
+## Typography decision
+
+Only the Mares Engineering company mark uses the bundled Eurostile-style display
+face. Product names and body copy remain serif-led.
+
+The licensed webfont is expected at:
 
 ```text
 assets/fonts/eurostile-extended-black.woff2
 ```
 
-Important:
+Visitors do not need the font installed locally. Do not replace or redistribute the
+font unless Mares Engineering has the required webfont rights.
 
-- Visitors do not need Eurostyle installed if this `.woff2` file is shipped.
-- If the file is missing, browsers use fallback fonts.
-- Do not add a commercial font file unless Javier has license rights to use it
-  as a webfont.
-
-## Public-Safety Rules
+## Public-safety rules
 
 Do not publish:
 
-- private strategy
-- internal pricing assumptions
-- secrets
-- customer/support data
-- official approval or certification claims
-- broad simulator/platform support claims
-- production payment/account/licensing claims
+- private strategy or internal pricing assumptions;
+- secrets, customer data, or private support material;
+- official approval, certification, sanction, or broad compatibility claims;
+- production payment, account, licensing, or availability claims;
+- Faber customer, revenue, universal-correctness, or production-sandbox claims;
+- Minimai implementation, privacy, platform, or launch-date claims without a source.
 
-## Roadmap Source Of Truth
+## Maintenance rules
 
-Read first:
+- Preserve the root page's first viewport when changing product discovery below it.
+- Keep the site static and JavaScript-free unless a real requirement changes that.
+- Update English and Spanish VICA pages together.
+- Regenerate VICA screenshots from the renderer; do not redraw display elements by
+  hand.
+- Keep the VICA disable path and product limits prominent.
 
-- `AGENTS.md`
-- `WEBSITE_ROADMAP.md`
-- `CONTENT_PRINCIPLES.md`
-- `prompts/README.md`
+## Review checklist
 
-Prompt sequence:
-
-1. `prompts/02_trust_and_safety_page.md`
-2. `prompts/03_compatibility_page.md`
-3. `prompts/04_install_disable_docs.md`
-4. `prompts/05_support_intake_entry.md`
-5. `prompts/06_changelog_release_page.md`
-6. `prompts/07_pricing_mock_only.md`
-
-The first landing-page pass has already been done and revised so `/vica/` is
-separate from the root company page.
-
-## Spark Operating Model
-
-Default worker:
-
-```text
-Hermes profile: vica-biz-spark
-```
-
-Codex should normally:
-
-- scope a focused task
-- run Spark
-- review the diff and generated claims
-- ask Spark for revisions if needed
-
-Example:
-
-```powershell
-cd C:\Users\javie\repos\mares-engineering.github.io
-hermes -p vica-biz-spark -z (Get-Content -Raw .\prompts\02_trust_and_safety_page.md)
-```
-
-## Review Checklist
-
-Before accepting Spark output:
+Before publishing:
 
 ```powershell
 git status --short
 git diff --check
-git log --oneline --decorate -n 5
-git show --stat --oneline HEAD
 ```
 
-Also inspect builder reports. Spark has previously written incorrect commit
-hashes in builder reports, so do not trust those blindly.
+Also verify every local link and image, confirm that the fabricated VICA composite is
+absent, and review new claims against the relevant product source repository.
 
-Repo-local push policy:
-
-- Pushing is allowed and expected for this website repo.
-- After validation and review, accepted commits should be pushed to `origin`.
-- This does not grant push permission for the business repo or core Vica repo.
-
-## Next Recommended Task
-
-If continuing website work, create the trust/privacy/install-safety page next.
-
-Goal:
-
-- explain user control
-- explain static/no-account/no-payment posture
-- explain disable/uninstall safety
-- avoid legal promises
-- avoid official approval/certification claims
-
-Then move to compatibility and install/disable docs.
+Accepted website commits should be pushed to `origin` after review. This permission
+applies only to this website repository.

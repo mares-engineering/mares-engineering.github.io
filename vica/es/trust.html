@@ -1,152 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VICA - Confianza, privacidad y seguridad de instalación</title>
     <meta
       name="description"
-      content="Página pública de confianza, privacidad y seguridad de instalación para el uso en alfa privada de VICA."
+      content="Seguridad, privacidad, instalación y límites de producto para la alfa privada de VICA."
     >
+    <title>Seguridad y privacidad de VICA — Mares Engineering</title>
     <link rel="alternate" hreflang="en" href="../trust.html">
     <link rel="alternate" hreflang="es" href="trust.html">
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
+    <a class="skip-link" href="#content">Ir al contenido</a>
     <header class="site-header">
-      <a class="brand-link" href="../../index.html" aria-label="Página principal de Mares Engineering">
+      <a class="brand-link" href="../../" aria-label="Página principal de Mares Engineering">
         <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
       </a>
       <div class="header-actions">
-        <nav class="nav-links" aria-label="Paginas de VICA">
-          <a href="index.html">Producto</a>
+        <nav class="nav-links" aria-label="Páginas de VICA">
+          <a href="../../#work">Proyectos</a>
+          <a href="./">Producto</a>
           <a href="manual.html">Manual</a>
-          <a href="trust.html" aria-current="page">Confianza</a>
+          <a href="trust.html" aria-current="page">Seguridad</a>
         </nav>
-        <nav class="language-switcher" aria-label="Selector de idioma">
-          <a class="language-link" href="../trust.html" hreflang="en" lang="en">
-            <span class="flag" aria-hidden="true">🇪🇺</span>
-            <span>English</span>
-          </a>
-          <a class="language-link" href="trust.html" aria-current="true" hreflang="es" lang="es">
-            <span class="flag" aria-hidden="true">🇪🇸</span>
-            <span>Español</span>
-          </a>
+        <nav class="language-switcher" aria-label="Idioma">
+          <a class="language-link" href="../trust.html" hreflang="en" lang="en">EN</a>
+          <a class="language-link" href="trust.html" aria-current="true" hreflang="es" lang="es">ES</a>
         </nav>
       </div>
     </header>
 
-    <main class="manual">
+    <main id="content" class="manual">
       <section class="manual-hero">
-        <p class="eyebrow">Confianza y seguridad de instalación en alfa privada</p>
-        <div class="brand-lockup">
-          <h1 aria-label="VICA Confianza y Seguridad">Confianza, privacidad, seguridad de instalación</h1>
-          <p class="brand-expansion">Sin hype. Sin sorpresas.</p>
-        </div>
+        <p class="eyebrow">Seguridad, privacidad e instalación</p>
+        <h1>Alcance explícito. Control explícito.</h1>
         <p class="hero-lede">
-          VICA es un instrumento de conciencia de carrera en alfa privada. Esta
-          página describe lo esperable hoy y dónde debe estar el control:
-          habilitación explícita, desactivación explícita y límites de soporte
-          claros.
+          VICA es una herramienta de visualización OpenXR en alfa privada. La confianza
+          empieza con afirmaciones limitadas, límites visibles y una forma de
+          desactivación que el piloto comprende antes de usarla.
         </p>
       </section>
 
-      <section class="section safety-panel">
-        <div class="section-heading">
-          <p class="section-kicker">Postura de instalación</p>
-          <h2>Entrega controlada, expectativas controladas</h2>
-          <p>
-            VICA no tiene un instalador público en esta fase. El acceso a la
-            alfa privada y el empaquetado se mantiene como material de pruebas
-            controladas, para que los usuarios puedan verificar lo que se ejecuta
-            en su máquina.
+      <section class="section safety-panel" aria-labelledby="install-posture">
+        <p class="section-kicker">Instalación</p>
+        <h2 id="install-posture">Sin instalador público, cuenta ni pago.</h2>
+        <p class="section-lede">
+          Los paquetes alfa y sus instrucciones están controlados para que cada persona
+          sepa qué ejecuta. Este sitio no recoge registros ni ofrece una descarga,
+          cuenta, pago o licencia de producción.
+        </p>
+      </section>
+
+      <section class="section split" aria-labelledby="user-control">
+        <div>
+          <p class="section-kicker">Control del usuario</p>
+          <h2 id="user-control">Desactiva antes de diagnosticar.</h2>
+          <p class="section-lede">
+            Si una indicación afecta a la visión, la atención, la comodidad o el
+            rendimiento, sal de la sesión de conducción y desactiva VICA antes de
+            investigar.
           </p>
         </div>
         <ul class="check-list">
-          <li>El comportamiento de instalación está limitado a pruebas en alfa privada, no a un lanzamiento público.</li>
-          <li>No existe flujo de pago, cuentas ni licencias enlazadas desde este sitio.</li>
-          <li>No se promete soporte para múltiples simuladores; la documentación pública solo cubre lo ya descrito.</li>
-          <li>Durante la validación, mantén solo una ruta de prueba validada activa por máquina.</li>
+          <li>Los elementos OpenXR son opcionales durante la validación de alfa privada.</li>
+          <li>La forma de desactivación suministrada debe estar siempre disponible.</li>
+          <li>Los cambios deben probarse primero en sesiones individuales o controladas.</li>
+          <li>Si VICA no puede mostrar una indicación de forma fiable, la oculta sin bloquear el simulador.</li>
         </ul>
       </section>
 
-      <section class="section split">
-        <div>
-          <p class="section-kicker">Desactivar y desinstalar</p>
-          <h2>La ruta de seguridad debe ser fácil de encontrar.</h2>
-          <p>
-            El piloto debe poder detener o ocultar la capa rápidamente.
-            Si una señal afecta visión, atención o rendimiento, detén el uso y
-            desactívala antes de continuar.
-          </p>
-        </div>
-        <ol class="number-list">
-          <li>Usa la ruta de desactivación documentada antes de conducir cuando VICA no sea necesaria.</li>
-          <li>En pausas inmediatas, sal de conducción y desactiva VICA para el siguiente arranque.</li>
-          <li>Elimina o desactiva ganchos de arranque que inyecten VICA en la sesión de simulador.</li>
-          <li>Borra o archiva las carpetas locales solo después de parar capas y servicios asociados.</li>
-        </ol>
-      </section>
-
-      <section class="section split">
+      <section class="section split" aria-labelledby="data-boundaries">
         <div>
           <p class="section-kicker">Límites de datos</p>
-          <h2>La privacidad por defecto es local.</h2>
-          <p>
-            La guía pública de VICA no afirma un flujo cloud-first. El comportamiento de
-            HUD se describe como operable sin infraestructura de cuenta externa.
+          <h2 id="data-boundaries">El comportamiento en carrera es local por defecto.</h2>
+          <p class="section-lede">
+            La visualización actual en carrera no requiere una cuenta en la nube. VICA
+            genera registros de diagnóstico locales y limitados mientras la capa OpenXR
+            está activa. Las grabaciones y vistas previas solo se crean al ejecutar las
+            herramientas correspondientes.
           </p>
         </div>
         <ul class="check-list">
-          <li>La documentación pública actual no describe almacenamiento en servidor de sesión.</li>
-          <li>Los logs o ficheros temporales solo se generan si habilitas herramientas que los activen.</li>
-          <li>No compartas trazas privadas más allá de las necesidades de soporte en alfa.</li>
-          <li>No se publican afirmaciones de certificación, aprobación oficial u operación sin riesgo.</li>
+          <li>Este sitio no recibe telemetría del simulador.</li>
+          <li>No compartas trazas privadas fuera de la vía de soporte acordada para la alfa.</li>
+          <li>Los archivos locales pueden contener contexto de la sesión; revísalos antes de compartirlos.</li>
+          <li>No se afirma retención cero ni una garantía integral de privacidad.</li>
         </ul>
       </section>
 
-      <section class="section split trust-band">
+      <section class="section split trust-band" aria-labelledby="product-boundaries">
         <div>
-          <p class="section-kicker">Postura de confianza</p>
-          <h2>Confiabilidad mediante contención.</h2>
-          <p>
-            Si faltan datos, se consideran no válidos para la decisión de confiar.
-            VICA debe evitar adivinar en esos casos.
+          <p class="section-kicker">Límites del producto</p>
+          <h2 id="product-boundaries">Una ayuda para el piloto, no una autoridad.</h2>
+          <p class="section-lede">
+            VICA ofrece indicaciones informativas limitadas. No sustituye las banderas
+            del simulador, al spotter, al control de carrera, al criterio del piloto ni
+            a la responsabilidad de conducir con seguridad.
           </p>
         </div>
         <ul class="check-list">
-          <li>El contenido mostrado debe degradarse a una línea base segura cuando falten entradas.</li>
-          <li>Las acciones críticas permanecen bajo control del usuario, no de automatizaciones ocultas.</li>
-          <li>La validación debe hacerse primero en sesiones de prueba o controladas.</li>
-          <li>La confianza se gana con comportamiento sobrio, controles claros y alcance explícito.</li>
+          <li>No se afirma aprobación oficial para carreras, certificación ni homologación.</li>
+          <li>No se afirma compatibilidad amplia con simuladores, visores o entornos.</li>
+          <li>No se garantiza un resultado de seguridad ni la ausencia de impacto en el rendimiento.</li>
+          <li>La evidencia de alfa privada no convierte el producto en apto para producción.</li>
         </ul>
       </section>
 
-      <section class="section">
-        <p class="section-kicker">Siguientes pasos</p>
-        <h2>Primeras rutas de soporte y resolución</h2>
-        <p>
-          Para comprobaciones de uso inmediato, usa la sección de resolución de
-          problemas del manual. Las vías de soporte en alfa privada se preparan;
-          hasta entonces, usa los canales descritos en la página del producto.
+      <section class="section narrow" aria-labelledby="next-step">
+        <p class="section-kicker">Siguiente paso</p>
+        <h2 id="next-step">Lee primero cómo desactivarlo.</h2>
+        <p class="section-lede">
+          El manual público explica la base segura actual, el alcance de los elementos,
+          la secuencia de desactivación y las primeras comprobaciones.
         </p>
-        <div class="hero-actions" aria-label="Rutas de soporte">
-          <a class="button button-primary" href="manual.html#troubleshooting">Resolución de problemas</a>
-          <a class="button button-secondary" href="index.html#alpha-interest">Canales de soporte en alfa</a>
+        <div class="hero-actions">
+          <a class="button button-primary" href="manual.html#disable">Desactivación y recuperación</a>
+          <a class="button" href="manual.html#troubleshooting">Resolución de problemas</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p class="footer-links">
-        <a href="../../index.html">Mares Engineering</a>
+        <a href="../../">Mares Engineering</a>
         <span aria-hidden="true">/</span>
-        <a href="index.html">Producto VICA</a>
+        <a href="./">VICA</a>
         <span aria-hidden="true">/</span>
-        <a href="manual.html">Manual de VICA</a>
+        <a href="manual.html">Manual</a>
       </p>
       <p class="footer-made">Hecho en la Unión Europea. <span class="footer-flag" aria-hidden="true">🇪🇺</span></p>
-      <p class="footer-meta">&copy; 2026 Mares Engineering. Todos los derechos reservados.</p>
+      <p class="footer-meta">&copy; 2026 Mares Engineering.</p>
     </footer>
   </body>
 </html>
