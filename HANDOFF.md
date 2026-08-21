@@ -31,6 +31,19 @@ Products:
   evidence-first trust model.
 - Minimai remains an intentionally sparse coming-soon concept page.
 
+Application profile:
+
+```text
+/nous/
+```
+
+- The Nous page is an unlisted, `noindex` technical application profile for Javier
+  Mares.
+- It proposes a bounded Hermes evaluation agenda and links only public-safe work
+  samples.
+- Keep it off the root product directory; the exact URL is intended to be shared
+  directly with application reviewers.
+
 ## Visual-source decisions
 
 VICA must use genuine output from the VICA display renderer, shown on a neutral
@@ -51,6 +64,10 @@ cockpit, circuit, simulator, or imagined HUD-placement imagery.
 The Faber comparison graphic is a tracked product asset and carries the exact
 `REPLAY — FAKE-DEVELOPMENT` provenance label. Minimai has no approved imagery and
 should remain typography-only until real product material exists.
+
+The Faber page links the dedicated `portfolio/faber-proof` source branch rather than
+the repository's broader default branch. Keep the local checkpoint, audit status, and
+policy-lifecycle limitation synchronized with that curated branch.
 
 ## Typography decision
 

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta
+      name="description"
+      content="Javier Mares's selected work and proposed evaluation agenda for the Machine Learning Engineer, Evals role at Nous Research."
+    >
+    <title>Javier Mares — Evaluation engineering for Nous Research</title>
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body class="product-page application-page">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand-link" href="../" aria-label="Mares Engineering homepage">
+        <span class="brand" data-text="MARES ENGINEERING">MARES ENGINEERING</span>
+      </a>
+      <nav class="global-nav" aria-label="Application sections">
+        <a href="#proposal">Proposal</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#background">Background</a>
+      </nav>
+    </header>
+
+    <main id="content" class="product-main">
+      <section class="application-hero" aria-labelledby="application-title">
+        <div class="application-hero-copy">
+          <p class="eyebrow">Application · Machine Learning Engineer, Evals</p>
+          <h1 id="application-title" class="application-title">Javier Mares</h1>
+          <p class="product-tagline">Build the measurement boundary for capable agents.</p>
+          <p class="hero-lede">
+            I want to help Nous determine when a Hermes capability gain is real, whether
+            a self-evolution candidate meets an explicit promotion bar, and which
+            trajectories have sufficient verified provenance to serve as evaluation or
+            training signal.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#proposal">Read the proposed work</a>
+            <a class="button" href="#evidence">Selected evidence</a>
+            <a class="button" href="mailto:javiermares@proton.me">Email Javier</a>
+          </div>
+          <p class="application-location">
+            Based in Valencia, Spain · Available for regular US Eastern-hours overlap
+          </p>
+        </div>
+
+        <dl class="application-facts" aria-label="Application summary">
+          <div>
+            <dt>Focus</dt>
+            <dd>Agent evaluation and failure analysis</dd>
+          </div>
+          <div>
+            <dt>System</dt>
+            <dd>Hermes Agent</dd>
+          </div>
+          <div>
+            <dt>Method</dt>
+            <dd>Reproduce, calibrate, adversarially extend, regress</dd>
+          </div>
+          <div>
+            <dt>Working hours</dt>
+            <dd>US Eastern overlap from Valencia</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section application-mission" aria-labelledby="mission-fit">
+        <p class="section-kicker">Why Nous</p>
+        <h2 id="mission-fit">Open intelligence needs trustworthy measurement.</h2>
+        <p class="section-lede">
+          Nous's commitment to open, broadly accessible intelligence is why this work
+          matters to me. The practical contribution I can make now is measurement: make
+          Hermes gains reproducible, failure modes legible, and improvement data
+          trustworthy.
+        </p>
+      </section>
+
+      <section id="proposal" class="section" aria-labelledby="proposal-title">
+        <p class="section-kicker">Proposed work</p>
+        <h2 id="proposal-title">Make Hermes improvements difficult to fool.</h2>
+        <p class="section-lede">
+          The immediate target is not another evaluation framework. It is a durable
+          measurement loop for Hermes: reproduce current results, expose whether failures
+          come from the model, tools, harness, judge, or environment, and turn observed
+          failures into better held-out tests.
+        </p>
+        <p class="application-scope-note">
+          This is a proposed first workstream, not a condition of the role; I would begin
+          with the team&rsquo;s current evaluation priorities and infrastructure.
+        </p>
+        <div class="feature-grid application-phases">
+          <article>
+            <p class="phase-label">Days 1–30</p>
+            <h3>Reproduce</h3>
+            <p>
+              Reproduce two current Hermes evaluation results. Preserve code,
+              configuration, model, provider, tool, task, and sandbox identity with every
+              run; retain transcripts, grader outputs, cost, and timing. Establish an
+              initial failure taxonomy and human-labelled calibration set.
+            </p>
+          </article>
+          <article>
+            <p class="phase-label">Days 31–60</p>
+            <h3>Calibrate and extend</h3>
+            <p>
+              Add held-out and adversarial cases based on observed gaps. Run same-budget
+              comparisons with repeated trials and confidence intervals. Measure judge
+              agreement, Cohen's κ, per-class precision and recall, and drift zones.
+            </p>
+          </article>
+          <article>
+            <p class="phase-label">Days 61–90</p>
+            <h3>Regress and promote</h3>
+            <p>
+              Establish a weekly regression and judge-drift workflow. Produce an
+              evidence-bound promotion report for self-evolution candidates that does not
+              recommend promotion when evidence is missing, contradictory, or stale.
+              Define which verified trajectories are suitable for later evaluation or
+              training use.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="evidence" class="section" aria-labelledby="evidence-title">
+        <p class="section-kicker">Selected evidence</p>
+        <h2 id="evidence-title">Built work, bounded claims.</h2>
+        <div class="evidence-stack">
+          <article class="evidence-item">
+            <div class="evidence-heading">
+              <p class="evidence-index">01</p>
+              <h3>Faber Proof</h3>
+              <p class="evidence-subhead">
+                Evidence-bound acceptance for agent-written patches.
+              </p>
+            </div>
+            <div class="evidence-copy">
+              <p>
+                I designed and built, using Codex as an implementation agent, a local
+                Python alpha in which model-generated proof plans are advisory.
+                Repository-approved capabilities execute bounded checks; evidence is
+                bound to the exact task, patch, policy, and environment; deterministic
+                logic returns <code>PASS</code>, <code>BLOCK</code>, or
+                <code>HUMAN_REVIEW</code>.
+              </p>
+              <p>
+                In a constructed scheduler case, ordinary tests accept both a flawed
+                patch and its repair. Faber blocks the flaw with a concrete
+                boundary-condition counterexample and accepts the repair.
+              </p>
+              <p class="evidence-limit">
+                Current local checkpoint: 725 passing tests, one guarded live-provider
+                test skipped, and a 49-case deterministic adversarial regression
+                campaign. The audit remains non-green: four P0 findings have remediation
+                candidates and targeted regression tests, but await fresh independent
+                re-verification. This is development evidence, not production testing or
+                a claim of general program correctness.
+              </p>
+              <p class="evidence-links">
+                <a class="inline-link" href="../faber/">Product note</a>
+                <a
+                  class="inline-link"
+                  href="https://github.com/lk251/faber/tree/portfolio/faber-proof"
+                >Curated source</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="evidence-item">
+            <div class="evidence-heading">
+              <p class="evidence-index">02</p>
+              <h3>Hermes workflow case</h3>
+              <p class="evidence-subhead">Reconciliation before confidence.</p>
+            </div>
+            <div class="evidence-copy">
+              <p>
+                Using Hermes, I built and validated a public-source ingestion workflow,
+                then treated reconciliation as an evaluation problem rather than trusting
+                the first successful run. It used twscrape for acquisition and Nitter as
+                an independent cross-check, preserved upstream IDs and provenance,
+                rejected contextual parents, committed per account, and advanced
+                checkpoints only after successful transactions.
+              </p>
+              <p>
+                In the first 72-hour validation window, two result pages yielded 43 parsed
+                source records and 30 canonical target-author activities. Nitter&rsquo;s
+                24 IDs were an exact 24/30 subset after repost-wrapper canonicalization;
+                an idempotence rerun added zero records. I also reversed my initial
+                &ldquo;zero results&rdquo; diagnosis after finding that conversation modules
+                were not strictly ordered.
+              </p>
+              <p class="evidence-limit">
+                Local work sample · Code and run artifacts available for technical
+                review.
+              </p>
+            </div>
+          </article>
+
+          <article class="evidence-item">
+            <div class="evidence-heading">
+              <p class="evidence-index">03</p>
+              <h3>Verified agent work</h3>
+              <p class="evidence-subhead">Outcomes attached to trajectories.</p>
+            </div>
+            <div class="evidence-copy">
+              <p>
+                An earlier agent-native GitHub bounty prototype implemented task
+                reservation, exact-commit evaluation against a protected verifier target,
+                commit-bound acceptance receipts, and idempotent payout and reconciliation
+                state transitions. It was the origin of my work on attaching task,
+                candidate, evidence, and outcome to trajectories intended for later
+                learning.
+              </p>
+              <p class="evidence-limit">
+                Public hackathon prototype · Earlier and broader than Faber Proof.
+              </p>
+            </div>
+          </article>
+
+          <article class="evidence-item">
+            <div class="evidence-heading">
+              <p class="evidence-index">04</p>
+              <h3>VICA</h3>
+              <p class="evidence-subhead">Systems work with explicit trust boundaries.</p>
+            </div>
+            <div class="evidence-copy">
+              <p>
+                VICA is a private-alpha OpenXR race-awareness instrument. Its public
+                surface uses genuine renderer output, distinguishes replay evidence from
+                live placement, and states safety and compatibility limits explicitly.
+              </p>
+              <p class="evidence-links">
+                <a class="inline-link" href="../vica/">Read the public case</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="background" class="section split" aria-labelledby="background-title">
+        <div>
+          <p class="section-kicker">Background</p>
+          <h2 id="background-title">Engineering, mathematics, and applied ML.</h2>
+        </div>
+        <div class="background-copy">
+          <p>
+            MEng in Aeronautical Engineering from Imperial College London, 2007.
+            Graduate coursework in machine learning and computational mathematics at
+            Stanford ICME, including CS229. I co-authored the 2007 course project
+            <a
+              href="https://cs229.stanford.edu/proj2007/MittalEjsingRomero-Corporate%20Valuation%20using%20Machine%20Learning%20Final%20Report1.pdf"
+            >Corporate Valuation using Machine Learning</a>.
+          </p>
+          <p>
+            In 2009 I worked in Madrid as a startup application analyst for entrepreneur
+            and angel investor Martin Varsavsky. In summer 2010 I studied exponential
+            technologies and global challenges at Singularity University, with
+            particular emphasis on space exploration and robotics.
+          </p>
+          <p>
+            Since 2011, I have worked as an independent machine-learning engineer and
+            consultant, building bespoke deep-learning NLP systems, including semantic
+            topic classification for Al Jazeera, and prototyping agentic systems for
+            iExec. Detailed client work remains confidential.
+          </p>
+        </div>
+      </section>
+
+      <section class="section application-closing" aria-labelledby="closing-title">
+        <p class="section-kicker">Working style</p>
+        <h2 id="closing-title">What I would bring to Nous.</h2>
+        <p class="section-lede">
+          Clean, tested Python; repeated-run and adversarial evaluation discipline;
+          evidence preservation; candid reporting of negative results; and proactive
+          communication when ambiguity changes the technical decision.
+        </p>
+        <p class="application-final-note">
+          I am applying for the Machine Learning Engineer, Evals role. If Nous sees a
+          better internal home for this work, I would be glad to discuss it.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-links">
+        <a href="../">Mares Engineering</a>
+        <span aria-hidden="true">/</span>
+        <a href="../faber/">Faber</a>
+        <span aria-hidden="true">/</span>
+        <a href="../vica/">VICA</a>
+      </p>
+      <p class="footer-made">Valencia, Spain · US Eastern-hours overlap</p>
+      <p class="footer-meta">&copy; 2026 Mares Engineering.</p>
+    </footer>
+  </body>
+</html>
