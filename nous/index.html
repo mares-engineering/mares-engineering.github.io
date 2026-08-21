@@ -177,6 +177,42 @@
           <article class="evidence-item">
             <div class="evidence-heading">
               <p class="evidence-index">02</p>
+              <h3>Motoko</h3>
+              <p class="evidence-subhead">A security- and privacy-focused local assistant harness.</p>
+            </div>
+            <div class="evidence-copy">
+              <p>
+                Motoko is a public, standard-library Python terminal assistant built
+                around local llama.cpp endpoints. It combines source-visible context,
+                hybrid retrieval and reranking, named model routes, procedural skills,
+                and durable checkpointed jobs. Private content remains in realm-local
+                state; source documents stay behind explicit allowlists and are read-only
+                by default.
+              </p>
+              <p>
+                Its engineering rule is that model output is planning data, not authority.
+                Unknown effects fail closed; scripts remain inert until their code and
+                effect contract are fingerprint-approved; project writes require an
+                allowlisted path, <code>.motokoignore</code> enforcement, exact-session
+                confirmation, hash checks, atomic writes, and an inspectable ledger.
+                Long jobs stay bounded, resumable, and off the render and input path.
+              </p>
+              <p class="evidence-limit">
+                Public work in progress · Nix-packaged · stdlib runtime · 329 defined
+                regression cases, 15 evaluation checks, and six PTY checks. A fresh full
+                validation run and external security/performance review are still needed;
+                approved scripts are policy-confined but not OS-sandboxed.
+                <a
+                  class="inline-link"
+                  href="https://github.com/lk251/motoko"
+                >Public source</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="evidence-item">
+            <div class="evidence-heading">
+              <p class="evidence-index">03</p>
               <h3>Nous hackathon agent-bounty prototype</h3>
               <p class="evidence-subhead">The lineage of Faber.</p>
             </div>
@@ -209,7 +245,7 @@
 
           <article class="evidence-item">
             <div class="evidence-heading">
-              <p class="evidence-index">03</p>
+              <p class="evidence-index">04</p>
               <h3>Hermes workflow case</h3>
               <p class="evidence-subhead">Reconciliation before confidence.</p>
             </div>
@@ -239,7 +275,7 @@
 
           <article class="evidence-item">
             <div class="evidence-heading">
-              <p class="evidence-index">04</p>
+              <p class="evidence-index">05</p>
               <h3>VICA</h3>
               <p class="evidence-subhead">Systems work with explicit trust boundaries.</p>
             </div>
