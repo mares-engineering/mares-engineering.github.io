@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Faber Proof turns patch requirements into bounded proof obligations and evidence-based decisions."
+      content="Faber Proof requires bounded, repository-approved evidence before accepting an agent-written patch."
     >
     <title>Faber Proof — Mares Engineering</title>
     <link rel="stylesheet" href="../assets/site.css">
@@ -28,12 +28,22 @@
         <div class="product-hero-copy">
           <p class="eyebrow">Development preview</p>
           <h1 id="faber-title" class="product-title">Faber Proof</h1>
-          <p class="product-tagline">Codex can write the patch. Faber makes the patch prove itself.</p>
+          <p class="product-tagline">Codex can write the patch. Faber requires evidence before acceptance.</p>
           <p class="hero-lede">
-            Faber turns a patch&rsquo;s requirements into falsifiable obligations, runs only
+            Faber accepts proposed falsifiable obligations for a patch, runs only
             repository-approved checks, and returns an evidence-bound <code>PASS</code>,
             <code>BLOCK</code>, or <code>HUMAN_REVIEW</code> decision.
           </p>
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/lk251/faber/tree/portfolio/faber-proof"
+            >Curated source</a>
+            <a
+              class="button"
+              href="https://github.com/lk251/faber/blob/portfolio/faber-proof/codex/build-week/AUDIT_QUEUE.md"
+            >Audit ledger</a>
+          </div>
         </div>
         <figure class="faber-visual">
           <img
@@ -97,6 +107,30 @@
         </div>
       </section>
 
+      <section class="section" aria-labelledby="faber-evidence">
+        <p class="section-kicker">Evidence checkpoint</p>
+        <h2 id="faber-evidence">Reproducible results with unresolved findings visible.</h2>
+        <div class="feature-grid">
+          <article>
+            <h3>725 + 1</h3>
+            <p>Passing tests, plus one guarded live-provider test skipped.</p>
+          </article>
+          <article>
+            <h3>49 cases</h3>
+            <p>Deterministic adversarial regression campaign at the current checkpoint.</p>
+          </article>
+          <article>
+            <h3>BLOCK / PASS</h3>
+            <p>Ordinary tests pass both scheduler candidates; Faber separates them.</p>
+          </article>
+        </div>
+        <p class="status-note">
+          These are project-run development results, not independent certification. Four
+          P0 authority findings have remediation candidates and targeted regression tests,
+          but await fresh independent re-verification; the audit is not green.
+        </p>
+      </section>
+
       <section class="section narrow" aria-labelledby="faber-scope">
         <p class="section-kicker">Current scope</p>
         <h2 id="faber-scope">Local, reproducible, deliberately bounded.</h2>
@@ -104,7 +138,9 @@
           Faber Proof is currently a development-local tool. Its no-key replay path can
           reproduce evidence reports without an account or network request. The local
           runner is not a production sandbox, and a passing report covers declared
-          obligations&mdash;not universal correctness.
+          obligations&mdash;not universal correctness. The executable capability catalog
+          is currently authored and approved by the repository owner; automatic policy
+          bootstrapping and lifecycle management remain research questions.
         </p>
       </section>
     </main>
