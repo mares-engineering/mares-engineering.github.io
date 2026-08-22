@@ -39,12 +39,15 @@ Application profile:
 
 - The Nous page is an unlisted, `noindex` technical application profile for Javier
   Mares.
-- It is an open application to pursue Faber at Nous: bind real agent work to
-  inspectable outcomes, then test whether the resulting episodes improve a concrete
-  routing, selection, or orchestration decision.
-- It links only public-safe work samples. Faber Proof is presented as the
-  label-integrity component of the broader Faber thesis, not as a renamed application
-  to a listed role.
+- It is an open application to pursue Faber at Nous: investigate whether
+  repository-owned verification policies can be bootstrapped and evolved economically
+  while maintainers retain acceptance authority.
+- It preserves Faber's original long-term thesis—learning better orchestrations from
+  real interactions among independently operated agents—without making routing,
+  training, a Hermes feature, or a listed role the project's present identity.
+- It links only public-safe work samples. Faber Proof is presented as the current
+  fixed-policy enforcement experiment; automated policy authorship and lifecycle are
+  clearly identified as the research hypothesis, not an implemented capability.
 - Keep it off the root product directory; the exact URL is intended to be shared
   directly with application reviewers.
 
