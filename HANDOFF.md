@@ -39,11 +39,12 @@ Application profile:
 
 - The Nous page is an unlisted, `noindex` technical application profile for Javier
   Mares.
-- It is an open application to pursue Faber at Nous, beginning with an
-  evidence-bound promotion layer for Hermes and treating outcome-linked learning
-  trajectories as a conditional second stage.
-- It links only public-safe work samples and presents Nous's existing tests,
-  sandboxing, benchmarks, and human review as the baseline Faber must beat.
+- It is an open application to pursue Faber at Nous: bind real agent work to
+  inspectable outcomes, then test whether the resulting episodes improve a concrete
+  routing, selection, or orchestration decision.
+- It links only public-safe work samples. Faber Proof is presented as the
+  label-integrity component of the broader Faber thesis, not as a renamed application
+  to a listed role.
 - Keep it off the root product directory; the exact URL is intended to be shared
   directly with application reviewers.
 
