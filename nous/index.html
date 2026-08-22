@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex">
     <meta
       name="description"
-      content="Javier Mares's open application to develop Faber at Nous Research: verified agent work, trustworthy outcome labels, and useful learning trajectories."
+      content="Javier Mares's open application to develop Faber at Nous Research: automated verification-policy authorship with maintainer-controlled acceptance authority."
     >
     <title>Javier Mares — Faber at Nous Research</title>
     <link rel="stylesheet" href="../assets/site.css">
@@ -29,12 +29,12 @@
         <div class="application-hero-copy">
           <p class="eyebrow">Open application · Proposed work at Nous Research</p>
           <h1 id="application-title" class="application-title">Javier Mares</h1>
-          <p class="product-tagline">Turn verified agent work into trustworthy learning signal.</p>
+          <p class="product-tagline">Automate verification policy—not acceptance authority.</p>
           <p class="hero-lede">
-            I would like to develop and falsify Faber at Nous: connect a real task, the
-            agent's exact attempt, authorized verifier evidence, and the actual outcome;
-            then test whether those outcome-bound episodes improve a concrete routing,
-            selection, or orchestration decision.
+            I would like to develop and falsify Faber at Nous: test whether
+            repository-owned verification policies for agent-produced work can be
+            bootstrapped and evolved economically, while neither the worker nor the
+            verifier can change the active acceptance standard.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#proposal">Read the proposed work</a>
@@ -49,15 +49,15 @@
         <dl class="application-facts" aria-label="Application summary">
           <div>
             <dt>Focus</dt>
-            <dd>Verified agent work and outcome-bound trajectories</dd>
+            <dd>Automated verification-policy authorship and evolution</dd>
           </div>
           <div>
-            <dt>System</dt>
-            <dd>Faber with Hermes as the first proving ground</dd>
+            <dt>Question</dt>
+            <dd>Can useful policies be learned without transferring authority?</dd>
           </div>
           <div>
-            <dt>Method</dt>
-            <dd>Bind task, attempt, environment, evidence, and outcome</dd>
+            <dt>Authority</dt>
+            <dd>Maintainer-approved, versioned policy; fixed during each run</dd>
           </div>
           <div>
             <dt>Working hours</dt>
@@ -68,27 +68,35 @@
 
       <section class="section application-mission" aria-labelledby="mission-fit">
         <p class="section-kicker">Why Nous</p>
-        <h2 id="mission-fit">Open intelligence should learn from outcomes it can inspect.</h2>
+        <h2 id="mission-fit">Open intelligence needs verification it can trust.</h2>
         <p class="section-lede">
-          Nous's commitment to open, broadly accessible intelligence is why this work
-          matters to me. Hermes performs substantial, tool-using work and can preserve
-          trajectories; Nous also has the model, evaluation, and training expertise to
-          test whether verified outcomes are genuinely useful. That makes Nous the rare
-          place where the larger Faber thesis can receive a serious positive or negative
-          result.
+          Faber began with the idea that real interactions among independently owned
+          agents could eventually help train better orchestrations and advance
+          open-source frontier intelligence. That future is not here yet. The nearer
+          prerequisite is verification: before an interaction can teach anything
+          trustworthy, we must establish whether the work actually satisfied its task.
+          Nous's commitment to broadly accessible frontier intelligence—and its
+          experience across models, evaluation, training, and agent systems—makes it a
+          compelling place to investigate that bottleneck.
         </p>
       </section>
 
       <section id="proposal" class="section" aria-labelledby="proposal-title">
         <p class="section-kicker">Proposed work</p>
-        <h2 id="proposal-title">Verify real work. Then test whether it teaches.</h2>
+        <h2 id="proposal-title">Let models propose the policy. Keep authority with maintainers.</h2>
         <p class="section-lede">
-          Faber binds a task contract, exact attempt and environment, authorized verifier
-          evidence, outcome, cost, and data rights into a portable episode. The original
-          bounty market was one mechanism for generating real work; Faber Proof is the
-          current experiment in earning the outcome label rather than accepting a model's
-          self-report. The proposed Hermes pilot tests the complete loop without assuming
-          in advance that verification makes the resulting episode more useful.
+          Faber treats verification-policy authorship and evolution as a learning
+          problem. Models may propose falsifiable obligations and bounded checks from
+          tests, CI configuration, requirements, documentation, repository history, and
+          escaped bugs. A maintainer reviews and activates a versioned policy. During a
+          run, neither the worker nor the verifier can modify that policy, authorize a
+          new capability, or decide that its own evidence is sufficient. The model
+          planner can select only capabilities permitted by the active policy; Faber's
+          executors run them. Executed evidence is bound to the task, exact patch,
+          policy, and environment; code-owned logic then maps that fixed evidence to
+          <code>PASS</code>, <code>BLOCK</code>, or
+          <code>HUMAN_REVIEW</code> deterministically. Evidence generation may remain
+          model-dependent, and this does not claim general program correctness.
         </p>
         <p class="application-scope-note">
           This is an open application to pursue Faber with the Nous team, not an
@@ -99,32 +107,36 @@
         <div class="feature-grid application-phases">
           <article>
             <p class="phase-label">Days 1–14</p>
-            <h3>Map before building</h3>
+            <h3>Understand and freeze</h3>
             <p>
-              Build nothing new. Map how one bounded public Hermes task class is attempted,
-              judged, retained, and reused today. Freeze the strongest existing baseline
-              and precommit to security, differentiation, maintenance-burden, and
-              downstream-value kill criteria.
+              Study how teams establish and maintain acceptance criteria today. Select
+              bounded task classes and held-out, CI-passing patches in unfamiliar
+              repositories. Freeze expected labels, the strongest competent
+              CI-plus-verifier baseline, budgets, and security, differentiation,
+              scalability, usability, and demand kill criteria.
             </p>
           </article>
           <article>
             <p class="phase-label">Days 15–60</p>
-            <h3>Earn the outcome label</h3>
+            <h3>Bootstrap and challenge</h3>
             <p>
-              Re-verify Faber Proof, then run it in shadow mode around real attempts.
-              Bind the task, attempt, environment, executed evidence, result, cost, and
-              latency. Compare label quality, reproducibility, false accepts, false
-              blocks, referrals, and policy burden against the matched baseline.
+              Derive proposed policies from repository artifacts, with maintainers
+              retaining approval authority. Run Faber and the matched baseline against
+              frozen holdouts. Preserve raw commands, evidence, receipts, and results;
+              measure false accepts, false blocks, referrals, repeated-run agreement,
+              maintainer time, and reusable versus repository-specific checks.
             </p>
           </article>
           <article>
             <p class="phase-label">Days 61–90</p>
-            <h3>Test the learning claim</h3>
+            <h3>Evolve and decide</h3>
             <p>
-              Only if the labels are better at acceptable cost, test whether the
-              outcome-bound episodes improve one held-out decision—for example attempt,
-              worker, or strategy selection—over a matched baseline. Finish with a
-              continue, narrow, open-source, or stop decision.
+              Test one policy update after a newly discovered bug and one bounded
+              integration with maintainers. Determine whether policy authorship and
+              maintenance can become economical without weakening the authority
+              boundary. Finish with a continue, narrow, open-source, or stop decision.
+              Only after verification succeeds should the longer-term
+              learning-from-agent-interactions thesis be tested.
             </p>
           </article>
         </div>
@@ -148,10 +160,12 @@
                 receipts, and made payout and reconciliation idempotent.
               </p>
               <p>
-                The market was one mechanism for generating real tasks. The larger idea
-                was to bind task, attempt, evidence, and outcome so completed work could
-                become a trustworthy learning episode. A member of the Nous team
-                responded especially strongly to that concept.
+                The longer-term idea was that real interactions among independently
+                owned agents could help train better orchestrations. Iterating on the
+                prototype exposed the nearer prerequisite: before those interactions can
+                become trustworthy learning material, the system must establish whether
+                the work actually satisfied its task. A member of the Nous team
+                responded especially strongly to the original concept.
               </p>
               <p class="evidence-limit">
                 Public hackathon prototype · Earlier and broader than Faber Proof.
@@ -170,7 +184,7 @@
               <p class="evidence-index">02</p>
               <h3>Faber Proof</h3>
               <p class="evidence-subhead">
-                The label-integrity experiment for agent-written patches.
+                The current fixed-policy verification experiment for agent-written patches.
               </p>
             </div>
             <div class="evidence-copy">
@@ -193,7 +207,9 @@
                 campaign. The audit remains non-green: four P0 findings have remediation
                 candidates and targeted regression tests, but await fresh independent
                 re-verification. This is development evidence, not production testing or
-                a claim of general program correctness.
+                a claim of general program correctness. The alpha does not yet
+                economically bootstrap or evolve repository policy; that is the central
+                research hypothesis of the proposed work.
               </p>
               <p class="evidence-links">
                 <a class="inline-link" href="../faber/">Product note</a>
@@ -213,26 +229,29 @@
             </div>
             <div class="evidence-copy">
               <p>
-                Motoko is a public, standard-library Python terminal assistant built
-                around local llama.cpp endpoints. It combines source-visible context,
-                hybrid retrieval and reranking, named model routes, procedural skills,
-                and durable checkpointed jobs. Private content remains in realm-local
-                state; source documents stay behind explicit allowlists and are read-only
-                by default.
+                Motoko is a public, Python-standard-library terminal assistant built over
+                NixOS-declared local llama.cpp endpoints. It combines inspectable hybrid
+                retrieval and evidence-span selection, provenance-rich artifacts, named
+                model routes, durable checkpointed jobs, and an input-first raw-terminal
+                interface. Private content remains in realm-local state; source documents
+                stay behind explicit allowlists and are read-only by default.
               </p>
               <p>
-                Its engineering rule is that model output is planning data, not authority.
-                Unknown effects fail closed; scripts remain inert until their code and
-                effect contract are fingerprint-approved; project writes require an
-                allowlisted path, <code>.motokoignore</code> enforcement, exact-session
-                confirmation, hash checks, atomic writes, and an inspectable ledger.
-                Long jobs stay bounded, resumable, and off the render and input path.
+                Its engineering rule is to gain capability through better evidence,
+                procedures, evaluation, and carefully bounded action—not ambient
+                authority. Review-first skills, typed action records, fingerprinted
+                standard-library tools, validator-owned confirmed writes, budgeted goal
+                loops, and managed Git worktrees sit behind visible ledgers and explicit
+                user authority. Arbitrary shell, network, service-control, privileged,
+                and hidden autonomous execution remain outside the product boundary.
               </p>
               <p class="evidence-limit">
-                Public work in progress · Nix-packaged · stdlib runtime · 329 defined
-                regression cases, 15 evaluation checks, and six PTY checks. A fresh full
-                validation run and external security/performance review are still needed;
-                approved scripts are policy-confined but not OS-sandboxed.
+                Public work in progress · Nix-packaged · stdlib runtime · current master
+                registers 329 regression cases, 15 evaluation checks, and six PTY
+                render/input checks. These checks are defined in the public source; no
+                current public CI result is claimed. A fresh full validation run and
+                external security/performance review are still needed; Motoko's
+                permission gates are not an OS sandbox.
                 <a
                   class="inline-link"
                   href="https://github.com/lk251/motoko"
@@ -324,16 +343,18 @@
         <p class="section-kicker">The ask</p>
         <h2 id="closing-title">Hire me to pursue Faber with the team.</h2>
         <p class="section-lede">
-          I bring tested Python, adversarial evaluation discipline, evidence preservation,
-          and a habit of exposing limits. I am not asking Nous to accept Faber's thesis on
-          faith. I am asking for the chance to run the strongest falsification of it in
-          the environment where verified outcomes could matter most.
+          I bring tested Python, adversarial evaluation discipline, evidence
+          preservation, security-conscious harness engineering, and a habit of exposing
+          limits. I am not asking Nous to accept Faber's thesis on faith. I am asking for
+          the chance to run the strongest falsification of whether automated policy
+          authorship can improve verification while maintainers retain authority.
         </p>
         <p class="application-final-note">
-          If Faber does not produce better outcome labels, its policy burden is
-          uneconomic, or the resulting episodes do not improve a real downstream
-          decision, it should narrow or stop. If it succeeds, Nous gains open
-          infrastructure for turning real agent work into inspectable learning signal.
+          If Faber cannot catch material failures missed by a hardened baseline, if
+          policy creation and maintenance remain bespoke, or if a model can expand its
+          own authority, it should narrow or stop. If it succeeds, Nous gains open
+          verification infrastructure useful to agent systems now—and a foundation for
+          learning responsibly from cross-agent interactions later.
         </p>
       </section>
     </main>
